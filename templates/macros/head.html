@@ -1,0 +1,15 @@
+{% macro stylesheet() %}
+<!-- CSS -->
+<link rel="stylesheet" href="{{ get_url(path="print.css", trailing_slash=false) }}" media="print">
+<link rel="stylesheet" href="{{ get_url(path="poole.css", trailing_slash=false) }}">
+<link rel="stylesheet" href="{{ get_url(path="hyde.css", trailing_slash=false) }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+{% endmacro %}
+
+{% macro javascript() %}
+{% if config.build_search_index %}
+  <script src="{{ get_url(path="plugins/elasticlunr.min.js") | safe }}" defer></script>
+  <script src="{{ get_url(path="search_index." ~ config.default_language ~ ".js") | safe }}" defer></script>
+  <script src="{{ get_url(path="js/search.js") | safe }}" defer></script>
+{% endif %}
+{% endmacro %}

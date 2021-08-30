@@ -1,0 +1,15 @@
+base_url = "https://resume.alongwy.top"
+compile_sass = true
+title = "Feng Yunlong"
+description = "A clean resume theme"
+generate_feed = true
+
+
+[extra]
+resume_avatar = "/avatar.png"
+resume_sticky = true
+resume_reverse = false
+resume_theme = "theme-base-08"
+resume_links = [
+    {url = "https://google.com", name = "About"},
+]

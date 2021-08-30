@@ -1,0 +1,80 @@
+{% import 'macros/head.html' as macros_head -%}
+{% import 'macros/fullpage.html' as macros_fullpage -%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+  {{ macros_head::stylesheet() }}
+  {{ macros_head::javascript() }}
+
+  {% if config.generate_feed %}
+  <link rel="alternate" type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"{% else
+    %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+  {% endif %}
+
+  {% block extra_head %}
+  {% endblock extra_head %}
+</head>
+
+<body class="{{ config.extra.resume_theme }} {% if config.extra.resume_reverse %}layout-reverse{% endif %}">
+  {% block sidebar %}
+  <div class="sidebar">
+    <div class="container {% if config.extra.resume_sticky %}sidebar-sticky{% endif %}">
+      <div class="sidebar-about">
+        {% if config.extra.resume_avatar %}
+        <img src="{{ config.extra.resume_avatar }}" alt="">
+        {% endif %}
+
+        {% block sidebar_about %}
+        <a href="{{ config.base_url }}">
+          <h1>{{ config.title }}</h1>
+        </a>
+        {% if config.description %}
+        <p class="lead">{{config.description}}</p>
+        {% endif %}
+        {% endblock sidebar_about %}
+      </div>
+
+      <ul class="sidebar-nav">
+        {% block sidebar_nav %}
+        {% for link in config.extra.resume_links %}
+        <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
+        {% endfor %}
+        {% endblock sidebar_nav %}
+      </ul>
+    </div>
+  </div>
+  {% endblock sidebar %}
+
+  <div id="fullpage" class="content container">
+    <div class="section">
+      {% block content %}
+      <div class="posts">
+        {% for page in section.pages | reverse %}
+        <div class="post">
+          <h1 class="post-title">
+            <a href="{{ page.permalink }}">
+              {{ page.title }}
+            </a>
+          </h1>
+
+          <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endblock content %}
+    </div>
+    <div class="section">Some section</div>
+    <div class="section">Some section</div>
+    <div class="section">Some section</div>
+  </div>
+  {{ macros_fullpage::fullpage() }}
+</body>
+
+</html>

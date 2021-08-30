@@ -1,0 +1,21 @@
+name = "resume"
+description = "A resume theme"
+license = "MIT"
+homepage = "https://github.com/alongwy/zola-resume"
+min_version = "0.11.0"
+demo = "https://resume.alongwy.top"
+
+[extra]
+resume_sticky = true
+resume_reverse = false
+resume_theme = ""
+resume_links = []
+
+[author]
+name = "Feng Yunlong"
+homepage = "https://www.alongwy.top"
+
+[original]
+author =  "Vincent Prouillet"
+homepage = "https://www.vincentprouillet.com"
+repo = "https://github.com/getzola/hyde"
