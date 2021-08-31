@@ -2,140 +2,59 @@
 
 {% block content %}
 <div id="fullpage">
-
   {% if config.extra.show_about %}
-  <div class="section">
-    <div class="posts">
-      {% for page in section.pages | reverse %}
-      <div class="post">
-        <h2 class="post-title">
-          <a href="{{ page.permalink }}">
-            {{ page.title }}
-          </a>
-        </h2>
-        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-      </div>
-      {% endfor %}
-    </div>
+  <div class="section" id="about">
+    {% set section = get_section(path="about/_index.md") %}
+    {{ section.content | safe }}
   </div>
   {% endif %}
 
   {% if config.extra.show_skills %}
-  <div class="section">
-    <div class="posts">
-      {% for page in section.pages | reverse %}
-      <div class="post">
-        <h2 class="post-title">
-          <a href="{{ page.permalink }}">
-            {{ page.title }}
-          </a>
-        </h2>
-        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-      </div>
-      {% endfor %}
-    </div>
+  <div class="section" id="skills">
+    {% set section = get_section(path="skills/_index.md") %}
+    {{ section.content | safe }}
   </div>
   {% endif %}
 
   {% if config.extra.show_projects %}
-  <div class="section">
-    <div class="posts">
-      {% for page in section.pages | reverse %}
-      <div class="post">
-        <h2 class="post-title">
-          <a href="{{ page.permalink }}">
-            {{ page.title }}
-          </a>
-        </h2>
-        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-      </div>
-      {% endfor %}
-    </div>
+  <div class="section" id="projects">
+    {% set section = get_section(path="projects/_index.md") %}
+    {{ section.content | safe }}
   </div>
   {% endif %}
 
   {% if config.extra.show_opensource %}
-  <div class="section">
-    <div class="posts">
-      {% for page in section.pages | reverse %}
-      <div class="post">
-        <h2 class="post-title">
-          <a href="{{ page.permalink }}">
-            {{ page.title }}
-          </a>
-        </h2>
-        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-      </div>
-      {% endfor %}
-    </div>
+  <div class="section" id="opensource">
+    {% set section = get_section(path="opensource/_index.md") %}
+    {{ section.content | safe }}
   </div>
   {% endif %}
 
   {% if config.extra.show_publications %}
-  <div class="section">
-    <div class="posts">
-      {% for page in section.pages | reverse %}
-      <div class="post">
-        <h2 class="post-title">
-          <a href="{{ page.permalink }}">
-            {{ page.title }}
-          </a>
-        </h2>
-        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-      </div>
-      {% endfor %}
-    </div>
+  <div class="section" id="publications">
+    {% set section = get_section(path="publications/_index.md") %}
+    {{ section.content | safe }}
   </div>
   {% endif %}
 
   {% if config.extra.show_experience %}
-  <div class="section">
-    <div class="posts">
-      {% for page in section.pages | reverse %}
-      <div class="post">
-        <h2 class="post-title">
-          <a href="{{ page.permalink }}">
-            {{ page.title }}
-          </a>
-        </h2>
-        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-      </div>
-      {% endfor %}
-    </div>
+  <div class="section" id="experience">
+    {% set section = get_section(path="experience/_index.md") %}
+    {{ section.content | safe }}
   </div>
   {% endif %}
 
   {% if config.extra.show_education %}
-  <div class="section">
-    <div class="posts">
-      {% for page in section.pages | reverse %}
-      <div class="post">
-        <h2 class="post-title">
-          <a href="{{ page.permalink }}">
-            {{ page.title }}
-          </a>
-        </h2>
-        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-      </div>
-      {% endfor %}
-    </div>
+  <div class="section" id="education">
+    {% set section = get_section(path="education/_index.md") %}
+    {{ section.content | safe }}
   </div>
   {% endif %}
 
   {% if config.extra.show_blog %}
-  <div class="section">
-    <div class="posts">
-      {% for page in section.pages | reverse %}
-      <div class="post">
-        <h2 class="post-title">
-          <a href="{{ page.permalink }}">
-            {{ page.title }}
-          </a>
-        </h2>
-        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-      </div>
-      {% endfor %}
-    </div>
+  <div class="section" id="blog">
+    {% set section = get_section(path="blog/_index.md") %}
+    {{ section.content | safe }}
   </div>
   {% endif %}
 

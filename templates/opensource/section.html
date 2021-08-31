@@ -1,0 +1,21 @@
+{% extends "section.html" %}
+
+{% block content %}
+<div class="section">
+  <div class="page-header">
+    <h1>{{ section.title }}</h1>
+  </div>
+  <div class="posts">
+    {% for page in section.pages | reverse %}
+    <div class="post">
+      <h2 class="post-title">
+        <a href="{{ page.permalink }}">
+          {{ page.title }}
+        </a>
+      </h2>
+      <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}
