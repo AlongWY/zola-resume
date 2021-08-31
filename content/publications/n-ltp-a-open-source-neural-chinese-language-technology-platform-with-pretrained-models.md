@@ -22,6 +22,7 @@ fact: ""
 weight: 10
 ---
 An open-source neural language technology platform supporting six fundamental Chinese NLP tasks: 
+
 + lexical analysis (Chinese word segmentation, part-of-speech tagging, and named entity recognition)
 + syntactic parsing (dependency parsing)
 + semantic parsing (semantic dependency parsing and semantic role labeling). 

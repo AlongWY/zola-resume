@@ -3,17 +3,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ section.title }}</h1>
-<div class="posts">
-  {% for page in section.pages | reverse %}
-  <div class="post">
-    <h2 class="post-title">
-      <a href="{{ page.permalink }}">
-        {{ page.title }}
-      </a>
-    </h2>
-    <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+<div class="container is-fluid" style="min-height: 100vh;">
+  <div class="is-flex is-flex-direction-column is-justify-content-center" style="min-height: 100vh;">
+    <div>
+      <h1>{{ section.title }}</h1>
+    </div>
+    <div class="content">
+      {% for page in section.pages | reverse %}
+      <div class="post">
+        <h3 class="post-title">
+          <a href="{{ page.permalink }}">
+            {{ page.title }}
+          </a>
+        </h3>
+        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+      </div>
+      {% endfor %}
+    </div>
   </div>
-  {% endfor %}
 </div>
+
 {% endblock content %}

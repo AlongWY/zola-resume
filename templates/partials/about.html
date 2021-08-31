@@ -7,17 +7,33 @@
       {{ config.extra.address ~ " · " }} <a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a>
     </h2>
   </div>
-  <div style="flex: 2;">
+  <div class="content" style="flex: 2;">
     {{ section.content | safe }}
   </div>
   <div class="is-flex is-flex-direction-column is-justify-content-center" style="flex: 2;">
     <div>
       <h3>Certifications</h3>
-      xxx
+      {% set data = load_data(path="data/certifications.json") %}
+      {% for item in data %}
+      <a href="{{ item.proof }}"data-toggle="tooltip" title="{{ item.name }}" data-offset="0,10" rel="me">
+        <figure class="image is-64x64">
+          <img src="{{ item.badge }}">
+        </figure>
+      </a>
+      {% endfor %}
+      
     </div>
     <div>
       <h3>Socialization</h3>
-      xxx
+      {% set data = load_data(path="data/social.json") %}
+      {% for item in data %}
+      <a href="{{ item.link }}" style="font-size: 1.75rem;" data-toggle="tooltip" title="{{ item.name }}" data-offset="0,10" rel="me">
+        <span class="fa-stack">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fab fa-{{ item.name | lower }} fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+      {% endfor %}
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 {% macro display() %}
 {% set section = get_section(path="opensource/_index.md") %}
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
-  <h2>opensource</h2>
+  <h2><a href="/opensource">open source contributions</a></h2>
   {{ section.content | safe }}
 
   {% for page in section.pages | reverse %}
