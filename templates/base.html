@@ -1,0 +1,35 @@
+{% import 'macros/head.html' as macros_head -%}
+{% import 'macros/search.html' as macros_search -%}
+{% import 'macros/fullpage.html' as macros_fullpage -%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  {{ macros_head::stylesheet() }}
+  {{ macros_head::javascript() }}
+  {{ macros_head::rss() }}
+
+  {% block extra_head %}
+  {% endblock extra_head %}
+</head>
+
+<body>
+  <aside id="sidebar" class="menu is-hidden-touch">
+    {{ macros_head::avatar() }}
+    {{ macros_fullpage::menu()}}
+  </aside>
+  <div id="content">
+    <!-- Content -->
+    {% block content %}
+    {% endblock content %}
+  </div>
+  <!-- {{ macros_search::search() }} -->
+  {{ macros_fullpage::fullpage() }}
+  {{ macros_search::search_init() }}
+</body>
+
+</html>

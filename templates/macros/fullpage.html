@@ -1,6 +1,49 @@
+{% macro menu() %}
+<ul id="menu" class="menu-list">
+    
+{% if config.extra.show_about           %}
+<li data-menuanchor="about" class="active"><a href="/#about">ABOUT</a></li>   
+{% endif %}
+{% if config.extra.show_skills          %} 
+<li data-menuanchor="skills" class="active"><a href="/#skills">SKILLS</a></li>
+{% endif %}
+{% if config.extra.show_projects        %}
+<li data-menuanchor="projects" class="active"><a href="/#projects">PROJECTS</a></li>
+{% endif %}
+{% if config.extra.show_opensource      %} 
+<li data-menuanchor="opensource" class="active"><a href="/#opensource">OPEN SOURCE</a></li>
+{% endif %}
+{% if config.extra.show_publications    %}
+<li data-menuanchor="publications" class="active"><a href="/#publications">PUBLICATIONS</a></li>
+{% endif %}
+{% if config.extra.show_experience      %} 
+<li data-menuanchor="experience" class="active"><a href="/#experience">EXPERIENCE</a></li>
+{% endif %}
+{% if config.extra.show_education       %} 
+<li data-menuanchor="education" class="active"><a href="/#education">EDUCATION</a></li>
+{% endif %}
+{% if config.extra.show_blog            %} 
+<li data-menuanchor="blog" class="active"><a href="/#blog">BLOG</a></li>    
+{% endif %}
+</ul>
+{% endmacro %}
+
 {% macro fullpage() %}
 <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
 <script type="text/javascript">
-    var fullpages = new fullpage('#fullpage');
+    var fullpages = new fullpage('#fullpage', {
+        licenseKey: 'OPEN-SOURCE-MIT-LICENSE',
+        menu: '#menu',
+        anchors: [
+            {% if config.extra.show_about           %} 'about',         {% endif %}
+            {% if config.extra.show_skills          %} 'skills',        {% endif %}
+            {% if config.extra.show_projects        %} 'projects',      {% endif %}
+            {% if config.extra.show_opensource      %} 'opensource',    {% endif %}
+            {% if config.extra.show_publications    %} 'publications',  {% endif %}
+            {% if config.extra.show_experience      %} 'experience',    {% endif %}
+            {% if config.extra.show_education       %} 'education',     {% endif %}
+            {% if config.extra.show_blog            %} 'blog',          {% endif %}
+        ],
+    });
 </script>
 {% endmacro %}

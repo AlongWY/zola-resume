@@ -1,0 +1,24 @@
+@media (min-width: 992px) {
+  #sidebar {
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    height: 100vh;
+    width: 17rem;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #bd5d38;
+  }
+  #content {
+    margin-left: 17rem;
+  }
+  #avatar {
+    text-align: center;
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  }
+}

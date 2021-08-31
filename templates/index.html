@@ -1,80 +1,143 @@
-{% import 'macros/head.html' as macros_head -%}
-{% import 'macros/fullpage.html' as macros_fullpage -%}
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+{% block content %}
+<div id="fullpage">
 
-  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-
-  {{ macros_head::stylesheet() }}
-  {{ macros_head::javascript() }}
-
-  {% if config.generate_feed %}
-  <link rel="alternate" type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"{% else
-    %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+  {% if config.extra.show_about %}
+  <div class="section">
+    <div class="posts">
+      {% for page in section.pages | reverse %}
+      <div class="post">
+        <h1 class="post-title">
+          <a href="{{ page.permalink }}">
+            {{ page.title }}
+          </a>
+        </h1>
+        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
   {% endif %}
 
-  {% block extra_head %}
-  {% endblock extra_head %}
-</head>
-
-<body class="{{ config.extra.resume_theme }} {% if config.extra.resume_reverse %}layout-reverse{% endif %}">
-  {% block sidebar %}
-  <div class="sidebar">
-    <div class="container {% if config.extra.resume_sticky %}sidebar-sticky{% endif %}">
-      <div class="sidebar-about">
-        {% if config.extra.resume_avatar %}
-        <img src="{{ config.extra.resume_avatar }}" alt="">
-        {% endif %}
-
-        {% block sidebar_about %}
-        <a href="{{ config.base_url }}">
-          <h1>{{ config.title }}</h1>
-        </a>
-        {% if config.description %}
-        <p class="lead">{{config.description}}</p>
-        {% endif %}
-        {% endblock sidebar_about %}
+  {% if config.extra.show_skills %}
+  <div class="section">
+    <div class="posts">
+      {% for page in section.pages | reverse %}
+      <div class="post">
+        <h1 class="post-title">
+          <a href="{{ page.permalink }}">
+            {{ page.title }}
+          </a>
+        </h1>
+        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
       </div>
-
-      <ul class="sidebar-nav">
-        {% block sidebar_nav %}
-        {% for link in config.extra.resume_links %}
-        <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
-        {% endfor %}
-        {% endblock sidebar_nav %}
-      </ul>
+      {% endfor %}
     </div>
   </div>
-  {% endblock sidebar %}
+  {% endif %}
 
-  <div id="fullpage" class="content container">
-    <div class="section">
-      {% block content %}
-      <div class="posts">
-        {% for page in section.pages | reverse %}
-        <div class="post">
-          <h1 class="post-title">
-            <a href="{{ page.permalink }}">
-              {{ page.title }}
-            </a>
-          </h1>
-
-          <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-        </div>
-        {% endfor %}
+  {% if config.extra.show_projects %}
+  <div class="section">
+    <div class="posts">
+      {% for page in section.pages | reverse %}
+      <div class="post">
+        <h1 class="post-title">
+          <a href="{{ page.permalink }}">
+            {{ page.title }}
+          </a>
+        </h1>
+        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
       </div>
-      {% endblock content %}
+      {% endfor %}
     </div>
-    <div class="section">Some section</div>
-    <div class="section">Some section</div>
-    <div class="section">Some section</div>
   </div>
-  {{ macros_fullpage::fullpage() }}
-</body>
+  {% endif %}
 
-</html>
+  {% if config.extra.show_opensource %}
+  <div class="section">
+    <div class="posts">
+      {% for page in section.pages | reverse %}
+      <div class="post">
+        <h1 class="post-title">
+          <a href="{{ page.permalink }}">
+            {{ page.title }}
+          </a>
+        </h1>
+        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if config.extra.show_publications %}
+  <div class="section">
+    <div class="posts">
+      {% for page in section.pages | reverse %}
+      <div class="post">
+        <h1 class="post-title">
+          <a href="{{ page.permalink }}">
+            {{ page.title }}
+          </a>
+        </h1>
+        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if config.extra.show_experience %}
+  <div class="section">
+    <div class="posts">
+      {% for page in section.pages | reverse %}
+      <div class="post">
+        <h1 class="post-title">
+          <a href="{{ page.permalink }}">
+            {{ page.title }}
+          </a>
+        </h1>
+        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if config.extra.show_education %}
+  <div class="section">
+    <div class="posts">
+      {% for page in section.pages | reverse %}
+      <div class="post">
+        <h1 class="post-title">
+          <a href="{{ page.permalink }}">
+            {{ page.title }}
+          </a>
+        </h1>
+        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if config.extra.show_blog %}
+  <div class="section">
+    <div class="posts">
+      {% for page in section.pages | reverse %}
+      <div class="post">
+        <h1 class="post-title">
+          <a href="{{ page.permalink }}">
+            {{ page.title }}
+          </a>
+        </h1>
+        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+</div>
+{% endblock content %}

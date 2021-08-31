@@ -1,0 +1,40 @@
+{% macro search(input="search-input", results="search-results") %}
+<article class="panel is-link">
+  <div class="panel-block">
+    <p class="control has-icons-left">
+      <input id="{{ input }}" class="input" type="text" placeholder="search" onkeyup="doSearch()">
+      <span class="icon is-left">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </span>
+    </p>
+  </div>
+  <div id="{{ results }}"></div>
+</article>
+{% endmacro %}
+
+{% macro search_init(input="search-input", results="search-results") %}
+<script type="module">
+  import { search, default as init } from "{{ get_url(path='/tinysearch_engine.js') | safe }}";
+  window.search = search;
+  async function run() { await init("{{ get_url(path='/tinysearch_engine_bg.wasm') | safe }}"); }
+  run();
+</script>
+<script>
+  function doSearch() {
+    let value = document.getElementById("{{ input }}").value;
+    console.log(`Search query: ${value}`);
+    const results = search(value, 5);
+    console.log(`Results: ${results}`);
+    let ul = document.getElementById("{{ results }}");
+    ul.innerHTML = "";
+    for (i = 0; i < results.length; i++) {
+      let [title, url] = results[i];
+      let elemlink = document.createElement('a');
+      elemlink.className = "panel-block";
+      elemlink.innerHTML = title;
+      elemlink.setAttribute('href', url);
+      ul.appendChild(elemlink);
+    }
+  }
+</script>
+{% endmacro %}
