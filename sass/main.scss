@@ -1,3 +1,51 @@
+body {
+  font-family: 'Open Sans', serif;
+  padding-top: 54px;
+  color: #868e96;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Saira Extra Condensed', serif;
+  font-weight: 700;
+  color: #343a40;
+}
+
+
+h1, h2{
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 5.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+.bg-primary {
+  background-color: #BD5D38 !important;
+}
+
+.text-primary {
+  color: #BD5D38 !important;
+}
+
+a {
+  color: #BD5D38;
+}
+
+a:hover, a:focus, a:active {
+  color: #824027;
+}
+
+
 @media (min-width: 992px) {
   #sidebar {
     top: 0;
@@ -21,4 +69,27 @@
     max-height: 10rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
   }
+  #menu {
+    display: block;
+    align-items: flex-start;
+    margin-bottom: auto;
+    flex-grow: 0
+  }
+  
+  .menu-list a {
+    color: rgba(255,255,255,.55);
+    font-weight: bold;
+    padding: .5rem;
+  }
+
+  .menu-list a:hover, a:focus, a:active {
+    color: rgba(255,255,255,.75);
+    font-weight: bold;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+  }
 }
+
+
+

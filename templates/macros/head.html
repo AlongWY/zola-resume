@@ -1,6 +1,7 @@
 {% macro stylesheet() %}
 <!-- CSS -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <link rel="stylesheet" href="{{ get_url(path='main.css', trailing_slash=false) }}">
@@ -25,7 +26,7 @@
 
 {% macro avatar() %}
 {% if config.extra.resume_avatar %}
-<div style="display:block;margin:auto;">
+<div style="display:block;margin:auto auto 0;padding:.5rem">
     <figure class="image">
         <img id="avatar" class="is-rounded" src="{{ config.extra.resume_avatar }}">
     </figure>
