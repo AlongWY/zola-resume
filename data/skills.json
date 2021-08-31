@@ -1,0 +1,82 @@
+[
+  {
+    "grouping": "Languages, Operating Systems & Tools",
+    "skills": [
+      "Cplusplus",
+      "Rust",
+      "Java",
+      "Python",
+      "git",
+      "linux",
+      "bash",
+      "javascript"
+    ]
+  },
+  {
+    "grouping": "Platform Development & Administration",
+    "skills": [
+      "NGINX",
+      "MySQL",
+      {
+        "name": "Slurm",
+        "icon": "bash"
+      }
+    ]
+  },
+  {
+    "grouping": "Data Management",
+    "skills": [
+      {
+        "name": "MySQL/MariaDB",
+        "icon": "MySQL"
+      },
+      {
+        "name": "Sqlite",
+        "icon": "bash"
+      }
+    ]
+  },
+  {
+    "grouping": "Architecture",
+    "skills": [
+      {
+        "name": "IP Networking",
+        "icon": "bash"
+      },
+      {
+        "name": "DNS",
+        "icon": "bash"
+      },
+      {
+        "name": "Firewalls",
+        "icon": "bash"
+      },
+      {
+        "name": "Load Balancing",
+        "icon": "bash"
+      },
+      {
+        "name": "Microservices",
+        "icon": "bash"
+      },
+      {
+        "name": "RESTful APIs",
+        "icon": "bash"
+      }
+    ]
+  },
+  {
+    "grouping": "Containers & Cloud",
+    "skills": [
+      {
+        "name": "Docker",
+        "link": "https://docker.com"
+      },
+      {
+        "name": "Aliyun",
+        "link": "https://aliyun.com",
+        "icon": "bash"
+      }
+    ]
+  }
+]

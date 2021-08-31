@@ -2,47 +2,46 @@
 <ul id="menu" class="menu-list">
     
 {% if config.extra.show_about           %}
-<li data-menuanchor="about"><a href="/#about">ABOUT</a></li>   
+<li data-menuanchor="about"><a href="/#anchor_about">ABOUT</a></li>   
 {% endif %}
 {% if config.extra.show_skills          %} 
-<li data-menuanchor="skills"><a href="/#skills">SKILLS</a></li>
+<li data-menuanchor="skills"><a href="/#anchor_skills">SKILLS</a></li>
 {% endif %}
 {% if config.extra.show_projects        %}
-<li data-menuanchor="projects"><a href="/#projects">PROJECTS</a></li>
+<li data-menuanchor="projects"><a href="/#anchor_projects">PROJECTS</a></li>
 {% endif %}
 {% if config.extra.show_opensource      %} 
-<li data-menuanchor="opensource"><a href="/#opensource">OPEN SOURCE</a></li>
+<li data-menuanchor="opensource"><a href="/#anchor_opensource">OPEN SOURCE</a></li>
 {% endif %}
 {% if config.extra.show_publications    %}
-<li data-menuanchor="publications"><a href="/#publications">PUBLICATIONS</a></li>
+<li data-menuanchor="publications"><a href="/#anchor_publications">PUBLICATIONS</a></li>
 {% endif %}
 {% if config.extra.show_experience      %} 
-<li data-menuanchor="experience"><a href="/#experience">EXPERIENCE</a></li>
+<li data-menuanchor="experience"><a href="/#anchor_experience">EXPERIENCE</a></li>
 {% endif %}
 {% if config.extra.show_education       %} 
-<li data-menuanchor="education"><a href="/#education">EDUCATION</a></li>
+<li data-menuanchor="education"><a href="/#anchor_education">EDUCATION</a></li>
 {% endif %}
 {% if config.extra.show_blog            %} 
-<li data-menuanchor="blog"><a href="/#blog">BLOG</a></li>    
+<li data-menuanchor="blog"><a href="/#anchor_blog">BLOG</a></li>    
 {% endif %}
 </ul>
 {% endmacro %}
 
 {% macro fullpage() %}
-<script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
+<script src="{{ get_url(path='js/fullpage.js', trailing_slash=false) }}"></script>
 <script type="text/javascript">
     var fullpages = new fullpage('#fullpage', {
-        licenseKey: 'OPEN-SOURCE-MIT-LICENSE',
         menu: '#menu',
         anchors: [
-            {% if config.extra.show_about           %} 'about',         {% endif %}
-            {% if config.extra.show_skills          %} 'skills',        {% endif %}
-            {% if config.extra.show_projects        %} 'projects',      {% endif %}
-            {% if config.extra.show_opensource      %} 'opensource',    {% endif %}
-            {% if config.extra.show_publications    %} 'publications',  {% endif %}
-            {% if config.extra.show_experience      %} 'experience',    {% endif %}
-            {% if config.extra.show_education       %} 'education',     {% endif %}
-            {% if config.extra.show_blog            %} 'blog',          {% endif %}
+            {% if config.extra.show_about           %} 'anchor_about',         {% endif %}
+            {% if config.extra.show_skills          %} 'anchor_skills',        {% endif %}
+            {% if config.extra.show_projects        %} 'anchor_projects',      {% endif %}
+            {% if config.extra.show_opensource      %} 'anchor_opensource',    {% endif %}
+            {% if config.extra.show_publications    %} 'anchor_publications',  {% endif %}
+            {% if config.extra.show_experience      %} 'anchor_experience',    {% endif %}
+            {% if config.extra.show_education       %} 'anchor_education',     {% endif %}
+            {% if config.extra.show_blog            %} 'anchor_blog',          {% endif %}
         ],
     });
 </script>

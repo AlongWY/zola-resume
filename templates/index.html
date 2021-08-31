@@ -1,60 +1,61 @@
+{% import 'partials/about.html' as partial_about -%}
+{% import 'partials/skills.html' as partial_skills -%}
+{% import 'partials/projects.html' as partial_projects -%}
+{% import 'partials/opensource.html' as partial_opensource -%}
+{% import 'partials/publications.html' as partial_publications -%}
+{% import 'partials/experience.html' as partial_experience -%}
+{% import 'partials/education.html' as partial_education -%}
+{% import 'partials/blog.html' as partial_blog -%}
+
 {% extends "base.html" %}
 
 {% block content %}
 <div id="fullpage">
   {% if config.extra.show_about %}
-  <div class="section" id="about">
-    {% set section = get_section(path="about/_index.md") %}
-    {{ section.content | safe }}
+  <div class="section hero is-fullheight">
+    {{ partial_about::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_skills %}
-  <div class="section" id="skills">
-    {% set section = get_section(path="skills/_index.md") %}
-    {{ section.content | safe }}
+  <div class="section hero is-fullheight">
+    {{ partial_skills::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_projects %}
-  <div class="section" id="projects">
-    {% set section = get_section(path="projects/_index.md") %}
-    {{ section.content | safe }}
+  <div class="section hero is-fullheight">
+    {{ partial_projects::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_opensource %}
-  <div class="section" id="opensource">
-    {% set section = get_section(path="opensource/_index.md") %}
-    {{ section.content | safe }}
+  <div class="section hero is-fullheight">
+    {{ partial_opensource::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_publications %}
-  <div class="section" id="publications">
-    {% set section = get_section(path="publications/_index.md") %}
-    {{ section.content | safe }}
+  <div class="section hero is-fullheight">
+    {{ partial_publications::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_experience %}
-  <div class="section" id="experience">
-    {% set section = get_section(path="experience/_index.md") %}
-    {{ section.content | safe }}
+  <div class="section hero is-fullheight">
+    {{ partial_experience::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_education %}
-  <div class="section" id="education">
-    {% set section = get_section(path="education/_index.md") %}
-    {{ section.content | safe }}
+  <div class="section hero is-fullheight">
+    {{ partial_education::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_blog %}
-  <div class="section" id="blog">
-    {% set section = get_section(path="blog/_index.md") %}
-    {{ section.content | safe }}
+  <div class="section hero is-fullheight">
+    {{ partial_blog::display() }}
   </div>
   {% endif %}
 

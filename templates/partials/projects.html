@@ -1,0 +1,17 @@
+{% macro display() %}
+{% set section = get_section(path="projects/_index.md") %}
+<div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
+  <h2>projects</h2>
+  {{ section.content | safe }}
+  {% for page in section.pages | reverse %}
+  <div class="post">
+    <h3 class="post-title">
+      <a href="{{ page.permalink }}">
+        {{ page.title }}
+      </a>
+    </h3>
+    <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}

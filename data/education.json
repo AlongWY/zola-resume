@@ -1,0 +1,16 @@
+[
+    {
+        "school": "[Harbin Institute of Technology](https://hit.edu.cn)",
+        "degree": "Computer Science and Technology",
+        "major": "Linear algebra, Multivariable calculus, Algorithm",
+        "notes": "Bachelor of Engineering",
+        "range": "2016 - 2020"
+    },
+    {
+        "school": "[Harbin Institute of Technology](https://hit.edu.cn)",
+        "degree": "Computer Science and Technology",
+        "major": "Natural language processing",
+        "notes": "Master of Engineering & PhD",
+        "range": "2020 - NOW"
+    }
+]

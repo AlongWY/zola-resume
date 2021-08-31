@@ -1,0 +1,24 @@
+{% macro display() %}
+{% set section = get_section(path="about/_index.md") %}
+<div class="is-flex is-flex-direction-column" style="height: 100%;">
+  <div style="flex: 1;">
+    <h1>{{ config.extra.first_name }} <span class="text-primary">{{ config.extra.last_name }}</span></h1>
+    <h2 class="subtitle">
+      {{ config.extra.address ~ " · " }} <a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a>
+    </h2>
+  </div>
+  <div style="flex: 2;">
+    {{ section.content | safe }}
+  </div>
+  <div class="is-flex is-flex-direction-column is-justify-content-center" style="flex: 2;">
+    <div>
+      <h3>Certifications</h3>
+      xxx
+    </div>
+    <div>
+      <h3>Socialization</h3>
+      xxx
+    </div>
+  </div>
+</div>
+{% endmacro %}

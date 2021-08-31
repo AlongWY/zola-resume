@@ -1,5 +1,0 @@
----
-title: "education"
----
-
-# Education

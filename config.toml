@@ -1,18 +1,18 @@
 base_url = "https://resume.alongwy.top"
 compile_sass = true
-title = "Resume"
+title = "Feng"
 description = "A clean resume theme"
 generate_feed = true
 
 
 [extra]
-resume_avatar = "/img/avatar.png"
-resume_sticky = true
-resume_reverse = false
-resume_theme = "theme-base-08"
-resume_links = [
-    {url = "https://google.com", name = "About"},
-]
+first_name = "Feng"
+last_name = "Yunlong"
+address = "Harbin, China"
+email = "ylfeng@ir.hit.edu.cn"
+favicon = "/favicon.ico"
+avatar = "/img/avatar.png"
+
 
 show_about = true
 show_skills = true

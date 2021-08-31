@@ -6,10 +6,12 @@ min_version = "0.11.0"
 demo = "https://resume.alongwy.top"
 
 [extra]
-resume_sticky = true
-resume_reverse = false
-resume_theme = ""
-resume_links = []
+first_name = "Feng"
+last_name = "Yunlong"
+address = "Harbin, China"
+email = "ylfeng@ir.hit.edu.cn"
+favicon = "/favicon.ico"
+avatar = "/img/avatar.png"
 
 show_about = true
 show_skills = true
