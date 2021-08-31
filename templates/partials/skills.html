@@ -2,28 +2,25 @@
 {% set data = load_data(path="data/skills.json") %}
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
   <h2>skills</h2>
-  {% for group in data %}
-  <h2 class="subtitle">{{ group.grouping }}</h2>
-  <nav class="level">
-    <div class="level-left">
-      {% for skill in group.skills %}
-      <div class="level-item has-text-centered">
-        <span class="icon"></span>
-        <div>
-          {% if "name" in skill %}
-          {% if "icon" in skill %}
-          <h6 class="title is-6"><span class="icon"><i class="devicon-{{  skill.icon | lower }}-plain"></i></span>{{ skill.name }}</h6>
-          {% else %}
-          <h6 class="title is-6"><span class="icon"><i class="devicon-{{  skill.name | lower }}-plain"></i></span>{{ skill.name }}</h6>
-          {% endif %}
-          {% else %}
-          <h6 class="title is-6"><span class="icon"><i class="devicon-{{  skill | lower }}-plain"></i></span>{{ skill }}</h6>
-          {% endif %}
-        </div>
+  <div>
+    {% for group in data %}
+    <div style="padding-bottom: 1rem;">
+      <h3 style="color: #868e96;">{{ group.grouping }}</h3>
+      <div>
+        {% for skill in group.skills %}
+        {% if "name" in skill %}
+        {% if "icon" in skill %}
+        <span class="icon"><i class="devicon-{{  skill.icon | lower }}-plain"></i></span>{{ skill.name }}
+        {% else %}
+        <span class="icon"><i class="devicon-{{  skill.name | lower }}-plain"></i></span>{{ skill.name }}
+        {% endif %}
+        {% else %}
+        <span class="icon"><i class="devicon-{{  skill | lower }}-plain"></i></span>{{ skill }}
+        {% endif %}
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
-  </nav>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>
 {% endmacro %}
