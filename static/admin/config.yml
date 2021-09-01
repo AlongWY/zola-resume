@@ -111,7 +111,7 @@ collections:
         description: "网站设置"
         fields:
           - { label: "标题", name: "title", widget: "string" }
-          - name: "params"
+          - name: "extra"
             label: "参数"
             widget: "object"
             fields:
@@ -130,12 +130,6 @@ collections:
               - {
                   label: "显示博客",
                   name: "showBlog",
-                  widget: "boolean",
-                  required: false,
-                }
-              - {
-                  label: "显示二维码",
-                  name: "showQr",
                   widget: "boolean",
                   required: false,
                 }
@@ -169,4 +163,3 @@ collections:
                   widget: "boolean",
                   required: false,
                 }
-              - { label: "网站图标", name: "favicon", widget: "image" }
