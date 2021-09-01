@@ -19,9 +19,11 @@ jobs:
         run: |
           chmod +x ./.github/tinysearch
           zola build
-          ./.github/tinysearch -p public public/json/index.html
+          ./.github/tinysearch -p static public/json/index.html
+          zola build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
