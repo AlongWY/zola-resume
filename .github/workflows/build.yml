@@ -35,12 +35,12 @@ jobs:
           tar -zxvf zola.tgz
           chmod +x zola
           ./zola build
-      - name: build search
-        uses: addnab/docker-run-action@v3
-        with:
-          image: tinysearch/cli
-          options: -v ${{ github.workspace }}:/tmp
-          run: tinysearch -p /tmp/public /tmp/public/json/index.html
+      # - name: build search
+      #   uses: addnab/docker-run-action@v3
+      #   with:
+      #     image: tinysearch/cli
+      #     options: -v ${{ github.workspace }}:/tmp
+      #     run: tinysearch -p /tmp/public /tmp/public/json/index.html
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
