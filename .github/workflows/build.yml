@@ -22,7 +22,7 @@ jobs:
         with:
           image: tinysearch/cli
           options: -v ${{ github.workspace }}:/tmp
-          run: -p /tmp/static /tmp/public/json/index.html
+          run: /usr/local/cargo/bin/tinysearch -p /tmp/static /tmp/public/json/index.html
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
