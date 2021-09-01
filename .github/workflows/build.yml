@@ -17,9 +17,9 @@ jobs:
           brew install zola wasm-pack binaryen
       - name: build
         run: |
-          chmod +x ./github/tinysearch
+          chmod +x ./.github/tinysearch
           zola build
-          ./github/tinysearch -p static public/json/index.html
+          ./.github/tinysearch -p static public/json/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
