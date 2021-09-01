@@ -2,3 +2,10 @@
 /.idea
 /public
 /storage
+/static/.gitignore
+/static/demo.html
+/static/package.json
+/static/tinysearch_engine.js
+/static/tinysearch_engine.d.ts
+/static/tinysearch_engine_bg.wasm
+/static/tinysearch_engine_bg.wasm.d.ts
