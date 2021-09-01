@@ -13,6 +13,34 @@
 {% endmacro %}
 
 {% macro search_init(input="search-input", results="search-results") %}
+{% if config.build_search_index %}
+<script>
+  function doSearch() {
+    let value = document.getElementById("{{ input }}").value;
+    var options = {
+      bool: "AND",
+      fields: {
+        title: { boost: 2 },
+        body: { boost: 1 },
+      }
+    };
+    var index = elasticlunr.Index.load(window.searchIndex);
+    const results = index.search(value, options);
+    let ul = document.getElementById("{{ results }}");
+    ul.innerHTML = "";
+    for (i = 0; i < results.length; i++) {
+      console.log(`Results: ${results[i]}`);
+      let url = results[i].ref;
+      let title = results[i].doc.title; // doc.body
+      let elemlink = document.createElement('a');
+      elemlink.className = "panel-block";
+      elemlink.innerHTML = title;
+      elemlink.setAttribute('href', url);
+      ul.appendChild(elemlink);
+    }
+  }
+</script>
+{% else %}
 <script type="module">
   import { search, default as init } from "{{ get_url(path='/tinysearch_engine.js') | safe }}";
   window.search = search;
@@ -22,9 +50,7 @@
 <script>
   function doSearch() {
     let value = document.getElementById("{{ input }}").value;
-    console.log(`Search query: ${value}`);
     const results = search(value, 5);
-    console.log(`Results: ${results}`);
     let ul = document.getElementById("{{ results }}");
     ul.innerHTML = "";
     for (i = 0; i < results.length; i++) {
@@ -37,4 +63,5 @@
     }
   }
 </script>
+{% endif %}
 {% endmacro %}

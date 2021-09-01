@@ -3,10 +3,14 @@ compile_sass = true
 title = "Feng"
 description = "A clean resume theme"
 generate_feed = true
-
+build_search_index = true
 taxonomies = [
   { name = "tags", feed = true },
 ]
+
+[markdown]
+highlight_code = true
+highlight_theme = "OneHalfLight"
 
 [extra]
 first_name = "Feng"

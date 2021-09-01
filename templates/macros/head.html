@@ -11,9 +11,12 @@
 {% macro javascript() %}
 <!-- JS -->
 {% if config.build_search_index %}
-<script src="{{ get_url(path='plugins/elasticlunr.min.js') | safe }}" defer></script>
-<script src="{{ get_url(path='search_index.' ~ config.default_language ~ " .js" ) | safe }}" defer></script>
-<script src="{{ get_url(path='js/search.js') | safe }}" defer></script>
+<script src="{{ get_url(path='elasticlunr.min.js') | safe }}" defer></script>
+{% if config.default_language %}
+<script src="{{ get_url(path='search_index.' ~ config.default_language ~ '.js' ) | safe }}" defer></script>
+{% else %}
+<script src="{{ get_url(path='search_index.en.js' ) | safe }}" defer></script>
+{% endif %}
 {% endif %}
 {% endmacro %}
 
