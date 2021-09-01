@@ -21,8 +21,8 @@ jobs:
             ~/.cargo/registry/cache
             ~/.cargo/git/db/
             ~/.cargo/git
-          key: brew-${{ hashFiles('.github/brew-formulae') }}
-          restore-keys: brew-
+          key: brew
+          restore-keys: brew
       - name: install
         run: |
           brew install zola wasm-pack binaryen
