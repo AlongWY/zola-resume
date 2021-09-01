@@ -2,5 +2,27 @@
 {% set data = load_data(path="data/experience.json") %}
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
   <h2>experience</h2>
+  {% for item in data %}
+  <div class="mb-5">
+    <nav class="level mb-0">
+      <div class="level-left">
+        <div class="level-item">
+          <h3>{{ item.role }}</h3>
+        </div>
+      </div>
+      <div class="level-right">
+        <div class="level-item">
+          {{ item.range }}
+        </div>
+      </div>
+    </nav>
+    <div class="is-flex is-flex-direction-column is-align-items-start">
+      <h2 class="subtitle">{{ item.company | markdown(inline=true) | safe }}</h2>
+      <div>
+        {{ item.summary | markdown(inline=true) | safe }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
 </div>
 {% endmacro %}

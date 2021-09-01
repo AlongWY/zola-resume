@@ -1,15 +1,15 @@
 ---
 title: "gpustat: a rust-version of gpustat."
 date: 2021-08-28T15:00:30.183Z
-link: https://crates.io/crates/gpustat
-image: /img/rust-logo-blk.svg
+extra:
+  link: https://crates.io/crates/gpustat
+  image: /img/rust-logo-blk.svg
 description: 📊 A simple command-line utility for querying and monitoring GPU status
-tags:
-  - Rust
-  - GPU
-  - Nvidia
-fact: Very Fast!
-weight: 30
+taxonomies:
+  tags:
+    - Rust
+    - GPU
+    - Nvidia
 ---
 ### gpustat
 

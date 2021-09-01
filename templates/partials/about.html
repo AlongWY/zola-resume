@@ -1,5 +1,5 @@
 {% macro display() %}
-{% set section = get_section(path="about/_index.md") %}
+{% set section = get_section(path="_index.md") %}
 <div class="is-flex is-flex-direction-column" style="height: 100%;">
   <div style="flex: 1;">
     <h1>{{ config.extra.first_name }} <span class="text-primary">{{ config.extra.last_name }}</span></h1>
@@ -7,27 +7,29 @@
       {{ config.extra.address ~ " · " }} <a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a>
     </h2>
   </div>
-  <div class="content" style="flex: 2;">
-    {{ section.content | safe }}
+  <div class="is-flex is-flex-direction-column is-justify-content-center" style="flex: 1;">
+    <div class="content">
+      {{ section.content | safe }}
+    </div>
   </div>
-  <div class="is-flex is-flex-direction-column is-justify-content-center" style="flex: 2;">
+  <div class="is-flex is-flex-direction-column is-justify-content-center" style="flex: 1;">
     <div>
       <h3>Certifications</h3>
       {% set data = load_data(path="data/certifications.json") %}
       {% for item in data %}
-      <a href="{{ item.proof }}"data-toggle="tooltip" title="{{ item.name }}" data-offset="0,10" rel="me">
+      <a href="{{ item.proof }}" data-toggle="tooltip" title="{{ item.name }}" data-offset="0,10" rel="me">
         <figure class="image is-64x64">
           <img src="{{ item.badge }}">
         </figure>
       </a>
       {% endfor %}
-      
     </div>
     <div>
       <h3>Socialization</h3>
       {% set data = load_data(path="data/social.json") %}
       {% for item in data %}
-      <a href="{{ item.link }}" style="font-size: 1.75rem;" data-toggle="tooltip" title="{{ item.name }}" data-offset="0,10" rel="me">
+      <a href="{{ item.link }}" style="font-size: 1.75rem;" data-toggle="tooltip" title="{{ item.name }}"
+        data-offset="0,10" rel="me">
         <span class="fa-stack">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fab fa-{{ item.name | lower }} fa-stack-1x fa-inverse"></i>

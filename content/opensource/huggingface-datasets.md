@@ -1,16 +1,16 @@
 ---
 title: Huggingface/datasets
 date: 2021-08-28T14:13:14.674Z
-featured: true
-link: https://github.com/huggingface/datasets
-image: /img/huggingface_logo.svg
+extra:
+  featured: true
+  link: https://github.com/huggingface/datasets
+  image: /img/huggingface_logo.svg
 description: 🤗 The largest hub of ready-to-use datasets for ML models with
   fast, easy-to-use and efficient data manipulation tools
-tags:
-  - NLP
-  - Datasets
-fact: ""
-weight: 10
+taxonomies:
+  tags:
+    - NLP
+    - Datasets
 ---
 🤗 Datasets is a lightweight library providing two main features:
 

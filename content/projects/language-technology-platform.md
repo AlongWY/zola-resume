@@ -1,24 +1,22 @@
 ---
 title: Language Technology Platform
 date: 2021-08-28T11:35:41.496Z
-featured: true
-link: https://github.com/HIT-SCIR/ltp
-image: /img/ltp.png
+extra:
+  featured: true
+  link: https://github.com/HIT-SCIR/ltp
+  image: /img/ltp.png
 description: "An open-source neural language technology platform supporting
   six   fundamental Chinese NLP tasks: <ul>   <li>lexical analysis (Chinese word
   segmentation,   part-of-speech tagging, and named entity
   recognition)</li>   <li>syntactic parsing   (dependency
   parsing)</li>   <li>semantic parsing (semantic dependency parsing
   and   semantic role labeling)</li> </ul>"
-tags:
-  - Python
-  - Pytorch
-  - NLP
-  - Chinese
-fact: A collection of tools to process Chinese.
-sitemap:
-  priority: 0.8
-weight: 10
+taxonomies:
+  tags:
+    - Python
+    - Pytorch
+    - NLP
+    - Chinese
 ---
 ### Intro
 An open-source neural language technology platform supporting six fundamental Chinese NLP tasks:

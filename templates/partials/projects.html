@@ -1,17 +1,53 @@
 {% macro display() %}
 {% set section = get_section(path="projects/_index.md") %}
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
-  <h2><a href="/projects">creations</a></h2>
+  <h2><a href="{{ section.permalink }}">creations</a></h2>
   {{ section.content | safe }}
+  {% set remain = false %}
   {% for page in section.pages | reverse %}
-  <div class="post">
-    <h3 class="post-title">
-      <a href="{{ page.permalink }}">
-        {{ page.title }}
-      </a>
-    </h3>
-    <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+  {% if page.extra.featured %}
+  <div class="mb-5">
+    <nav class="level mb-0">
+      <div class="level-left">
+        <div class="level-item">
+          <h3 class="post-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+        </div>
+      </div>
+      <div class="level-right">
+        <div class="level-item">
+          <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+        </div>
+      </div>
+    </nav>
+    <div class="is-flex is-flex-direction-row">
+      {% if page.extra.image %}
+      <div class="mr-5">
+        <figure class="image is-128x128">
+          <img src="{{ page.extra.image }}">
+        </figure>
+      </div>
+      {% endif %}
+      {% if page.description %}
+      <div class="content">
+        {{ page.description | markdown() | safe }}
+        <a href="{{ page.permalink }}">Read More</a>
+      </div>
+      {% endif %}
+    </div>
+    {% if page.taxonomies.tags %}
+    <div class="tags">
+      {% for tag in page.taxonomies.tags %}
+      <span class="tag"><a href="/taxonomies/tags/{{ tag }}">{{ tag }}</a></span>
+      {% endfor %}
+    </div>
+    {% endif %}
   </div>
+  {% else %}
+  {% set_global remain = true %}
+  {% endif %}
   {% endfor %}
+  {% if remain %}
+  <h3><a href="{{ section.permalink }}">Wait! There's more..</a></h3>
+  {% endif %}
 </div>
 {% endmacro %}

@@ -1,22 +1,20 @@
 ---
 title: "NotFeed: A RSS Reader on GitHub"
 date: 2021-08-28T11:40:32.885Z
-featured: true
-link: https://notcraft.alongwy.top/NotFeed/
-image: /img/notcraft.png
+extra:
+  featured: true
+  link: https://notcraft.alongwy.top/NotFeed/
+  image: /img/notcraft.png
 description: An RSS reader running entirely from your GitHub
   repo.  <ul>   <li>Free hosting on GitHub Pages. No ads. No third party
   tracking. </li>   <li>No need for backend. Content updates via GitHub
   Actions.</li>   <li>Customizable layouts and styles via templating and theming
   API. Just bring your HTML and CSS. </li>   <li>Free and open source. No
   third-party tracking.</li> </ul>
-tags:
-  - RSS
-  - Rust
-fact: No need backends!
-sitemap:
-  priority: 0.5
-weight: 20
+taxonomies:
+  tags:
+    - RSS
+    - Rust
 ---
 ### [NotCraft::NotFeed](https://notcraft.alongwy.top/NotFeed/)
 

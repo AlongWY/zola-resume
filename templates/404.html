@@ -1,8 +1,13 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 
 {% block content %}
-<div class="post">
-  <h1 class="post-title">404: Page not found</h1>
-  <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href={{ config.base_url }}>Head back home</a> to try finding it again.</p>
-</div>
+
+<section class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="">
+      <h1 class="post-title">404: Page not found</h1>
+      <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href={{ config.base_url }}>Head back home</a> to try finding it again.</p>
+    </div>
+  </div>
+</section>
 {% endblock content %}

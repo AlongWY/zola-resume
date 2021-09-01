@@ -1,10 +1,11 @@
 ---
 title: "HIT-SCIR at MRP 2020: Transition-based Parser and Iterative Inference Parser"
 date: 2020-09-01T11:00:06.142Z
-featured: true
-link: https://aclanthology.org/2020.conll-shared.6
-pubtype: Article
-image: /img/acl-logo.svg
+extra:
+  featured: true
+  link: https://aclanthology.org/2020.conll-shared.6
+  pubtype: Article
+  image: /img/acl-logo.svg
 description: "This paper describes our submission system (HIT-SCIR) for
   the   CoNLL 2020 shared task: Cross-Framework and Cross-Lingual
   Meaning   Representation Parsing.</br> Our solution consists of two
@@ -13,13 +14,12 @@ description: "This paper describes our submission system (HIT-SCIR) for
   Flavor (2) frameworks   (DRG, AMR)</li> </ul> In the final evaluation, our
   system is ranked 3rd among the seven team both in Cross-Framework Track and
   Cross-Lingual Track, with the macro-averaged MRP F1 score of 0.81/0.69."
-tags:
-  - ACL
-  - Python
-  - Pytorch
-  - NLP
-fact: ""
-weight: 20
+taxonomies:
+  tags:
+    - ACL
+    - Python
+    - Pytorch
+    - NLP
 ---
 This paper describes our submission system (HIT-SCIR) for the CoNLL 2020 shared task: Cross-Framework and Cross-Lingual Meaning Representation Parsing. 
 
