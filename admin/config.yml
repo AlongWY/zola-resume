@@ -19,7 +19,7 @@ collections:
       - { label: "日期", name: "date", widget: "datetime" }
       - { label: "简介", name: "description", widget: "string" }
       - label: "分类"
-        name: "extra"
+        name: "taxonomies"
         widget: "object"
         fields:
           - { label: "标签", name: "tags", widget: "list", required: false }
@@ -31,6 +31,7 @@ collections:
           - { label: "项目/网址链接", name: "link", widget: "string" }
           - { label: "项目图片", name: image, widget: "image" }
       - { label: "正文", name: "body", widget: "markdown" }
+
   - name: "Projects"
     label: "开源项目"
     folder: "content/projects"
@@ -40,7 +41,7 @@ collections:
       - { label: "日期", name: "date", widget: "datetime" }
       - { label: "简介", name: "description", widget: "string" }
       - label: "分类"
-        name: "extra"
+        name: "taxonomies"
         widget: "object"
         fields:
           - { label: "标签", name: "tags", widget: "list", required: false }
@@ -62,7 +63,7 @@ collections:
       - { label: "日期", name: "date", widget: "datetime" }
       - { label: "简介", name: "description", widget: "string" }
       - label: "分类"
-        name: "extra"
+        name: "taxonomies"
         widget: "object"
         fields:
           - { label: "标签", name: "tags", widget: "list", required: false }
@@ -84,7 +85,7 @@ collections:
       - { label: "日期", name: "date", widget: "datetime" }
       - { label: "简介", name: "description", widget: "string" }
       - label: "分类"
-        name: "extra"
+        name: "taxonomies"
         widget: "object"
         fields:
           - { label: "标签", name: "tags", widget: "list", required: false }
