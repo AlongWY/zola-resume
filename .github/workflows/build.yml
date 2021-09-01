@@ -12,18 +12,35 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v2
-      - name: build
-        uses: shalzz/zola-deploy-action@master
+      - name: Download zola
         env:
-          TOKEN: ${{ secrets.TOKEN }}
-          BUILD_DIR: .
-          BUILD_ONLY: true
+          GITHUB_PAT: ${{ github.token }}
+          REPO: "getzola/zola"
+          VERSION: "latest"
+          MATCH: "zola-.+-x86_64-unknown-linux-musl.tar.gz$"
+          RENAME: "zola.tgz"
+        shell: bash
+        run: |
+          curl -sL --fail \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: Bearer ${GITHUB_PAT}" \
+              "https://api.github.com/repos/${REPO}/releases/${VERSION}" \
+              | jq -r ".assets | .[] | select(.name | test(\"${MATCH}\")) | .url" \
+              | tee asset.url
+          curl -sL --fail \
+            -H "Accept: application/octet-stream" \
+            -H "Authorization: Bearer ${GITHUB_PAT}" \
+              -o "${RENAME}" \
+              "$(cat asset.url)"
+          tar -zxvf zola.tgz
+          chmod +x zola
+          ./zola build
       - name: build search
         uses: addnab/docker-run-action@v3
         with:
           image: tinysearch/cli
           options: -v ${{ github.workspace }}:/tmp
-          run: tinysearch -p /tmp/static /tmp/public/json/index.html
+          run: tinysearch -p /tmp/public /tmp/public/json/index.html
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
