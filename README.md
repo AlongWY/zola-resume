@@ -1,67 +1,140 @@
-# Resume
-Resume is a brazen two-column [Zola](https://github.com/getzola/zola) theme based on [Hyde](https://github.com/getzola/hyde).
+# Zola Resume
 
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
+Redesigned form [hugo resume](https://github.com/eddiewebb/hugo-resume).
 
+## Features
++ This is basically a single-page website with auto-scrolling based on left-hand nav.
++ Dedicated project/publications pages allow more detail.
++ Includes a client-side search at '/search'. 
++ Includes an `/admin` endpoint that can allow authorized users to use a WYSIWYG editor and commit files back to markdown, but with a Wordpress/CMS like experience.
 
-## Contents
-
-- [Installation](#installation)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Sticky sidebar content](#sticky-sidebar-content)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-
-## Installation
-First download this theme to your `themes` directory:
+## Quick Start
 
 ```bash
-cd themes
-git clone https://github.com/alongwy/zola-resume.git
+git clone git@github.com:alongwy/zola-resume.git
+cd adidoks
+zola serve
+# open http://127.0.0.1:1111/
 ```
-and then enable it in your `config.toml`:
+
+## Installation
+Just earlier we showed you how to run the theme directly. Now we start to install the theme in an existing site step by step.
+
+### Step 1: Create a new zola site
+
+```bash
+zola init mysite
+```
+
+### Step 2: Install AdiDoks
+Download this theme to your themes directory:
+
+```bash
+cd mysite/themes
+git clone git@github.com:alongwy/zola-resume.git
+```
+
+Or install as a submodule:
+
+```bash
+cd mysite
+git init  # if your project is a git repository already, ignore this command
+git submodule add git@github.com:alongwy/zola-resume.git themes/zola-resume
+```
+
+### Step 3: Configuration
+Enable the theme in your config.toml in the site derectory:
 
 ```toml
 theme = "zola-resume"
 ```
 
-## Options
+Or copy the config.toml.example from the theme directory to your project's root directory:
 
-### Sidebar menu
-Set a field in `extra` with a key of `resume_links`:
-```toml
-[extra]
-resume_links = [
-    {url = "https://google.com", name = "Google.com"},
-    {url = "https://google.fr", name = "Google.fr"},
-]
-```
-Each link needs to have a `url` and a `name`.
-
-### Sticky sidebar content
-By default Hyde ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disable this by setting `resume_sticky` to false in your `config.toml`.
-
-### Themes
-Hyde ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
-
-![Hyde in red](https://f.cloud.github.com/assets/98681/1831229/42b0b354-7384-11e3-8462-31b8df193fe5.png)
-
-There are eight themes available at this time.
-
-![Hyde theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
-
-To use a theme, set the `resume_theme` field in `config.toml` to any of the themes name:
-
-```toml
-[extra]
-resume_theme = "theme-base-08"
+```bash
+cp themes/zola-resume/config.toml.example config.toml
 ```
 
-To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/hyde/blob/master/public/css/hyde.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
+#### For CMS
 
-### Reverse layout
+```bash
+cp themes/zola-resume/static/admin/config.yml static/admin/config.yml
+```
 
-![Hyde with reverse layout](https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png)
+and change those
 
-Hyde's page orientation can be reversed by setting `resume_reverse` to `true` in the `config.toml`.
+```yaml
+# static/admin/config.yml
+
+backend:
+  name: github
+  repo: USERNAME/REPO
+  branch: BRANCH
+  cms_label_prefix: netlify-cms/
+  site_domain: DOMAIN.netlify.com
+```
+
+### Step 4: Add new content
+You can copy the content from the theme directory to your project:
+
+```
+cp -r themes/zola-resume/content .
+```
+
+You can modify or add new posts in the content/blog, content/projects or other content directories as needed.
+
+### Step 5: Run the project
+Just run zola serve in the root path of the project:
+
+```
+zola serve
+```
+
+This will start the Zola development web server accessible by default at http://127.0.0.1:1111. Saved changes will live reload in the browser.
+
+## Examples
+
+![screenshot](https://raw.githubusercontent.com/alongwy/zola-resume/master/screenshot.png)
+
+See [along's site](https://resume.alongwy.top) for a live example.
+
+## Setup & Use
+
+This theme uses a combination of custom sections and some data files to drive content.
+
+### Summary
+Edit the main `contents/_index.md with a brief bio/summary`
+
+### Data files
+Data files are used for simple content presented on the homepage.
+
+- [data/certifications.json](https://github.com/AlongWY/zola-resume/blob/main/data/certifications.json)
+- [data/social.json](https://github.com/AlongWY/zola-resume/blob/main/data/social.json)
+- [data/skills.json](https://github.com/AlongWY/zola-resume/blob/main/data/skills.json)
+- [data/experience.json](https://github.com/AlongWY/zola-resume/blob/main/data/experience.json)
+- [data/education.json](https://github.com/AlongWY/zola-resume/blob/main/data/education.json)
+
+### Projects/Opensource
+
+The difference indicates your role as originator or colaborator.
+
+### Publications
+Similar to projects, create them under `publications`. Include any papers, speaking engagements, articles, etc.
+
+### Blog / Posts
+Similar to posts, create them under `blog`. Include any thoughts, musiings, etc.
+**This template does not support a `posts` folder**
+
+### Template params
+
+Almost All personal information outside the above details is captured by extra in [`config.toml`](https://github.com/AlongWY/zola-resume/blob/main/config.toml), or can be edited in the "Settings" collection if using CMS.
+
+## CMS Editor with Netlify CMS
+**Does not require deployment to Netlify!**
+
+[Netlify CMS](https://www.netlifycms.org/) is an open source project that enables CMS like experience for static site generation tools like Hugo. This theme includes a fully working integration and guide in [static/admin](https://github.com/AlongWY/zola-resume/tree/main/static/admin)
+
+## Credits
+
+This project ports the Hugo Resume theme by Feng Yunlong to support zola.
+

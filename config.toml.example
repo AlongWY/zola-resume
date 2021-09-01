@@ -1,0 +1,32 @@
+base_url = "https://YOUR_WEB_SITE.URL"
+title = "Example"
+description = "Example"
+
+compile_sass = true
+generate_feed = true
+build_search_index = true
+taxonomies = [
+  { name = "tags", feed = true },
+]
+
+[markdown]
+highlight_code = true
+highlight_theme = "OneHalfLight"
+
+[extra]
+first_name = "First"
+last_name = "Last"
+address = "Unknown"
+email = "email@address.com"
+favicon = "/favicon.ico"
+avatar = "/img/avatar.png"
+
+
+show_about = true
+show_skills = true
+show_projects = true
+show_opensource = true
+show_publications = true
+show_experience = true
+show_education = true
+show_blog = true
