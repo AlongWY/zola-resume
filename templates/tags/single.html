@@ -1,7 +1,12 @@
 {% extends "base.html" %}
+
+{% block rss %}
+{% set rss_path = "tags/" ~ term.name ~ "/rss.xml" %}
+<link rel="alternate" type="application/rss+xml" title="RSS"
+  href="{{ get_url(path=rss_path, trailing_slash=false) }}">
+{% endblock rss %}
+
 {% block content %}
-
-
 <div class="container is-fluid" style="min-height: 100vh;">
   <div class="is-flex is-flex-direction-column is-justify-content-center" style="min-height: 100vh;">
     <h1>{{ term.name }}</h1>

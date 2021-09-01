@@ -11,7 +11,10 @@
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
   {{ macros_head::stylesheet() }}
   {{ macros_head::javascript() }}
+
+  {% block rss %}
   {{ macros_head::rss() }}
+  {% endblock %}
 
   {% block extra_head %}
   {% endblock extra_head %}
