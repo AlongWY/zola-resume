@@ -12,14 +12,6 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v2
-      - name: Configure Homebrew cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/Library/Caches/Homebrew/
-            ~/Library/Caches/Homebrew/downloads/
-          key: homebrew
-          restore-keys: homebrew
       - name: install
         run: |
           brew install zola wasm-pack binaryen
@@ -28,7 +20,6 @@ jobs:
           chmod +x ./.github/tinysearch
           zola build
           ./.github/tinysearch -p public public/json/index.html
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
