@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: alongwy/zola-resume
-  branch: index
+  branch: main
   cms_label_prefix: netlify-cms/
   site_domain: resume-alongwy.netlify.com
 
