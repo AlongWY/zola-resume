@@ -18,6 +18,11 @@
   
 <!-- JS -->
 
+<script src="https://resume.alongwy.top/elasticlunr.min.js" defer></script>
+
+<script src="https://resume.alongwy.top/search_index.en.js" defer></script>
+
+
 
 
   
@@ -90,16 +95,16 @@
 <li>semantic parsing (semantic dependency parsing and semantic role labeling). </li>
 </ul>
 <h3 id="quickstart">Quickstart</h3>
-<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">from ltp import LTP
-
-ltp = LTP()  # 默认加载 Small 模型
-seg, hidden = ltp.seg([&quot;他叫汤姆去拿外衣。&quot;])
-pos = ltp.pos(hidden)
-ner = ltp.ner(hidden)
-srl = ltp.srl(hidden)
-dep = ltp.dep(hidden)
-sdp = ltp.sdp(hidden)
-</code></pre>
+<pre data-lang="python" style="background-color:#fafafa;color:#383a42;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#a626a4;">from </span><span>ltp </span><span style="color:#a626a4;">import </span><span style="color:#e45649;">LTP
+</span><span>
+</span><span>ltp </span><span style="color:#a626a4;">= </span><span style="color:#e45649;">LTP</span><span>()  </span><span style="color:#a0a1a7;"># 默认加载 Small 模型
+</span><span>seg, hidden </span><span style="color:#a626a4;">= </span><span>ltp.</span><span style="color:#e45649;">seg</span><span>([</span><span style="color:#50a14f;">&quot;他叫汤姆去拿外衣。&quot;</span><span>])
+</span><span>pos </span><span style="color:#a626a4;">= </span><span>ltp.</span><span style="color:#e45649;">pos</span><span>(hidden)
+</span><span>ner </span><span style="color:#a626a4;">= </span><span>ltp.</span><span style="color:#e45649;">ner</span><span>(hidden)
+</span><span>srl </span><span style="color:#a626a4;">= </span><span>ltp.</span><span style="color:#e45649;">srl</span><span>(hidden)
+</span><span>dep </span><span style="color:#a626a4;">= </span><span>ltp.</span><span style="color:#e45649;">dep</span><span>(hidden)
+</span><span>sdp </span><span style="color:#a626a4;">= </span><span>ltp.</span><span style="color:#e45649;">sdp</span><span>(hidden)
+</span></code></pre>
 <h3 id="performance">Performance</h3>
 <table><thead><tr><th align="left">Model</th><th align="center">CWS</th><th align="center">POS</th><th align="center">NER</th><th align="center">SRL</th><th align="center">DEP</th><th align="center">SDP</th><th align="center">Speed(Sents/S)</th></tr></thead><tbody>
 <tr><td align="left">LTP 4.0 (Base)</td><td align="center">98.70</td><td align="center">98.50</td><td align="center">95.4</td><td align="center">80.60</td><td align="center">89.50</td><td align="center">75.20</td><td align="center">39.12</td></tr>
@@ -109,32 +114,19 @@ sdp = ltp.sdp(hidden)
 <tr><td align="left">LTP 4.0 (Tiny)</td><td align="center">96.80</td><td align="center">97.10</td><td align="center">91.60</td><td align="center">70.90</td><td align="center">83.80</td><td align="center">70.10</td><td align="center">53.22</td></tr>
 </tbody></table>
 <h3 id="cite">Cite</h3>
-<pre data-lang="latex" class="language-latex "><code class="language-latex" data-lang="latex">@article{che2020n,
-  title={N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models},
-  author={Che, Wanxiang and Feng, Yunlong and Qin, Libo and Liu, Ting},
-  journal={arXiv preprint arXiv:2009.11616},
-  year={2020}
-}
-</code></pre>
+<pre data-lang="latex" style="background-color:#fafafa;color:#383a42;" class="language-latex "><code class="language-latex" data-lang="latex"><span>@article{che2020n,
+</span><span>  title={N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models},
+</span><span>  author={Che, Wanxiang and Feng, Yunlong and Qin, Libo and Liu, Ting},
+</span><span>  journal={arXiv preprint arXiv:2009.11616},
+</span><span>  year={2020}
+</span><span>}
+</span></code></pre>
 
     </div>
   </div>
 </div>
 
   </div>
-  <!-- 
-<article class="panel is-link">
-  <div class="panel-block">
-    <p class="control has-icons-left">
-      <input id="search-input" class="input" type="text" placeholder="search" onkeyup="doSearch()">
-      <span class="icon is-left">
-        <i class="fas fa-search" aria-hidden="true"></i>
-      </span>
-    </p>
-  </div>
-  <div id="search-results"></div>
-</article>
- -->
   
 <script src="https://resume.alongwy.top/js/fullpage.js"></script>
 <script type="text/javascript">
@@ -151,32 +143,6 @@ sdp = ltp.sdp(hidden)
              'anchor_blog',          
         ],
     });
-</script>
-
-  
-<script type="module">
-  import { search, default as init } from "https://resume.alongwy.top/tinysearch_engine.js";
-  window.search = search;
-  async function run() { await init("https://resume.alongwy.top/tinysearch_engine_bg.wasm"); }
-  run();
-</script>
-<script>
-  function doSearch() {
-    let value = document.getElementById("search-input").value;
-    console.log(`Search query: ${value}`);
-    const results = search(value, 5);
-    console.log(`Results: ${results}`);
-    let ul = document.getElementById("search-results");
-    ul.innerHTML = "";
-    for (i = 0; i < results.length; i++) {
-      let [title, url] = results[i];
-      let elemlink = document.createElement('a');
-      elemlink.className = "panel-block";
-      elemlink.innerHTML = title;
-      elemlink.setAttribute('href', url);
-      ul.appendChild(elemlink);
-    }
-  }
 </script>
 
 </body>

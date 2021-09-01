@@ -35,16 +35,16 @@
 &lt;li&gt;semantic parsing (semantic dependency parsing and semantic role labeling). &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;quickstart&quot;&gt;Quickstart&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;from ltp import LTP
-
-ltp = LTP()  # 默认加载 Small 模型
-seg, hidden = ltp.seg([&amp;quot;他叫汤姆去拿外衣。&amp;quot;])
-pos = ltp.pos(hidden)
-ner = ltp.ner(hidden)
-srl = ltp.srl(hidden)
-dep = ltp.dep(hidden)
-sdp = ltp.sdp(hidden)
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;ltp &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;LTP
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;ltp &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;LTP&lt;&#x2F;span&gt;&lt;span&gt;()  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# 默认加载 Small 模型
+&lt;&#x2F;span&gt;&lt;span&gt;seg, hidden &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;ltp.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;seg&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;他叫汤姆去拿外衣。&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;])
+&lt;&#x2F;span&gt;&lt;span&gt;pos &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;ltp.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;pos&lt;&#x2F;span&gt;&lt;span&gt;(hidden)
+&lt;&#x2F;span&gt;&lt;span&gt;ner &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;ltp.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;ner&lt;&#x2F;span&gt;&lt;span&gt;(hidden)
+&lt;&#x2F;span&gt;&lt;span&gt;srl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;ltp.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;srl&lt;&#x2F;span&gt;&lt;span&gt;(hidden)
+&lt;&#x2F;span&gt;&lt;span&gt;dep &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;ltp.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;dep&lt;&#x2F;span&gt;&lt;span&gt;(hidden)
+&lt;&#x2F;span&gt;&lt;span&gt;sdp &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a626a4;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;ltp.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;sdp&lt;&#x2F;span&gt;&lt;span&gt;(hidden)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;performance&quot;&gt;Performance&lt;&#x2F;h3&gt;
 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Model&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;CWS&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;POS&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;NER&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;SRL&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;DEP&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;SDP&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;Speed(Sents&#x2F;S)&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
 &lt;tr&gt;&lt;td align=&quot;left&quot;&gt;LTP 4.0 (Base)&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;98.70&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;98.50&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;95.4&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;80.60&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;89.50&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;75.20&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;39.12&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
@@ -54,13 +54,13 @@ sdp = ltp.sdp(hidden)
 &lt;tr&gt;&lt;td align=&quot;left&quot;&gt;LTP 4.0 (Tiny)&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;96.80&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;97.10&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;91.60&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;70.90&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;83.80&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;70.10&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;53.22&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
 &lt;h3 id=&quot;cite&quot;&gt;Cite&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;latex&quot; class=&quot;language-latex &quot;&gt;&lt;code class=&quot;language-latex&quot; data-lang=&quot;latex&quot;&gt;@article{che2020n,
-  title={N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models},
-  author={Che, Wanxiang and Feng, Yunlong and Qin, Libo and Liu, Ting},
-  journal={arXiv preprint arXiv:2009.11616},
-  year={2020}
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;latex&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-latex &quot;&gt;&lt;code class=&quot;language-latex&quot; data-lang=&quot;latex&quot;&gt;&lt;span&gt;@article{che2020n,
+&lt;&#x2F;span&gt;&lt;span&gt;  title={N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models},
+&lt;&#x2F;span&gt;&lt;span&gt;  author={Che, Wanxiang and Feng, Yunlong and Qin, Libo and Liu, Ting},
+&lt;&#x2F;span&gt;&lt;span&gt;  journal={arXiv preprint arXiv:2009.11616},
+&lt;&#x2F;span&gt;&lt;span&gt;  year={2020}
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">

@@ -34,8 +34,8 @@
 &lt;&#x2F;ul&gt;
 &lt;h4 id=&quot;quick-installation&quot;&gt;Quick Installation&lt;&#x2F;h4&gt;
 &lt;p&gt;Install from Cargo:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;cargo install gpustat
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre style=&quot;background-color:#fafafa;color:#383a42;&quot;&gt;&lt;code&gt;&lt;span&gt;cargo install gpustat
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h4 id=&quot;default-display&quot;&gt;Default display&lt;&#x2F;h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[0] | A100-PCIE-40GB | 65&#x27;C | 75 % | 33409 &#x2F; 40536 MB | along(33407M)&lt;&#x2F;p&gt;

@@ -18,6 +18,11 @@
   
 <!-- JS -->
 
+<script src="https://resume.alongwy.top/elasticlunr.min.js" defer></script>
+
+<script src="https://resume.alongwy.top/search_index.en.js" defer></script>
+
+
 
 
   
@@ -106,21 +111,21 @@ replace <code>&lt;repo&gt;</code> with your GitHub repo name.</p>
 <li>
 <p>In the sources, update the items to the sources you want to follow. The final content of the file should look similar
 to this:</p>
-<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml"># Config.toml
-
-site_title = &quot;ArxivDaily&quot;
-cache_max_days = 7
-sources = [
-  &quot;https:&#x2F;&#x2F;export.arxiv.org&#x2F;rss&#x2F;cs.CL&quot;
-]
-# proxy = &quot;http:&#x2F;&#x2F;127.0.0.1:7890&quot; ## Optional: default is None
-# statics_dir   = &quot;statics&quot;       ## Optional: default is &quot;statics&quot;
-# templates_dir = &quot;includes&quot;      ## Optional: default is &quot;includes&quot;
-# cache_url = &quot;https:&#x2F;&#x2F;GITHUB_USERNAME.github.io&#x2F;REPO_NAME&#x2F;cache.json&quot;
-# minify = true
-# [scripts]
-# highlight = &quot;scripts&#x2F;highlight.rhai&quot;
-</code></pre>
+<pre data-lang="toml" style="background-color:#fafafa;color:#383a42;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#a0a1a7;"># Config.toml
+</span><span>
+</span><span style="color:#e45649;">site_title </span><span>= </span><span style="color:#50a14f;">&quot;ArxivDaily&quot;
+</span><span style="color:#e45649;">cache_max_days </span><span>= </span><span style="color:#c18401;">7
+</span><span style="color:#e45649;">sources </span><span>= [
+</span><span>  </span><span style="color:#50a14f;">&quot;https://export.arxiv.org/rss/cs.CL&quot;
+</span><span>]
+</span><span style="color:#a0a1a7;"># proxy = &quot;http://127.0.0.1:7890&quot; ## Optional: default is None
+</span><span style="color:#a0a1a7;"># statics_dir   = &quot;statics&quot;       ## Optional: default is &quot;statics&quot;
+</span><span style="color:#a0a1a7;"># templates_dir = &quot;includes&quot;      ## Optional: default is &quot;includes&quot;
+</span><span style="color:#a0a1a7;"># cache_url = &quot;https://GITHUB_USERNAME.github.io/REPO_NAME/cache.json&quot;
+</span><span style="color:#a0a1a7;"># minify = true
+</span><span style="color:#a0a1a7;"># [scripts]
+</span><span style="color:#a0a1a7;"># highlight = &quot;scripts/highlight.rhai&quot;
+</span></code></pre>
 </li>
 <li>
 <p>Scroll to the bottom of the page, click &quot;Commit changes&quot; button.</p>
@@ -155,19 +160,6 @@ sources = [
 </div>
 
   </div>
-  <!-- 
-<article class="panel is-link">
-  <div class="panel-block">
-    <p class="control has-icons-left">
-      <input id="search-input" class="input" type="text" placeholder="search" onkeyup="doSearch()">
-      <span class="icon is-left">
-        <i class="fas fa-search" aria-hidden="true"></i>
-      </span>
-    </p>
-  </div>
-  <div id="search-results"></div>
-</article>
- -->
   
 <script src="https://resume.alongwy.top/js/fullpage.js"></script>
 <script type="text/javascript">
@@ -184,32 +176,6 @@ sources = [
              'anchor_blog',          
         ],
     });
-</script>
-
-  
-<script type="module">
-  import { search, default as init } from "https://resume.alongwy.top/tinysearch_engine.js";
-  window.search = search;
-  async function run() { await init("https://resume.alongwy.top/tinysearch_engine_bg.wasm"); }
-  run();
-</script>
-<script>
-  function doSearch() {
-    let value = document.getElementById("search-input").value;
-    console.log(`Search query: ${value}`);
-    const results = search(value, 5);
-    console.log(`Results: ${results}`);
-    let ul = document.getElementById("search-results");
-    ul.innerHTML = "";
-    for (i = 0; i < results.length; i++) {
-      let [title, url] = results[i];
-      let elemlink = document.createElement('a');
-      elemlink.className = "panel-block";
-      elemlink.innerHTML = title;
-      elemlink.setAttribute('href', url);
-      ul.appendChild(elemlink);
-    }
-  }
 </script>
 
 </body>

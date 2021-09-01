@@ -34,8 +34,8 @@
 &lt;&#x2F;ul&gt;
 &lt;h4 id=&quot;quick-installation&quot;&gt;Quick Installation&lt;&#x2F;h4&gt;
 &lt;p&gt;Install from Cargo:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;cargo install gpustat
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre style=&quot;background-color:#fafafa;color:#383a42;&quot;&gt;&lt;code&gt;&lt;span&gt;cargo install gpustat
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h4 id=&quot;default-display&quot;&gt;Default display&lt;&#x2F;h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[0] | A100-PCIE-40GB | 65&#x27;C | 75 % | 33409 &#x2F; 40536 MB | along(33407M)&lt;&#x2F;p&gt;
@@ -82,21 +82,21 @@ replace &lt;code&gt;&amp;lt;repo&amp;gt;&lt;&#x2F;code&gt; with your GitHub repo
 &lt;li&gt;
 &lt;p&gt;In the sources, update the items to the sources you want to follow. The final content of the file should look similar
 to this:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;toml&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;# Config.toml
-
-site_title = &amp;quot;ArxivDaily&amp;quot;
-cache_max_days = 7
-sources = [
-  &amp;quot;https:&amp;#x2F;&amp;#x2F;export.arxiv.org&amp;#x2F;rss&amp;#x2F;cs.CL&amp;quot;
-]
-# proxy = &amp;quot;http:&amp;#x2F;&amp;#x2F;127.0.0.1:7890&amp;quot; ## Optional: default is None
-# statics_dir   = &amp;quot;statics&amp;quot;       ## Optional: default is &amp;quot;statics&amp;quot;
-# templates_dir = &amp;quot;includes&amp;quot;      ## Optional: default is &amp;quot;includes&amp;quot;
-# cache_url = &amp;quot;https:&amp;#x2F;&amp;#x2F;GITHUB_USERNAME.github.io&amp;#x2F;REPO_NAME&amp;#x2F;cache.json&amp;quot;
-# minify = true
-# [scripts]
-# highlight = &amp;quot;scripts&amp;#x2F;highlight.rhai&amp;quot;
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# Config.toml
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;site_title &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;ArxivDaily&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;cache_max_days &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c18401;&quot;&gt;7
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;sources &lt;&#x2F;span&gt;&lt;span&gt;= [
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;export.arxiv.org&#x2F;rss&#x2F;cs.CL&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# proxy = &amp;quot;http:&#x2F;&#x2F;127.0.0.1:7890&amp;quot; ## Optional: default is None
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# statics_dir   = &amp;quot;statics&amp;quot;       ## Optional: default is &amp;quot;statics&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# templates_dir = &amp;quot;includes&amp;quot;      ## Optional: default is &amp;quot;includes&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# cache_url = &amp;quot;https:&#x2F;&#x2F;GITHUB_USERNAME.github.io&#x2F;REPO_NAME&#x2F;cache.json&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# minify = true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# [scripts]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# highlight = &amp;quot;scripts&#x2F;highlight.rhai&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Scroll to the bottom of the page, click &amp;quot;Commit changes&amp;quot; button.&lt;&#x2F;p&gt;

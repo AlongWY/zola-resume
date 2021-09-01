@@ -18,6 +18,11 @@
   
 <!-- JS -->
 
+<script src="https://resume.alongwy.top/elasticlunr.min.js" defer></script>
+
+<script src="https://resume.alongwy.top/search_index.en.js" defer></script>
+
+
 
 
   
@@ -103,8 +108,8 @@
 </ul>
 <h4 id="quick-installation">Quick Installation</h4>
 <p>Install from Cargo:</p>
-<pre><code>cargo install gpustat
-</code></pre>
+<pre style="background-color:#fafafa;color:#383a42;"><code><span>cargo install gpustat
+</span></code></pre>
 <h4 id="default-display">Default display</h4>
 <blockquote>
 <p>[0] | A100-PCIE-40GB | 65'C | 75 % | 33409 / 40536 MB | along(33407M)</p>
@@ -125,19 +130,6 @@
 </div>
 
   </div>
-  <!-- 
-<article class="panel is-link">
-  <div class="panel-block">
-    <p class="control has-icons-left">
-      <input id="search-input" class="input" type="text" placeholder="search" onkeyup="doSearch()">
-      <span class="icon is-left">
-        <i class="fas fa-search" aria-hidden="true"></i>
-      </span>
-    </p>
-  </div>
-  <div id="search-results"></div>
-</article>
- -->
   
 <script src="https://resume.alongwy.top/js/fullpage.js"></script>
 <script type="text/javascript">
@@ -154,32 +146,6 @@
              'anchor_blog',          
         ],
     });
-</script>
-
-  
-<script type="module">
-  import { search, default as init } from "https://resume.alongwy.top/tinysearch_engine.js";
-  window.search = search;
-  async function run() { await init("https://resume.alongwy.top/tinysearch_engine_bg.wasm"); }
-  run();
-</script>
-<script>
-  function doSearch() {
-    let value = document.getElementById("search-input").value;
-    console.log(`Search query: ${value}`);
-    const results = search(value, 5);
-    console.log(`Results: ${results}`);
-    let ul = document.getElementById("search-results");
-    ul.innerHTML = "";
-    for (i = 0; i < results.length; i++) {
-      let [title, url] = results[i];
-      let elemlink = document.createElement('a');
-      elemlink.className = "panel-block";
-      elemlink.innerHTML = title;
-      elemlink.setAttribute('href', url);
-      ul.appendChild(elemlink);
-    }
-  }
 </script>
 
 </body>
