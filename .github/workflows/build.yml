@@ -1,0 +1,31 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'Build only' 
+        uses: shalzz/zola-deploy-action@master
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          BUILD_DIR: .
+          BUILD_ONLY: true
+      - uses: addnab/docker-run-action@v3
+        with:
+          image: tinysearch/cli
+          options: -v ${{ github.workspace }}:/tmp
+          run: -p /tmp/static /tmp/public/json/index.html
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: resume.alongwy.top
