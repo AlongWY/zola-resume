@@ -19,8 +19,8 @@ jobs:
         run: |
           chmod +x ./.github/tinysearch
           zola build
-          ./.github/tinysearch -p static public/json/index.html
-          zola build
+          ./.github/tinysearch -p public public/json/index.html
+          rm public/.gitignore
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
