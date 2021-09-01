@@ -19,7 +19,7 @@ jobs:
         run: |
           chmod +x ./github/tinysearch
           zola build
-          ./github/tinysearch --optimize -p static public/json/index.html
+          ./github/tinysearch -p static public/json/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
