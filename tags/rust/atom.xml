@@ -84,18 +84,18 @@ replace &lt;code&gt;&amp;lt;repo&amp;gt;&lt;&#x2F;code&gt; with your GitHub repo
 to this:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;toml&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;# Config.toml
 
-site_title = &quot;ArxivDaily&quot;
+site_title = &amp;quot;ArxivDaily&amp;quot;
 cache_max_days = 7
 sources = [
-  &quot;https:&#x2F;&#x2F;export.arxiv.org&#x2F;rss&#x2F;cs.CL&quot;
+  &amp;quot;https:&amp;#x2F;&amp;#x2F;export.arxiv.org&amp;#x2F;rss&amp;#x2F;cs.CL&amp;quot;
 ]
-# proxy = &quot;http:&#x2F;&#x2F;127.0.0.1:7890&quot; ## Optional: default is None
-# statics_dir   = &quot;statics&quot;       ## Optional: default is &quot;statics&quot;
-# templates_dir = &quot;includes&quot;      ## Optional: default is &quot;includes&quot;
-# cache_url = &quot;https:&#x2F;&#x2F;GITHUB_USERNAME.github.io&#x2F;REPO_NAME&#x2F;cache.json&quot;
+# proxy = &amp;quot;http:&amp;#x2F;&amp;#x2F;127.0.0.1:7890&amp;quot; ## Optional: default is None
+# statics_dir   = &amp;quot;statics&amp;quot;       ## Optional: default is &amp;quot;statics&amp;quot;
+# templates_dir = &amp;quot;includes&amp;quot;      ## Optional: default is &amp;quot;includes&amp;quot;
+# cache_url = &amp;quot;https:&amp;#x2F;&amp;#x2F;GITHUB_USERNAME.github.io&amp;#x2F;REPO_NAME&amp;#x2F;cache.json&amp;quot;
 # minify = true
 # [scripts]
-# highlight = &quot;scripts&#x2F;highlight.rhai&quot;
+# highlight = &amp;quot;scripts&amp;#x2F;highlight.rhai&amp;quot;
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;

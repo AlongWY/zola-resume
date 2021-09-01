@@ -38,7 +38,7 @@
 &lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;from ltp import LTP
 
 ltp = LTP()  # 默认加载 Small 模型
-seg, hidden = ltp.seg([&quot;他叫汤姆去拿外衣。&quot;])
+seg, hidden = ltp.seg([&amp;quot;他叫汤姆去拿外衣。&amp;quot;])
 pos = ltp.pos(hidden)
 ner = ltp.ner(hidden)
 srl = ltp.srl(hidden)

@@ -93,7 +93,7 @@
 <pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">from ltp import LTP
 
 ltp = LTP()  # 默认加载 Small 模型
-seg, hidden = ltp.seg(["他叫汤姆去拿外衣。"])
+seg, hidden = ltp.seg([&quot;他叫汤姆去拿外衣。&quot;])
 pos = ltp.pos(hidden)
 ner = ltp.ner(hidden)
 srl = ltp.srl(hidden)
