@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container is-fluid" style="min-height: 100vh;">
+  <div class="is-flex is-flex-direction-column is-justify-content-center" style="min-height: 100vh;">
+    <h1>{{ term.name }}</h1>
+    {% if term.pages %}
+    {% for page in term.pages %}
+    <div class="card mb-5">
+      <header class="card-header">
+        <p class="card-header-title">
+          <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+        </p>
+      </header>
+      {% if page.description %}
+      <div class="card-content">
+        <div class="content">
+          {{ page.description | markdown() | safe }}
+          <a href="{{ page.permalink }}">Read More</a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+{% endblock content %}

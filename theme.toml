@@ -5,6 +5,13 @@ homepage = "https://github.com/alongwy/zola-resume"
 min_version = "0.11.0"
 demo = "https://resume.alongwy.top"
 
+compile_sass = true
+generate_feed = true
+
+taxonomies = [
+  { name = "tags", feed = true },
+]
+
 [extra]
 first_name = "Feng"
 last_name = "Yunlong"

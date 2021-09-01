@@ -4,6 +4,9 @@ title = "Feng"
 description = "A clean resume theme"
 generate_feed = true
 
+taxonomies = [
+  { name = "tags", feed = true },
+]
 
 [extra]
 first_name = "Feng"
