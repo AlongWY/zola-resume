@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Feng - EMNLP</title>
+	<subtitle>A clean resume theme</subtitle>
+	<link href="https://resume.alongwy.top/tags/emnlp/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://resume.alongwy.top"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-08-28T11:00:37.434+00:00</updated>
+	<id>https://resume.alongwy.top/tags/emnlp/atom.xml</id>
+	<entry xml:lang="en">
+		<title>N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models</title>
+		<published>2021-08-28T11:00:37.434+00:00</published>
+		<updated>2021-08-28T11:00:37.434+00:00</updated>
+		<link href="https://resume.alongwy.top/publications/n-ltp-a-open-source-neural-chinese-language-technology-platform-with-pretrained-models/" type="text/html"/>
+		<id>https://resume.alongwy.top/publications/n-ltp-a-open-source-neural-chinese-language-technology-platform-with-pretrained-models/</id>
+		<content type="html">&lt;p&gt;An open-source neural language technology platform supporting six fundamental Chinese NLP tasks: &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;lexical analysis (Chinese word segmentation, part-of-speech tagging, and named entity recognition)&lt;&#x2F;li&gt;
+&lt;li&gt;syntactic parsing (dependency parsing)&lt;&#x2F;li&gt;
+&lt;li&gt;semantic parsing (semantic dependency parsing and semantic role labeling). &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Unlike the existing state-of-the-art toolkits, such as Stanza, that adopt an independent model for each task, N-LTP adopts the multi-task framework by using a shared pre-trained model, which has the advantage of capturing the shared knowledge across relevant Chinese tasks. &lt;&#x2F;p&gt;
+&lt;p&gt;In addition, knowledge distillation where the single-task model teaches the multi-task model is further introduced to encourage the multi-task model to surpass its single-task teacher.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, we provide a collection of easy-to-use APIs and a visualization tool to make users easier to use and view the processing results directly. To the best of our knowledge, this is the first toolkit to support six Chinese NLP fundamental tasks. &lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

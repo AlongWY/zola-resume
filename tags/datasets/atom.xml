@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Feng - Datasets</title>
+	<subtitle>A clean resume theme</subtitle>
+	<link href="https://resume.alongwy.top/tags/datasets/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://resume.alongwy.top"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-08-28T14:13:14.674+00:00</updated>
+	<id>https://resume.alongwy.top/tags/datasets/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Huggingface&#x2F;datasets</title>
+		<published>2021-08-28T14:13:14.674+00:00</published>
+		<updated>2021-08-28T14:13:14.674+00:00</updated>
+		<link href="https://resume.alongwy.top/opensource/huggingface-datasets/" type="text/html"/>
+		<id>https://resume.alongwy.top/opensource/huggingface-datasets/</id>
+		<content type="html">&lt;p&gt;🤗 Datasets is a lightweight library providing two main features:&lt;&#x2F;p&gt;
+&lt;p&gt;one-line dataloaders for many public datasets: &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;one liners to download and pre-process any of the number of datasets major public datasets (in 467 languages and dialects!) provided on the HuggingFace Datasets Hub. With a simple command like &lt;code&gt;squad_dataset = load_dataset(&amp;quot;squad&amp;quot;)&lt;&#x2F;code&gt;, get any of these datasets ready to use in a dataloader for training&#x2F;evaluating a ML model (Numpy&#x2F;Pandas&#x2F;PyTorch&#x2F;TensorFlow&#x2F;JAX),&lt;&#x2F;li&gt;
+&lt;li&gt;efficient data pre-processing: simple, fast and reproducible data pre-processing for the above public datasets as well as your own local datasets in CSV&#x2F;JSON&#x2F;text. With simple commands like &lt;code&gt;tokenized_dataset = dataset.map(tokenize_example)&lt;&#x2F;code&gt;, efficiently prepare the dataset for inspection and ML model evaluation and training.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+</feed>

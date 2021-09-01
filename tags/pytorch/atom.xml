@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Feng - Pytorch</title>
+	<subtitle>A clean resume theme</subtitle>
+	<link href="https://resume.alongwy.top/tags/pytorch/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://resume.alongwy.top"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-08-28T11:35:41.496+00:00</updated>
+	<id>https://resume.alongwy.top/tags/pytorch/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Language Technology Platform</title>
+		<published>2021-08-28T11:35:41.496+00:00</published>
+		<updated>2021-08-28T11:35:41.496+00:00</updated>
+		<link href="https://resume.alongwy.top/projects/language-technology-platform/" type="text/html"/>
+		<id>https://resume.alongwy.top/projects/language-technology-platform/</id>
+		<content type="html">&lt;h3 id=&quot;intro&quot;&gt;Intro&lt;&#x2F;h3&gt;
+&lt;p&gt;An open-source neural language technology platform supporting six fundamental Chinese NLP tasks:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;lexical analysis (Chinese word segmentation, part-of-speech tagging, and named entity recognition)&lt;&#x2F;li&gt;
+&lt;li&gt;syntactic parsing (dependency parsing)&lt;&#x2F;li&gt;
+&lt;li&gt;semantic parsing (semantic dependency parsing and semantic role labeling). &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;quickstart&quot;&gt;Quickstart&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;from ltp import LTP
+
+ltp = LTP()  # 默认加载 Small 模型
+seg, hidden = ltp.seg([&quot;他叫汤姆去拿外衣。&quot;])
+pos = ltp.pos(hidden)
+ner = ltp.ner(hidden)
+srl = ltp.srl(hidden)
+dep = ltp.dep(hidden)
+sdp = ltp.sdp(hidden)
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;performance&quot;&gt;Performance&lt;&#x2F;h3&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Model&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;CWS&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;POS&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;NER&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;SRL&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;DEP&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;SDP&lt;&#x2F;th&gt;&lt;th align=&quot;center&quot;&gt;Speed(Sents&#x2F;S)&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;LTP 4.0 (Base)&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;98.70&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;98.50&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;95.4&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;80.60&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;89.50&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;75.20&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;39.12&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;LTP 4.0 (Base1)&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;99.22&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;98.73&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;96.39&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;79.28&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;89.57&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;76.57&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;--.--&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;LTP 4.0 (Base2)&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;99.18&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;98.69&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;95.97&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;79.49&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;90.19&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;76.62&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;--.--&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;LTP 4.0 (Small)&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;98.40&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;98.20&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;94.30&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;78.40&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;88.30&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;74.70&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;43.13&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;LTP 4.0 (Tiny)&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;96.80&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;97.10&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;91.60&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;70.90&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;83.80&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;70.10&lt;&#x2F;td&gt;&lt;td align=&quot;center&quot;&gt;53.22&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h3 id=&quot;cite&quot;&gt;Cite&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;latex&quot; class=&quot;language-latex &quot;&gt;&lt;code class=&quot;language-latex&quot; data-lang=&quot;latex&quot;&gt;@article{che2020n,
+  title={N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models},
+  author={Che, Wanxiang and Feng, Yunlong and Qin, Libo and Liu, Ting},
+  journal={arXiv preprint arXiv:2009.11616},
+  year={2020}
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models</title>
+		<published>2021-08-28T11:00:37.434+00:00</published>
+		<updated>2021-08-28T11:00:37.434+00:00</updated>
+		<link href="https://resume.alongwy.top/publications/n-ltp-a-open-source-neural-chinese-language-technology-platform-with-pretrained-models/" type="text/html"/>
+		<id>https://resume.alongwy.top/publications/n-ltp-a-open-source-neural-chinese-language-technology-platform-with-pretrained-models/</id>
+		<content type="html">&lt;p&gt;An open-source neural language technology platform supporting six fundamental Chinese NLP tasks: &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;lexical analysis (Chinese word segmentation, part-of-speech tagging, and named entity recognition)&lt;&#x2F;li&gt;
+&lt;li&gt;syntactic parsing (dependency parsing)&lt;&#x2F;li&gt;
+&lt;li&gt;semantic parsing (semantic dependency parsing and semantic role labeling). &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Unlike the existing state-of-the-art toolkits, such as Stanza, that adopt an independent model for each task, N-LTP adopts the multi-task framework by using a shared pre-trained model, which has the advantage of capturing the shared knowledge across relevant Chinese tasks. &lt;&#x2F;p&gt;
+&lt;p&gt;In addition, knowledge distillation where the single-task model teaches the multi-task model is further introduced to encourage the multi-task model to surpass its single-task teacher.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, we provide a collection of easy-to-use APIs and a visualization tool to make users easier to use and view the processing results directly. To the best of our knowledge, this is the first toolkit to support six Chinese NLP fundamental tasks. &lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>HIT-SCIR at MRP 2020: Transition-based Parser and Iterative Inference Parser</title>
+		<published>2020-09-01T11:00:06.142+00:00</published>
+		<updated>2020-09-01T11:00:06.142+00:00</updated>
+		<link href="https://resume.alongwy.top/publications/hit-scir-at-mrp-2020-transition-based-parser-and-iterative-inference-parser/" type="text/html"/>
+		<id>https://resume.alongwy.top/publications/hit-scir-at-mrp-2020-transition-based-parser-and-iterative-inference-parser/</id>
+		<content type="html">&lt;p&gt;This paper describes our submission system (HIT-SCIR) for the CoNLL 2020 shared task: Cross-Framework and Cross-Lingual Meaning Representation Parsing. &lt;&#x2F;p&gt;
+&lt;p&gt;The task includes five frameworks for graph-based meaning representations, i.e., UCCA, EDS, PTG, AMR, and DRG. &lt;&#x2F;p&gt;
+&lt;p&gt;Our solution consists of two sub-systems: 
++ transition-based parser for Flavor (1) frameworks (UCCA, EDS, PTG)
++ iterative inference parser for Flavor (2) frameworks (DRG, AMR). &lt;&#x2F;p&gt;
+&lt;p&gt;In the final evaluation, our system is ranked 3rd among the seven team both in Cross-Framework Track and Cross-Lingual Track, with the macro-averaged MRP F1 score of 0.81&#x2F;0.69.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

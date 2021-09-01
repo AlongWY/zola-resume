@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Feng - ACL</title>
+	<subtitle>A clean resume theme</subtitle>
+	<link href="https://resume.alongwy.top/tags/acl/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://resume.alongwy.top"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2020-09-01T11:00:06.142+00:00</updated>
+	<id>https://resume.alongwy.top/tags/acl/atom.xml</id>
+	<entry xml:lang="en">
+		<title>HIT-SCIR at MRP 2020: Transition-based Parser and Iterative Inference Parser</title>
+		<published>2020-09-01T11:00:06.142+00:00</published>
+		<updated>2020-09-01T11:00:06.142+00:00</updated>
+		<link href="https://resume.alongwy.top/publications/hit-scir-at-mrp-2020-transition-based-parser-and-iterative-inference-parser/" type="text/html"/>
+		<id>https://resume.alongwy.top/publications/hit-scir-at-mrp-2020-transition-based-parser-and-iterative-inference-parser/</id>
+		<content type="html">&lt;p&gt;This paper describes our submission system (HIT-SCIR) for the CoNLL 2020 shared task: Cross-Framework and Cross-Lingual Meaning Representation Parsing. &lt;&#x2F;p&gt;
+&lt;p&gt;The task includes five frameworks for graph-based meaning representations, i.e., UCCA, EDS, PTG, AMR, and DRG. &lt;&#x2F;p&gt;
+&lt;p&gt;Our solution consists of two sub-systems: 
++ transition-based parser for Flavor (1) frameworks (UCCA, EDS, PTG)
++ iterative inference parser for Flavor (2) frameworks (DRG, AMR). &lt;&#x2F;p&gt;
+&lt;p&gt;In the final evaluation, our system is ranked 3rd among the seven team both in Cross-Framework Track and Cross-Lingual Track, with the macro-averaged MRP F1 score of 0.81&#x2F;0.69.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

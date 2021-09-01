@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+  <title>Feng</title>
+  
+<!-- CSS -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.13.0/devicon.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<link rel="stylesheet" href="https://resume.alongwy.top/main.css">
+
+  
+<!-- JS -->
+
+
+
+  
+  
+<!-- RSS -->
+
+<link rel="alternate" type="application/atom+xml" title="RSS" href="https://resume.alongwy.top/atom.xml">
+
+
+  
+
+  
+  
+</head>
+
+<body>
+  <aside id="sidebar" class="menu is-hidden-touch">
+    
+
+<div style="display:block;margin:auto auto 0;padding:.5rem">
+    <figure class="image">
+        <img id="avatar" class="is-rounded" src="&#x2F;img&#x2F;avatar.png">
+    </figure>
+</div>
+
+
+    
+<ul id="menu" class="menu-list">
+    
+
+<li data-menuanchor="about"><a href="/#anchor_about">ABOUT</a></li>   
+
+ 
+<li data-menuanchor="skills"><a href="/#anchor_skills">SKILLS</a></li>
+
+
+<li data-menuanchor="projects"><a href="/#anchor_projects">PROJECTS</a></li>
+
+ 
+<li data-menuanchor="opensource"><a href="/#anchor_opensource">OPEN SOURCE</a></li>
+
+
+<li data-menuanchor="publications"><a href="/#anchor_publications">PUBLICATIONS</a></li>
+
+ 
+<li data-menuanchor="experience"><a href="/#anchor_experience">EXPERIENCE</a></li>
+
+ 
+<li data-menuanchor="education"><a href="/#anchor_education">EDUCATION</a></li>
+
+ 
+<li data-menuanchor="blog"><a href="/#anchor_blog">BLOG</a></li>    
+
+</ul>
+
+  </aside>
+  <div id="content">
+    <!-- Content -->
+    
+<div class="container is-fluid" style="min-height: 100vh;">
+  <div class="is-flex is-flex-direction-column is-justify-content-center" style="min-height: 100vh;">
+    <h2>Language Technology Platform</h2>
+    
+    <div class="content">
+      <h3 id="intro">Intro</h3>
+<p>An open-source neural language technology platform supporting six fundamental Chinese NLP tasks:</p>
+<ul>
+<li>lexical analysis (Chinese word segmentation, part-of-speech tagging, and named entity recognition)</li>
+<li>syntactic parsing (dependency parsing)</li>
+<li>semantic parsing (semantic dependency parsing and semantic role labeling). </li>
+</ul>
+<h3 id="quickstart">Quickstart</h3>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">from ltp import LTP
+
+ltp = LTP()  # 默认加载 Small 模型
+seg, hidden = ltp.seg(["他叫汤姆去拿外衣。"])
+pos = ltp.pos(hidden)
+ner = ltp.ner(hidden)
+srl = ltp.srl(hidden)
+dep = ltp.dep(hidden)
+sdp = ltp.sdp(hidden)
+</code></pre>
+<h3 id="performance">Performance</h3>
+<table><thead><tr><th align="left">Model</th><th align="center">CWS</th><th align="center">POS</th><th align="center">NER</th><th align="center">SRL</th><th align="center">DEP</th><th align="center">SDP</th><th align="center">Speed(Sents/S)</th></tr></thead><tbody>
+<tr><td align="left">LTP 4.0 (Base)</td><td align="center">98.70</td><td align="center">98.50</td><td align="center">95.4</td><td align="center">80.60</td><td align="center">89.50</td><td align="center">75.20</td><td align="center">39.12</td></tr>
+<tr><td align="left">LTP 4.0 (Base1)</td><td align="center">99.22</td><td align="center">98.73</td><td align="center">96.39</td><td align="center">79.28</td><td align="center">89.57</td><td align="center">76.57</td><td align="center">--.--</td></tr>
+<tr><td align="left">LTP 4.0 (Base2)</td><td align="center">99.18</td><td align="center">98.69</td><td align="center">95.97</td><td align="center">79.49</td><td align="center">90.19</td><td align="center">76.62</td><td align="center">--.--</td></tr>
+<tr><td align="left">LTP 4.0 (Small)</td><td align="center">98.40</td><td align="center">98.20</td><td align="center">94.30</td><td align="center">78.40</td><td align="center">88.30</td><td align="center">74.70</td><td align="center">43.13</td></tr>
+<tr><td align="left">LTP 4.0 (Tiny)</td><td align="center">96.80</td><td align="center">97.10</td><td align="center">91.60</td><td align="center">70.90</td><td align="center">83.80</td><td align="center">70.10</td><td align="center">53.22</td></tr>
+</tbody></table>
+<h3 id="cite">Cite</h3>
+<pre data-lang="latex" class="language-latex "><code class="language-latex" data-lang="latex">@article{che2020n,
+  title={N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models},
+  author={Che, Wanxiang and Feng, Yunlong and Qin, Libo and Liu, Ting},
+  journal={arXiv preprint arXiv:2009.11616},
+  year={2020}
+}
+</code></pre>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <!-- 
+<article class="panel is-link">
+  <div class="panel-block">
+    <p class="control has-icons-left">
+      <input id="search-input" class="input" type="text" placeholder="search" onkeyup="doSearch()">
+      <span class="icon is-left">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </span>
+    </p>
+  </div>
+  <div id="search-results"></div>
+</article>
+ -->
+  
+<script src="https://resume.alongwy.top/js/fullpage.js"></script>
+<script type="text/javascript">
+    var fullpages = new fullpage('#fullpage', {
+        menu: '#menu',
+        anchors: [
+             'anchor_about',         
+             'anchor_skills',        
+             'anchor_projects',      
+             'anchor_opensource',    
+             'anchor_publications',  
+             'anchor_experience',    
+             'anchor_education',     
+             'anchor_blog',          
+        ],
+    });
+</script>
+
+  
+<script type="module">
+  import { search, default as init } from "https://resume.alongwy.top/tinysearch_engine.js";
+  window.search = search;
+  async function run() { await init("https://resume.alongwy.top/tinysearch_engine_bg.wasm"); }
+  run();
+</script>
+<script>
+  function doSearch() {
+    let value = document.getElementById("search-input").value;
+    console.log(`Search query: ${value}`);
+    const results = search(value, 5);
+    console.log(`Results: ${results}`);
+    let ul = document.getElementById("search-results");
+    ul.innerHTML = "";
+    for (i = 0; i < results.length; i++) {
+      let [title, url] = results[i];
+      let elemlink = document.createElement('a');
+      elemlink.className = "panel-block";
+      elemlink.innerHTML = title;
+      elemlink.setAttribute('href', url);
+      ul.appendChild(elemlink);
+    }
+  }
+</script>
+
+</body>
+
+</html>

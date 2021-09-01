@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+  <title>Feng</title>
+  
+<!-- CSS -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.13.0/devicon.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<link rel="stylesheet" href="https://resume.alongwy.top/main.css">
+
+  
+<!-- JS -->
+
+
+
+  
+
+<link rel="alternate" type="application/rss+xml" title="RSS"
+  href="https://resume.alongwy.top/tags/GPU/rss.xml">
+
+
+  
+  
+</head>
+
+<body>
+  <aside id="sidebar" class="menu is-hidden-touch">
+    
+
+<div style="display:block;margin:auto auto 0;padding:.5rem">
+    <figure class="image">
+        <img id="avatar" class="is-rounded" src="&#x2F;img&#x2F;avatar.png">
+    </figure>
+</div>
+
+
+    
+<ul id="menu" class="menu-list">
+    
+
+<li data-menuanchor="about"><a href="/#anchor_about">ABOUT</a></li>   
+
+ 
+<li data-menuanchor="skills"><a href="/#anchor_skills">SKILLS</a></li>
+
+
+<li data-menuanchor="projects"><a href="/#anchor_projects">PROJECTS</a></li>
+
+ 
+<li data-menuanchor="opensource"><a href="/#anchor_opensource">OPEN SOURCE</a></li>
+
+
+<li data-menuanchor="publications"><a href="/#anchor_publications">PUBLICATIONS</a></li>
+
+ 
+<li data-menuanchor="experience"><a href="/#anchor_experience">EXPERIENCE</a></li>
+
+ 
+<li data-menuanchor="education"><a href="/#anchor_education">EDUCATION</a></li>
+
+ 
+<li data-menuanchor="blog"><a href="/#anchor_blog">BLOG</a></li>    
+
+</ul>
+
+  </aside>
+  <div id="content">
+    <!-- Content -->
+    
+<div class="container is-fluid" style="min-height: 100vh;">
+  <div class="is-flex is-flex-direction-column is-justify-content-center" style="min-height: 100vh;">
+    <h1>GPU</h1>
+    
+    
+    <div class="card mb-5">
+      <header class="card-header">
+        <p class="card-header-title">
+          <a href="https://resume.alongwy.top/projects/gpustat-a-rust-version-of-gpustat/">gpustat: a rust-version of gpustat.</a>
+        </p>
+      </header>
+      
+      <div class="card-content">
+        <div class="content">
+          <p>📊 A simple command-line utility for querying and monitoring GPU status</p>
+
+          <a href="https:&#x2F;&#x2F;resume.alongwy.top&#x2F;projects&#x2F;gpustat-a-rust-version-of-gpustat&#x2F;">Read More</a>
+        </div>
+      </div>
+      
+    </div>
+    
+    
+  </div>
+</div>
+
+
+  </div>
+  <!-- 
+<article class="panel is-link">
+  <div class="panel-block">
+    <p class="control has-icons-left">
+      <input id="search-input" class="input" type="text" placeholder="search" onkeyup="doSearch()">
+      <span class="icon is-left">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </span>
+    </p>
+  </div>
+  <div id="search-results"></div>
+</article>
+ -->
+  
+<script src="https://resume.alongwy.top/js/fullpage.js"></script>
+<script type="text/javascript">
+    var fullpages = new fullpage('#fullpage', {
+        menu: '#menu',
+        anchors: [
+             'anchor_about',         
+             'anchor_skills',        
+             'anchor_projects',      
+             'anchor_opensource',    
+             'anchor_publications',  
+             'anchor_experience',    
+             'anchor_education',     
+             'anchor_blog',          
+        ],
+    });
+</script>
+
+  
+<script type="module">
+  import { search, default as init } from "https://resume.alongwy.top/tinysearch_engine.js";
+  window.search = search;
+  async function run() { await init("https://resume.alongwy.top/tinysearch_engine_bg.wasm"); }
+  run();
+</script>
+<script>
+  function doSearch() {
+    let value = document.getElementById("search-input").value;
+    console.log(`Search query: ${value}`);
+    const results = search(value, 5);
+    console.log(`Results: ${results}`);
+    let ul = document.getElementById("search-results");
+    ul.innerHTML = "";
+    for (i = 0; i < results.length; i++) {
+      let [title, url] = results[i];
+      let elemlink = document.createElement('a');
+      elemlink.className = "panel-block";
+      elemlink.innerHTML = title;
+      elemlink.setAttribute('href', url);
+      ul.appendChild(elemlink);
+    }
+  }
+</script>
+
+</body>
+
+</html>

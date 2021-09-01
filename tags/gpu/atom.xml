@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Feng - GPU</title>
+	<subtitle>A clean resume theme</subtitle>
+	<link href="https://resume.alongwy.top/tags/gpu/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://resume.alongwy.top"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-08-28T15:00:30.183+00:00</updated>
+	<id>https://resume.alongwy.top/tags/gpu/atom.xml</id>
+	<entry xml:lang="en">
+		<title>gpustat: a rust-version of gpustat.</title>
+		<published>2021-08-28T15:00:30.183+00:00</published>
+		<updated>2021-08-28T15:00:30.183+00:00</updated>
+		<link href="https://resume.alongwy.top/projects/gpustat-a-rust-version-of-gpustat/" type="text/html"/>
+		<id>https://resume.alongwy.top/projects/gpustat-a-rust-version-of-gpustat/</id>
+		<content type="html">&lt;h3 id=&quot;gpustat&quot;&gt;gpustat&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;gpustat&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;crates&#x2F;v&#x2F;gpustat.svg&quot; alt=&quot;Crates.io&quot; &#x2F;&gt;&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;resume.alongwy.top&#x2F;projects&#x2F;gpustat-a-rust-version-of-gpustat&#x2F;LICENSE&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;github&#x2F;license&#x2F;alongwy&#x2F;gpustat.svg?maxAge=86400&quot; alt=&quot;license&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A rust version of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wookayin&#x2F;gpustat&quot;&gt;gpustat&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Just &lt;em&gt;less&lt;&#x2F;em&gt; than nvidia-smi?&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;usage&quot;&gt;Usage&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;code&gt;$ gpustat&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Options:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--color&lt;&#x2F;code&gt;            : Force colored output (even when stdout is not a tty)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;--no-color&lt;&#x2F;code&gt;         : Suppress colored output&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-u&lt;&#x2F;code&gt;, &lt;code&gt;--show-user&lt;&#x2F;code&gt;  : Display username of the process owner&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-c&lt;&#x2F;code&gt;, &lt;code&gt;--show-cmd&lt;&#x2F;code&gt;   : Display the process name&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-f&lt;&#x2F;code&gt;, &lt;code&gt;--show-full-cmd&lt;&#x2F;code&gt;   : Display full command and cpu stats of running process&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;&#x2F;code&gt;, &lt;code&gt;--show-pid&lt;&#x2F;code&gt;   : Display PID of the process&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-F&lt;&#x2F;code&gt;, &lt;code&gt;--show-fan&lt;&#x2F;code&gt;   : Display GPU fan speed&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-e&lt;&#x2F;code&gt;, &lt;code&gt;--show-codec&lt;&#x2F;code&gt; : Display encoder and&#x2F;or decoder utilization&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-a&lt;&#x2F;code&gt;, &lt;code&gt;--show-all&lt;&#x2F;code&gt;   : Display all gpu properties above&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;quick-installation&quot;&gt;Quick Installation&lt;&#x2F;h4&gt;
+&lt;p&gt;Install from Cargo:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;cargo install gpustat
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;default-display&quot;&gt;Default display&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[0] | A100-PCIE-40GB | 65&#x27;C | 75 % | 33409 &#x2F; 40536 MB | along(33407M)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[0]&lt;&#x2F;code&gt;: GPUindex (starts from 0) as PCI_BUS_ID&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;A100-PCIE-40GB&lt;&#x2F;code&gt;: GPU name&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;65&#x27;C&lt;&#x2F;code&gt;: Temperature&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;75 %&lt;&#x2F;code&gt;: Utilization&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;33409 &#x2F; 40536 MB&lt;&#x2F;code&gt;: GPU Memory Usage&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;along(33407M)&lt;&#x2F;code&gt;: Username of the running processes owner on GPU (and their memory usage)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;license&quot;&gt;License&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;resume.alongwy.top&#x2F;projects&#x2F;gpustat-a-rust-version-of-gpustat&#x2F;LICENSE&quot;&gt;GPL v2 License&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

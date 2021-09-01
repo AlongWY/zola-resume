@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Feng - Rust</title>
+	<subtitle>A clean resume theme</subtitle>
+	<link href="https://resume.alongwy.top/tags/rust/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://resume.alongwy.top"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-08-28T15:00:30.183+00:00</updated>
+	<id>https://resume.alongwy.top/tags/rust/atom.xml</id>
+	<entry xml:lang="en">
+		<title>gpustat: a rust-version of gpustat.</title>
+		<published>2021-08-28T15:00:30.183+00:00</published>
+		<updated>2021-08-28T15:00:30.183+00:00</updated>
+		<link href="https://resume.alongwy.top/projects/gpustat-a-rust-version-of-gpustat/" type="text/html"/>
+		<id>https://resume.alongwy.top/projects/gpustat-a-rust-version-of-gpustat/</id>
+		<content type="html">&lt;h3 id=&quot;gpustat&quot;&gt;gpustat&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;gpustat&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;crates&#x2F;v&#x2F;gpustat.svg&quot; alt=&quot;Crates.io&quot; &#x2F;&gt;&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;resume.alongwy.top&#x2F;projects&#x2F;gpustat-a-rust-version-of-gpustat&#x2F;LICENSE&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;github&#x2F;license&#x2F;alongwy&#x2F;gpustat.svg?maxAge=86400&quot; alt=&quot;license&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A rust version of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wookayin&#x2F;gpustat&quot;&gt;gpustat&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Just &lt;em&gt;less&lt;&#x2F;em&gt; than nvidia-smi?&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;usage&quot;&gt;Usage&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;code&gt;$ gpustat&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Options:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--color&lt;&#x2F;code&gt;            : Force colored output (even when stdout is not a tty)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;--no-color&lt;&#x2F;code&gt;         : Suppress colored output&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-u&lt;&#x2F;code&gt;, &lt;code&gt;--show-user&lt;&#x2F;code&gt;  : Display username of the process owner&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-c&lt;&#x2F;code&gt;, &lt;code&gt;--show-cmd&lt;&#x2F;code&gt;   : Display the process name&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-f&lt;&#x2F;code&gt;, &lt;code&gt;--show-full-cmd&lt;&#x2F;code&gt;   : Display full command and cpu stats of running process&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;&#x2F;code&gt;, &lt;code&gt;--show-pid&lt;&#x2F;code&gt;   : Display PID of the process&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-F&lt;&#x2F;code&gt;, &lt;code&gt;--show-fan&lt;&#x2F;code&gt;   : Display GPU fan speed&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-e&lt;&#x2F;code&gt;, &lt;code&gt;--show-codec&lt;&#x2F;code&gt; : Display encoder and&#x2F;or decoder utilization&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-a&lt;&#x2F;code&gt;, &lt;code&gt;--show-all&lt;&#x2F;code&gt;   : Display all gpu properties above&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;quick-installation&quot;&gt;Quick Installation&lt;&#x2F;h4&gt;
+&lt;p&gt;Install from Cargo:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;cargo install gpustat
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;default-display&quot;&gt;Default display&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[0] | A100-PCIE-40GB | 65&#x27;C | 75 % | 33409 &#x2F; 40536 MB | along(33407M)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[0]&lt;&#x2F;code&gt;: GPUindex (starts from 0) as PCI_BUS_ID&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;A100-PCIE-40GB&lt;&#x2F;code&gt;: GPU name&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;65&#x27;C&lt;&#x2F;code&gt;: Temperature&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;75 %&lt;&#x2F;code&gt;: Utilization&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;33409 &#x2F; 40536 MB&lt;&#x2F;code&gt;: GPU Memory Usage&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;along(33407M)&lt;&#x2F;code&gt;: Username of the running processes owner on GPU (and their memory usage)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;license&quot;&gt;License&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;resume.alongwy.top&#x2F;projects&#x2F;gpustat-a-rust-version-of-gpustat&#x2F;LICENSE&quot;&gt;GPL v2 License&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>NotFeed: A RSS Reader on GitHub</title>
+		<published>2021-08-28T11:40:32.885+00:00</published>
+		<updated>2021-08-28T11:40:32.885+00:00</updated>
+		<link href="https://resume.alongwy.top/projects/notfeed-a-rss-reader-on-github/" type="text/html"/>
+		<id>https://resume.alongwy.top/projects/notfeed-a-rss-reader-on-github/</id>
+		<content type="html">&lt;h3 id=&quot;notcraft-notfeed&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;notcraft.alongwy.top&#x2F;NotFeed&#x2F;&quot;&gt;NotCraft::NotFeed&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;An RSS reader running entirely from your GitHub repo.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Free hosting on &lt;a href=&quot;https:&#x2F;&#x2F;pages.github.com&#x2F;&quot;&gt;GitHub Pages&lt;&#x2F;a&gt;. No ads. No third party tracking.&lt;&#x2F;li&gt;
+&lt;li&gt;No need for backend. Content updates via &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;features&#x2F;actions&quot;&gt;GitHub Actions&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Customizable layouts and styles via templating and theming API. Just bring your HTML and CSS.&lt;&#x2F;li&gt;
+&lt;li&gt;Free and open source. No third-party tracking.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;how-to-use-it&quot;&gt;How to use it?&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;github-pages&quot;&gt;Github Pages&lt;&#x2F;h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Use the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;NotCraft&#x2F;NotFeed-Template&quot;&gt;NotFeed-Template&lt;&#x2F;a&gt; generate your own repository.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;In the repository root, open &lt;code&gt;Config.toml&lt;&#x2F;code&gt; file, click the &amp;quot;Pencil (Edit this file)&amp;quot; button to edit.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;#&lt;&#x2F;code&gt; to uncommend the &lt;code&gt;cacheUrl&lt;&#x2F;code&gt; property, replace &lt;code&gt;&amp;lt;github_username&amp;gt;&lt;&#x2F;code&gt; with your GitHub username, and
+replace &lt;code&gt;&amp;lt;repo&amp;gt;&lt;&#x2F;code&gt; with your GitHub repo name.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;In the sources, update the items to the sources you want to follow. The final content of the file should look similar
+to this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;# Config.toml
+
+site_title = &quot;ArxivDaily&quot;
+cache_max_days = 7
+sources = [
+  &quot;https:&#x2F;&#x2F;export.arxiv.org&#x2F;rss&#x2F;cs.CL&quot;
+]
+# proxy = &quot;http:&#x2F;&#x2F;127.0.0.1:7890&quot; ## Optional: default is None
+# statics_dir   = &quot;statics&quot;       ## Optional: default is &quot;statics&quot;
+# templates_dir = &quot;includes&quot;      ## Optional: default is &quot;includes&quot;
+# cache_url = &quot;https:&#x2F;&#x2F;GITHUB_USERNAME.github.io&#x2F;REPO_NAME&#x2F;cache.json&quot;
+# minify = true
+# [scripts]
+# highlight = &quot;scripts&#x2F;highlight.rhai&quot;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Scroll to the bottom of the page, click &amp;quot;Commit changes&amp;quot; button.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Once the rebuild finishes, your feed will be available at &lt;code&gt;https:&#x2F;&#x2F;&amp;lt;github_username&amp;gt;.github.io&#x2F;&amp;lt;repo&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;localhost&quot;&gt;Localhost&lt;&#x2F;h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clone the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;NotCraft&#x2F;NotFeed-Template&quot;&gt;NotFeed-Template&lt;&#x2F;a&gt; repository.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Edit &lt;code&gt;Config.toml&lt;&#x2F;code&gt; file.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code&gt;notfeed&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;build: &lt;code&gt;notfeed build&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;serve: &lt;code&gt;notfeed serve --addr 127.0.0.1 --port 8080&lt;&#x2F;code&gt; or simply &lt;code&gt;notfeed serve&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;thanks&quot;&gt;Thanks&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Inspired by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;osmoscraft&#x2F;osmosfeed&quot;&gt;osmos::feed&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+</feed>
