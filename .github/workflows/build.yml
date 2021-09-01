@@ -12,17 +12,18 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v2
-      - name: 'Build only' 
+      - name: build
         uses: shalzz/zola-deploy-action@master
         env:
           TOKEN: ${{ secrets.TOKEN }}
           BUILD_DIR: .
           BUILD_ONLY: true
-      - uses: addnab/docker-run-action@v3
+      - name: build search
+        uses: addnab/docker-run-action@v3
         with:
           image: tinysearch/cli
           options: -v ${{ github.workspace }}:/tmp
-          run: /usr/local/cargo/bin/tinysearch -p /tmp/static /tmp/public/json/index.html
+          run: tinysearch -p /tmp/static /tmp/public/json/index.html
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
