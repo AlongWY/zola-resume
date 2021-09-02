@@ -114,8 +114,19 @@
              'anchor_experience',    
              'anchor_education',     
              'anchor_blog',          
-        ]
+        ],
+        afterResize: function( width, height ){
+		    if (width < 936) {
+                fullpage_api.setAutoScrolling(false);
+            } else {
+                fullpage_api.setAutoScrolling(true);
+            }
+	    }
     });
+    if (screen.width < 936){
+        fullpages.setAutoScrolling(false);
+    }
+
 </script>
 
 </body>

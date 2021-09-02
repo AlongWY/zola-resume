@@ -85,7 +85,7 @@
     
 <div id="fullpage">
   
-  <div class="section hero is-fullheight" id="about">
+  <div class="section hero is-fullheight" id="about" style="overflow: scroll;">
     
 
 <div class="is-flex is-flex-direction-column" style="height: 100%;">
@@ -197,7 +197,7 @@
   
 
   
-  <div class="section hero is-fullheight" id="skills">
+  <div class="section hero is-fullheight" id="skills" style="overflow: scroll;">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -352,7 +352,7 @@
   
 
   
-  <div class="section hero is-fullheight" id="projects">
+  <div class="section hero is-fullheight" id="projects" style="overflow: scroll;">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -462,7 +462,7 @@
   
 
   
-  <div class="section hero is-fullheight" id="opensource">
+  <div class="section hero is-fullheight" id="opensource" style="overflow: scroll;">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -520,7 +520,7 @@
   
 
   
-  <div class="section hero is-fullheight" id="publications">
+  <div class="section hero is-fullheight" id="publications" style="overflow: auto;">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -630,7 +630,7 @@
   
 
   
-  <div class="section hero is-fullheight" id="experience">
+  <div class="section hero is-fullheight" id="experience" style="overflow: scroll;">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -726,7 +726,7 @@
   
 
   
-  <div class="section hero is-fullheight" id="education">
+  <div class="section hero is-fullheight" id="education" style="overflow: scroll;">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -786,7 +786,7 @@
   
 
   
-  <div class="section hero is-fullheight" id="blog">
+  <div class="section hero is-fullheight" id="blog" style="overflow: scroll;">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -828,8 +828,19 @@
              'anchor_experience',    
              'anchor_education',     
              'anchor_blog',          
-        ]
+        ],
+        afterResize: function( width, height ){
+		    if (width < 936) {
+                fullpage_api.setAutoScrolling(false);
+            } else {
+                fullpage_api.setAutoScrolling(true);
+            }
+	    }
     });
+    if (screen.width < 936){
+        fullpages.setAutoScrolling(false);
+    }
+
 </script>
 
 </body>
