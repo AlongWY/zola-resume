@@ -43,7 +43,18 @@
             {% if config.extra.show_experience      %} 'anchor_experience',    {% endif %}
             {% if config.extra.show_education       %} 'anchor_education',     {% endif %}
             {% if config.extra.show_blog            %} 'anchor_blog',          {% endif %}
-        ]
+        ],
+        afterResize: function( width, height ){
+		    if (width < 936) {
+                fullpage_api.setAutoScrolling(false);
+            } else {
+                fullpage_api.setAutoScrolling(true);
+            }
+	    }
     });
+    if (screen.width < 936){
+        fullpages.setAutoScrolling(false);
+    }
+
 </script>
 {% endmacro %}

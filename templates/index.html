@@ -12,49 +12,49 @@
 {% block content %}
 <div id="fullpage">
   {% if config.extra.show_about %}
-  <div class="section hero is-fullheight" id="about">
+  <div class="section hero is-fullheight" id="about" style="overflow: scroll;">
     {{ partial_about::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_skills %}
-  <div class="section hero is-fullheight" id="skills">
+  <div class="section hero is-fullheight" id="skills" style="overflow: scroll;">
     {{ partial_skills::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_projects %}
-  <div class="section hero is-fullheight" id="projects">
+  <div class="section hero is-fullheight" id="projects" style="overflow: scroll;">
     {{ partial_projects::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_opensource %}
-  <div class="section hero is-fullheight" id="opensource">
+  <div class="section hero is-fullheight" id="opensource" style="overflow: scroll;">
     {{ partial_opensource::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_publications %}
-  <div class="section hero is-fullheight" id="publications">
+  <div class="section hero is-fullheight" id="publications" style="overflow: auto;">
     {{ partial_publications::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_experience %}
-  <div class="section hero is-fullheight" id="experience">
+  <div class="section hero is-fullheight" id="experience" style="overflow: scroll;">
     {{ partial_experience::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_education %}
-  <div class="section hero is-fullheight" id="education">
+  <div class="section hero is-fullheight" id="education" style="overflow: scroll;">
     {{ partial_education::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_blog %}
-  <div class="section hero is-fullheight" id="blog">
+  <div class="section hero is-fullheight" id="blog" style="overflow: scroll;">
     {{ partial_blog::display() }}
   </div>
   {% endif %}
