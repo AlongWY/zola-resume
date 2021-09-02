@@ -33,10 +33,7 @@
 <script type="text/javascript">
     var fullpages = new fullpage('#fullpage', {
         menu: '#menu',
-        autoScrolling: true,
         setRecordHistory: false,
-        fitToSection: true,
-        // scrollOverflow：true,
         anchors: [
             {% if config.extra.show_about           %} 'anchor_about',         {% endif %}
             {% if config.extra.show_skills          %} 'anchor_skills',        {% endif %}
@@ -46,15 +43,7 @@
             {% if config.extra.show_experience      %} 'anchor_experience',    {% endif %}
             {% if config.extra.show_education       %} 'anchor_education',     {% endif %}
             {% if config.extra.show_blog            %} 'anchor_blog',          {% endif %}
-        ],
-        afterResize: function(width, height){
-            var pluginContainer = this;
-		    if (width < 936) {
-                fullpage_api.setAutoScrolling(false);
-            } else {
-                fullpage_api.setAutoScrolling(true);
-            }
-	    }
+        ]
     });
 </script>
 {% endmacro %}
