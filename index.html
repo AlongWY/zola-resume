@@ -85,7 +85,7 @@
     
 <div id="fullpage">
   
-  <div class="section hero is-fullheight">
+  <div class="section hero is-fullheight" id="about">
     
 
 <div class="is-flex is-flex-direction-column" style="height: 100%;">
@@ -197,7 +197,7 @@
   
 
   
-  <div class="section hero is-fullheight">
+  <div class="section hero is-fullheight" id="skills">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -352,7 +352,7 @@
   
 
   
-  <div class="section hero is-fullheight">
+  <div class="section hero is-fullheight" id="projects">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -462,7 +462,7 @@
   
 
   
-  <div class="section hero is-fullheight">
+  <div class="section hero is-fullheight" id="opensource">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -520,7 +520,7 @@
   
 
   
-  <div class="section hero is-fullheight">
+  <div class="section hero is-fullheight" id="publications">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -630,7 +630,7 @@
   
 
   
-  <div class="section hero is-fullheight">
+  <div class="section hero is-fullheight" id="experience">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -726,7 +726,7 @@
   
 
   
-  <div class="section hero is-fullheight">
+  <div class="section hero is-fullheight" id="education">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -786,7 +786,7 @@
   
 
   
-  <div class="section hero is-fullheight">
+  <div class="section hero is-fullheight" id="blog">
     
 
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
@@ -818,10 +818,7 @@
 <script type="text/javascript">
     var fullpages = new fullpage('#fullpage', {
         menu: '#menu',
-        autoScrolling: true,
         setRecordHistory: false,
-        fitToSection: true,
-        // scrollOverflow：true,
         anchors: [
              'anchor_about',         
              'anchor_skills',        
@@ -831,15 +828,7 @@
              'anchor_experience',    
              'anchor_education',     
              'anchor_blog',          
-        ],
-        afterResize: function(width, height){
-            var pluginContainer = this;
-		    if (width < 936) {
-                fullpage_api.setAutoScrolling(false);
-            } else {
-                fullpage_api.setAutoScrolling(true);
-            }
-	    }
+        ]
     });
 </script>
 

@@ -99,10 +99,7 @@
 <script type="text/javascript">
     var fullpages = new fullpage('#fullpage', {
         menu: '#menu',
-        autoScrolling: true,
         setRecordHistory: false,
-        fitToSection: true,
-        // scrollOverflow：true,
         anchors: [
              'anchor_about',         
              'anchor_skills',        
@@ -112,15 +109,7 @@
              'anchor_experience',    
              'anchor_education',     
              'anchor_blog',          
-        ],
-        afterResize: function(width, height){
-            var pluginContainer = this;
-		    if (width < 936) {
-                fullpage_api.setAutoScrolling(false);
-            } else {
-                fullpage_api.setAutoScrolling(true);
-            }
-	    }
+        ]
     });
 </script>
 
