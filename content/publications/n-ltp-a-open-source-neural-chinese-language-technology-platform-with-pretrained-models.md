@@ -5,9 +5,9 @@ date: 2021-08-28T11:00:37.434Z
 extra:
   featured: true
   link: https://arxiv.org/abs/2009.11616
-  bibtex: /img/nltp.bib
+  bibtex: /media/nltp.bib
   pubtype: Article
-  image: /img/acl-logo.svg
+  image: /media/acl-logo.svg
 
 description: "An open-source neural language technology platform supporting
   six   fundamental Chinese NLP tasks: <ul>   <li>lexical analysis (Chinese word

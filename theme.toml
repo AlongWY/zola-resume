@@ -18,7 +18,7 @@ last_name = "Yunlong"
 address = "Harbin, China"
 email = "ylfeng@ir.hit.edu.cn"
 favicon = "/favicon.ico"
-avatar = "/img/avatar.png"
+avatar = "/media/avatar.png"
 
 katex = false
 show_about = true

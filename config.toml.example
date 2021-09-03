@@ -19,7 +19,7 @@ last_name = "Last"
 address = "Unknown"
 email = "email@address.com"
 favicon = "/favicon.ico"
-avatar = "/img/avatar.png"
+avatar = "/media/avatar.png"
 
 
 show_about = true
