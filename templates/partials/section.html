@@ -1,7 +1,7 @@
-{% macro display(path, align="left") %}
+{% macro display(title, path, align="left") %}
 {% set section = get_section(path=path) %}
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
-  <h2><a href="{{ section.permalink }}">creations</a></h2>
+  <h2><a href="{{ section.permalink }}">{{ title }}</a></h2>
   <div class="is-hidden-touch">
     {{ section.content | safe }}
   </div>

@@ -22,19 +22,19 @@
 
   {% if config.extra.show_projects %}
   <div class="section hero is-fullheight page" id="projects">
-    {{ partial_section::display(path="projects/_index.md") }}
+    {{ partial_section::display(title="projects", path="projects/_index.md") }}
   </div>
   {% endif %}
 
   {% if config.extra.show_opensource %}
   <div class="section hero is-fullheight page" id="opensource">
-    {{ partial_section::display(path="opensource/_index.md") }}
+    {{ partial_section::display(title="opensource",path="opensource/_index.md") }}
   </div>
   {% endif %}
 
   {% if config.extra.show_publications %}
   <div class="section hero is-fullheight page" id="publications">
-    {{ partial_section::display(path="publications/_index.md", align="right") }}
+    {{ partial_section::display(title="publications",path="publications/_index.md", align="right") }}
   </div>
   {% endif %}
 
@@ -52,7 +52,7 @@
 
   {% if config.extra.show_blog %}
   <div class="section hero is-fullheight page" id="blog">
-    {{ partial_section::display(path="blog/_index.md") }}
+    {{ partial_section::display(title="blog",path="blog/_index.md") }}
   </div>
   {% endif %}
 
