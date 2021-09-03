@@ -18,6 +18,7 @@
 
   
 <!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
 
 <script src="https://resume.alongwy.top/elasticlunr.min.js" defer></script>
@@ -78,6 +79,19 @@
 </ul>
 
   </aside>
+  
+<div class="modal" id="copyTarget">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <section class="modal-card-body">
+      <textarea class="textarea" id="bibtex-content" placeholder="e.g. Hello world"></textarea>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button" id="copyButton">Copy to clipboard</button>
+    </footer>
+  </div>
+</div>
+
   <div id="content">
     <!-- Content -->
     
@@ -126,6 +140,73 @@
 
 
   </div>
+  
+<script>
+  function show_bib(bib_path) {
+    $.ajax({
+      url: bib_path,
+      success: function (data) {
+        $("#bibtex-content").text(data);
+        $("#copyTarget").addClass("is-active");
+      },
+    });
+  }
+
+  function copyToClipboard(elem) {
+    var targetId = "_hiddenCopyText_";
+    var isInput =
+      elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
+    var origSelectionStart, origSelectionEnd;
+    if (isInput) {
+      target = elem;
+      origSelectionStart = elem.selectionStart;
+      origSelectionEnd = elem.selectionEnd;
+    } else {
+      target = document.getElementById(targetId);
+      if (!target) {
+        var target = document.createElement("textarea");
+        target.style.position = "absolute";
+        target.style.left = "-9999px";
+        target.style.top = "0";
+        target.id = targetId;
+        document.body.appendChild(target);
+      }
+      target.textContent = elem.textContent;
+    }
+    var currentFocus = document.activeElement;
+    target.focus();
+    target.setSelectionRange(0, target.value.length);
+    var succeed;
+    try {
+      succeed = document.execCommand("copy");
+    } catch (e) {
+      succeed = false;
+    }
+    if (currentFocus && typeof currentFocus.focus === "function") {
+      currentFocus.focus();
+    }
+
+    if (isInput) {
+      elem.setSelectionRange(
+        origSelectionStart,
+        origSelectionEnd
+      );
+    } else {
+      target.textContent = "";
+    }
+    return succeed;
+  }
+
+  $(function () {
+    document
+      .getElementById("copyButton")
+      .addEventListener("click", function () {
+        copyToClipboard(document.getElementById("copyTarget"));
+        $("#copyTarget").removeClass("is-active");
+      });
+  });
+</script>
+
   
 
 

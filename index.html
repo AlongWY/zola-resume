@@ -18,6 +18,7 @@
 
   
 <!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
 
 <script src="https://resume.alongwy.top/elasticlunr.min.js" defer></script>
@@ -81,6 +82,19 @@
 </ul>
 
   </aside>
+  
+<div class="modal" id="copyTarget">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <section class="modal-card-body">
+      <textarea class="textarea" id="bibtex-content" placeholder="e.g. Hello world"></textarea>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button" id="copyButton">Copy to clipboard</button>
+    </footer>
+  </div>
+</div>
+
   <div id="content">
     <!-- Content -->
     
@@ -378,6 +392,7 @@
           <div class="level-item">
             <h3 class="post-title"><a href="https:&#x2F;&#x2F;resume.alongwy.top&#x2F;projects&#x2F;notfeed-a-rss-reader-on-github&#x2F;">NotFeed: A RSS Reader on GitHub</a></h3>
           </div>
+          
         </div>
         <div class="level-right is-hidden-touch">
           <div class="level-item">
@@ -391,7 +406,7 @@
           
           <figure class="image is-128x128" style="float:left;">
             
-              <img src="https://resume.alongwy.top/img/notcraft.png">
+            <img src="https://resume.alongwy.top/media/notcraft.png">
             
           </figure>
           
@@ -420,6 +435,7 @@
           <div class="level-item">
             <h3 class="post-title"><a href="https:&#x2F;&#x2F;resume.alongwy.top&#x2F;projects&#x2F;language-technology-platform&#x2F;">Language Technology Platform</a></h3>
           </div>
+          
         </div>
         <div class="level-right is-hidden-touch">
           <div class="level-item">
@@ -433,7 +449,7 @@
           
           <figure class="image is-128x128" style="float:left;">
             
-              <img src="https://resume.alongwy.top/img/ltp.png">
+            <img src="https://resume.alongwy.top/media/ltp.png">
             
           </figure>
           
@@ -488,6 +504,7 @@
           <div class="level-item">
             <h3 class="post-title"><a href="https:&#x2F;&#x2F;resume.alongwy.top&#x2F;opensource&#x2F;huggingface-datasets&#x2F;">Huggingface&#x2F;datasets</a></h3>
           </div>
+          
         </div>
         <div class="level-right is-hidden-touch">
           <div class="level-item">
@@ -501,7 +518,7 @@
           
           <figure class="image is-128x128" style="float:left;">
             
-              <img src="https://resume.alongwy.top/img/huggingface_logo.svg">
+            <img src="https://resume.alongwy.top/media/huggingface_logo.svg">
             
           </figure>
           
@@ -550,6 +567,14 @@
           <div class="level-item">
             <h3 class="post-title"><a href="https:&#x2F;&#x2F;resume.alongwy.top&#x2F;publications&#x2F;hit-scir-at-mrp-2020-transition-based-parser-and-iterative-inference-parser&#x2F;">HIT-SCIR at MRP 2020: Transition-based Parser and Iterative Inference Parser</a></h3>
           </div>
+          
+          <div class="level-item">
+            <a role="button" data-target="copyTarget" aria-haspopup="true"
+              onclick="show_bib('https://resume.alongwy.top/media/conll2020.bib')">
+              <span class="tag is-warning">Bibtex</span>
+            </a>
+          </div>
+          
         </div>
         <div class="level-right is-hidden-touch">
           <div class="level-item">
@@ -563,7 +588,7 @@
           
           <figure class="image is-128x128" style="float:right;">
             
-              <img src="https://resume.alongwy.top/img/acl-logo.svg">
+            <img src="https://resume.alongwy.top/media/acl-logo.svg">
             
           </figure>
           
@@ -596,6 +621,14 @@
           <div class="level-item">
             <h3 class="post-title"><a href="https:&#x2F;&#x2F;resume.alongwy.top&#x2F;publications&#x2F;n-ltp-a-open-source-neural-chinese-language-technology-platform-with-pretrained-models&#x2F;">N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models</a></h3>
           </div>
+          
+          <div class="level-item">
+            <a role="button" data-target="copyTarget" aria-haspopup="true"
+              onclick="show_bib('https://resume.alongwy.top/img/nltp.bib')">
+              <span class="tag is-warning">Bibtex</span>
+            </a>
+          </div>
+          
         </div>
         <div class="level-right is-hidden-touch">
           <div class="level-item">
@@ -609,7 +642,7 @@
           
           <figure class="image is-128x128" style="float:right;">
             
-              <img src="https://resume.alongwy.top/img/acl-logo.svg">
+            <img src="https://resume.alongwy.top/img/acl-logo.svg">
             
           </figure>
           
@@ -827,6 +860,73 @@
 </div>
 
   </div>
+  
+<script>
+  function show_bib(bib_path) {
+    $.ajax({
+      url: bib_path,
+      success: function (data) {
+        $("#bibtex-content").text(data);
+        $("#copyTarget").addClass("is-active");
+      },
+    });
+  }
+
+  function copyToClipboard(elem) {
+    var targetId = "_hiddenCopyText_";
+    var isInput =
+      elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
+    var origSelectionStart, origSelectionEnd;
+    if (isInput) {
+      target = elem;
+      origSelectionStart = elem.selectionStart;
+      origSelectionEnd = elem.selectionEnd;
+    } else {
+      target = document.getElementById(targetId);
+      if (!target) {
+        var target = document.createElement("textarea");
+        target.style.position = "absolute";
+        target.style.left = "-9999px";
+        target.style.top = "0";
+        target.id = targetId;
+        document.body.appendChild(target);
+      }
+      target.textContent = elem.textContent;
+    }
+    var currentFocus = document.activeElement;
+    target.focus();
+    target.setSelectionRange(0, target.value.length);
+    var succeed;
+    try {
+      succeed = document.execCommand("copy");
+    } catch (e) {
+      succeed = false;
+    }
+    if (currentFocus && typeof currentFocus.focus === "function") {
+      currentFocus.focus();
+    }
+
+    if (isInput) {
+      elem.setSelectionRange(
+        origSelectionStart,
+        origSelectionEnd
+      );
+    } else {
+      target.textContent = "";
+    }
+    return succeed;
+  }
+
+  $(function () {
+    document
+      .getElementById("copyButton")
+      .addEventListener("click", function () {
+        copyToClipboard(document.getElementById("copyTarget"));
+        $("#copyTarget").removeClass("is-active");
+      });
+  });
+</script>
+
   
 
 
