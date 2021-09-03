@@ -6,8 +6,8 @@ backend:
   site_domain: resume-alongwy.netlify.com
 
 locale: "zh_Hans"
-media_folder: "static/img"
-public_folder: "/img"
+media_folder: "static/media"
+public_folder: "/media"
 
 collections:
   - name: "Blog"

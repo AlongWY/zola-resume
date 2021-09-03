@@ -1,5 +1,6 @@
 {% import 'macros/head.html' as macros_head -%}
 {% import 'macros/search.html' as macros_search -%}
+{% import 'macros/bibtex.html' as macros_bibtex -%}
 {% import 'macros/fullpage.html' as macros_fullpage -%}
 <!DOCTYPE html>
 <html lang="en">
@@ -25,11 +26,13 @@
     {{ macros_head::avatar() }}
     {{ macros_fullpage::menu()}}
   </aside>
+  {{ macros_bibtex::modal() }}
   <div id="content">
     <!-- Content -->
     {% block content %}
     {% endblock content %}
   </div>
+  {{ macros_bibtex::script() }}
   {{ macros_head::katex() }}
   {{ macros_fullpage::fullpage() }}
 </body>

@@ -4,7 +4,7 @@ date: 2021-08-28T14:13:14.674Z
 extra:
   featured: true
   link: https://github.com/huggingface/datasets
-  image: /img/huggingface_logo.svg
+  image: /media/huggingface_logo.svg
 description: 🤗 The largest hub of ready-to-use datasets for ML models with
   fast, easy-to-use and efficient data manipulation tools
 taxonomies:

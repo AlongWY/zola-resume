@@ -4,8 +4,10 @@ date: 2020-09-01T11:00:06.142Z
 extra:
   featured: true
   link: https://aclanthology.org/2020.conll-shared.6
+  bibtex: /media/conll2020.bib
   pubtype: Article
-  image: /img/acl-logo.svg
+  image: /media/acl-logo.svg
+
 description: "This paper describes our submission system (HIT-SCIR) for
   the   CoNLL 2020 shared task: Cross-Framework and Cross-Lingual
   Meaning   Representation Parsing.</br> Our solution consists of two

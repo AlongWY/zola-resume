@@ -4,7 +4,7 @@ date: 2021-08-28T11:35:41.496Z
 extra:
   featured: true
   link: https://github.com/HIT-SCIR/ltp
-  image: /img/ltp.png
+  image: /media/ltp.png
 description: "An open-source neural language technology platform supporting
   six   fundamental Chinese NLP tasks: <ul>   <li>lexical analysis (Chinese word
   segmentation,   part-of-speech tagging, and named entity

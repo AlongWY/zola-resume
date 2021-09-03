@@ -4,7 +4,7 @@ date: 2021-08-28T11:40:32.885Z
 extra:
   featured: true
   link: https://notcraft.alongwy.top/NotFeed/
-  image: /img/notcraft.png
+  image: /media/notcraft.png
 description: An RSS reader running entirely from your GitHub
   repo.  <ul>   <li>Free hosting on GitHub Pages. No ads. No third party
   tracking. </li>   <li>No need for backend. Content updates via GitHub

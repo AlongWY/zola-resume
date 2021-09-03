@@ -4,7 +4,7 @@ date: 2021-09-03T13:30:54.712Z
 description: "Resume: a zola theme"
 extra:
   link: https://github.com/AlongWY/zola-resume
-  image: /img/open-source.png
+  image: /media/open-source.png
 ---
 # Zola Resume
 

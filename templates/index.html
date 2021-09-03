@@ -34,7 +34,7 @@
 
   {% if config.extra.show_publications %}
   <div class="section hero is-fullheight page" id="publications">
-    {{ partial_section::display(title="publications",path="publications/_index.md", align="right") }}
+    {{ partial_section::display(title="publications",path="publications/_index.md", align="right", bibtex=true) }}
   </div>
   {% endif %}
 
