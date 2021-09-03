@@ -13,92 +13,81 @@
 		<updated>2021-09-03T13:30:54.712+00:00</updated>
 		<link href="https://resume.alongwy.top/projects/resume-a-zola-theme/" type="text/html"/>
 		<id>https://resume.alongwy.top/projects/resume-a-zola-theme/</id>
-		<content type="html">&lt;p&gt;# Zola Resume&lt;&#x2F;p&gt;
-&lt;p&gt;## 快速开始&lt;&#x2F;p&gt;
-&lt;p&gt;```bash&lt;&#x2F;p&gt;
-&lt;p&gt;git clone git@github.com:alongwy&#x2F;zola-resume.git&lt;&#x2F;p&gt;
-&lt;p&gt;cd zola-resume&lt;&#x2F;p&gt;
-&lt;p&gt;zola serve&lt;&#x2F;p&gt;
-&lt;p&gt;# open http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
-&lt;p&gt;**此方法之后更新主题可能比较麻烦**&lt;&#x2F;p&gt;
-&lt;p&gt;## 安装&lt;&#x2F;p&gt;
-&lt;p&gt;### 第一步: 初始化网站&lt;&#x2F;p&gt;
-&lt;p&gt;```bash&lt;&#x2F;p&gt;
-&lt;p&gt;zola init mysite&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
-&lt;p&gt;### Step 2: 安装 zola-resume&lt;&#x2F;p&gt;
-&lt;p&gt;安装该主题到`themes`目录:&lt;&#x2F;p&gt;
-&lt;p&gt;```bash&lt;&#x2F;p&gt;
-&lt;p&gt;cd mysite&#x2F;themes&lt;&#x2F;p&gt;
-&lt;p&gt;git clone git@github.com:alongwy&#x2F;zola-resume.git&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
+		<content type="html">&lt;h1 id=&quot;zola-resume&quot;&gt;Zola Resume&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;kuai-su-kai-shi&quot;&gt;快速开始&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; clone git@github.com:alongwy&#x2F;zola-resume.git
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0184bc;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; zola-resume
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; serve
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# open http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;此方法之后更新主题可能比较麻烦&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;an-zhuang&quot;&gt;安装&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;di-yi-bu-chu-shi-hua-wang-zhan&quot;&gt;第一步: 初始化网站&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; init mysite
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step-2-an-zhuang-zola-resume&quot;&gt;Step 2: 安装 zola-resume&lt;&#x2F;h3&gt;
+&lt;p&gt;安装该主题到&lt;code&gt;themes&lt;&#x2F;code&gt;目录:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#0184bc;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; mysite&#x2F;themes
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; clone git@github.com:alongwy&#x2F;zola-resume.git
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;或者使用 submodule 安装:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;br &#x2F;&gt;
-```bash&lt;&#x2F;p&gt;
-&lt;p&gt;cd mysite&lt;&#x2F;p&gt;
-&lt;p&gt;git init # if your project is a git repository already, ignore this command&lt;&#x2F;p&gt;
-&lt;p&gt;git submodule add git@github.com:alongwy&#x2F;zola-resume.git themes&#x2F;zola-resume&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
-&lt;p&gt;### Step 3: 配置网站&lt;&#x2F;p&gt;
-&lt;p&gt;在配置文件中 `config.toml` 开启本主题:&lt;&#x2F;p&gt;
-&lt;p&gt;```toml&lt;&#x2F;p&gt;
-&lt;p&gt;theme = &amp;quot;zola-resume&amp;quot;&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
-&lt;p&gt;或者直接复制 `config.toml.example` 到本目录:&lt;&#x2F;p&gt;
-&lt;p&gt;```bash&lt;&#x2F;p&gt;
-&lt;p&gt;cp themes&#x2F;zola-resume&#x2F;config.toml.example config.toml&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
-&lt;p&gt;### Step 4: 添加&#x2F;修改内容&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#0184bc;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; mysite
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; init  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# if your project is a git repository already, ignore this command
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule add git@github.com:alongwy&#x2F;zola-resume.git themes&#x2F;zola-resume
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step-3-pei-zhi-wang-zhan&quot;&gt;Step 3: 配置网站&lt;&#x2F;h3&gt;
+&lt;p&gt;在配置文件中 &lt;code&gt;config.toml&lt;&#x2F;code&gt; 开启本主题:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;theme &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;zola-resume&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;或者直接复制 &lt;code&gt;config.toml.example&lt;&#x2F;code&gt; 到本目录:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; themes&#x2F;zola-resume&#x2F;config.toml.example config.toml
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step-4-tian-jia-xiu-gai-nei-rong&quot;&gt;Step 4: 添加&#x2F;修改内容&lt;&#x2F;h3&gt;
 &lt;p&gt;然后复制:&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
-&lt;p&gt;cp -r themes&#x2F;zola-resume&#x2F;data .&lt;&#x2F;p&gt;
-&lt;p&gt;cp -r themes&#x2F;zola-resume&#x2F;content .&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
-&lt;p&gt;你可以修改或者添加新内容到 `content&#x2F;blog`, `content&#x2F;projects` 等目录，注意其中的 `_index.md` 不要删除。&lt;&#x2F;p&gt;
-&lt;p&gt;### Step 5: 运行项目&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#fafafa;color:#383a42;&quot;&gt;&lt;code&gt;&lt;span&gt;cp -r themes&#x2F;zola-resume&#x2F;data .
+&lt;&#x2F;span&gt;&lt;span&gt;cp -r themes&#x2F;zola-resume&#x2F;content .
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;你可以修改或者添加新内容到 &lt;code&gt;content&#x2F;blog&lt;&#x2F;code&gt;, &lt;code&gt;content&#x2F;projects&lt;&#x2F;code&gt; 等目录，注意其中的 &lt;code&gt;_index.md&lt;&#x2F;code&gt; 不要删除。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;step-5-yun-xing-xiang-mu&quot;&gt;Step 5: 运行项目&lt;&#x2F;h3&gt;
 &lt;p&gt;使用如下命令查看效果:&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
-&lt;p&gt;zola serve&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#fafafa;color:#383a42;&quot;&gt;&lt;code&gt;&lt;span&gt;zola serve
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;打开 http:&#x2F;&#x2F;127.0.0.1:1111 查看效果。&lt;&#x2F;p&gt;
-&lt;p&gt;### Step 6: 自动构建&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;step-6-zi-dong-gou-jian&quot;&gt;Step 6: 自动构建&lt;&#x2F;h3&gt;
 &lt;p&gt;复制 github actions 配置文件：&lt;&#x2F;p&gt;
-&lt;p&gt;```bash&lt;&#x2F;p&gt;
-&lt;p&gt;mkdir -p .github&#x2F;workflows&lt;&#x2F;p&gt;
-&lt;p&gt;cp themes&#x2F;zola-resume&#x2F;build.yml .github&#x2F;workflows&#x2F;build.yml&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
-&lt;p&gt;## 配置 CMS 系统&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;mkdir -p&lt;&#x2F;span&gt;&lt;span&gt; .github&#x2F;workflows
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; themes&#x2F;zola-resume&#x2F;build.yml .github&#x2F;workflows&#x2F;build.yml
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;pei-zhi-cms-xi-tong&quot;&gt;配置 CMS 系统&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;step-1-xiu-gai-pei-zhi-wen-jian&quot;&gt;Step 1: 修改配置文件&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;br &#x2F;&gt;
-复制 cms 配置文件:&lt;&#x2F;p&gt;
-&lt;p&gt;```bash&lt;&#x2F;p&gt;
-&lt;p&gt;cp themes&#x2F;zola-resume&#x2F;static&#x2F;admin&#x2F;config.yml static&#x2F;admin&#x2F;config.yml&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;复制 cms 配置文件:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; themes&#x2F;zola-resume&#x2F;static&#x2F;admin&#x2F;config.yml static&#x2F;admin&#x2F;config.yml
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;并修改如下部分:&lt;&#x2F;p&gt;
-&lt;p&gt;```yaml&lt;&#x2F;p&gt;
-&lt;p&gt;# static&#x2F;admin&#x2F;config.yml&lt;&#x2F;p&gt;
-&lt;p&gt;backend:&lt;&#x2F;p&gt;
-&lt;p&gt;name: github&lt;&#x2F;p&gt;
-&lt;p&gt;repo: USERNAME&#x2F;REPO # &amp;lt;-- 记得修改&lt;&#x2F;p&gt;
-&lt;p&gt;branch: BRANCH # &amp;lt;-- 记得修改&lt;&#x2F;p&gt;
-&lt;p&gt;cms_label_prefix: netlify-cms&#x2F;&lt;&#x2F;p&gt;
-&lt;p&gt;site_domain: DOMAIN.netlify.com # 记下来这个位置，之后会用到&lt;&#x2F;p&gt;
-&lt;p&gt;```&lt;&#x2F;p&gt;
-&lt;p&gt;## 配置后台认证&lt;&#x2F;p&gt;
-&lt;p&gt;首先到 [Netlify](https:&#x2F;&#x2F;netlify.com) 注册账号并配置仓库，这个时候会自动构建失败，不用管它。&lt;&#x2F;p&gt;
-&lt;p&gt;进入网站 setting 的 `Build &amp;amp; deploy` 选项把 `Build settings` 的 `active` 关掉，这样就不会消耗 netlify 的自动构建时长。&lt;&#x2F;p&gt;
-&lt;p&gt;进入 setting 的 `Access control` 找到其中的 `OAuth`，`Install provider` 把 Github 装上。其中的 github app 可以查看这个[文档](https:&#x2F;&#x2F;docs.netlify.com&#x2F;visitor-access&#x2F;oauth-provider-tokens&#x2F;)进行配置。&lt;&#x2F;p&gt;
-&lt;p&gt;最后在 setting 的 `Custom domains` 里面添加 `YOURNAME.github.io`，会有警告，但是不用管他，前面有一个 `Default subdomain`，把他记下来填到 `static&#x2F;admin&#x2F;config.yml` 里面的 `backend.site_domain` 里面去。&lt;&#x2F;p&gt;
-&lt;p&gt;### About 主页&lt;&#x2F;p&gt;
-&lt;p&gt;修改 `contents&#x2F;_index.md` 来改变主页内容&lt;&#x2F;p&gt;
-&lt;p&gt;### 其他文件&lt;&#x2F;p&gt;
-&lt;p&gt;- [data&#x2F;certifications.json](https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;certifications.json)&lt;&#x2F;p&gt;
-&lt;p&gt;- [data&#x2F;social.json](https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;social.json)&lt;&#x2F;p&gt;
-&lt;p&gt;- [data&#x2F;skills.json](https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;skills.json)&lt;&#x2F;p&gt;
-&lt;p&gt;- [data&#x2F;experience.json](https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;experience.json)&lt;&#x2F;p&gt;
-&lt;p&gt;- [data&#x2F;education.json](https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;education.json)&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# static&#x2F;admin&#x2F;config.yml
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;backend&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;github
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;repo&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;USERNAME&#x2F;REPO             &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# &amp;lt;-- 记得修改
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;branch&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;BRANCH                  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# &amp;lt;-- 记得修改
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;cms_label_prefix&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;netlify-cms&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;site_domain&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;DOMAIN.netlify.com &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# 记下来这个位置，之后会用到
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;pei-zhi-hou-tai-ren-zheng&quot;&gt;配置后台认证&lt;&#x2F;h2&gt;
+&lt;p&gt;首先到 &lt;a href=&quot;https:&#x2F;&#x2F;netlify.com&quot;&gt;Netlify&lt;&#x2F;a&gt; 注册账号并配置仓库，这个时候会自动构建失败，不用管它。&lt;&#x2F;p&gt;
+&lt;p&gt;进入网站 setting 的 &lt;code&gt;Build &amp;amp; deploy&lt;&#x2F;code&gt; 选项把 &lt;code&gt;Build settings&lt;&#x2F;code&gt; 的 &lt;code&gt;active&lt;&#x2F;code&gt; 关掉，这样就不会消耗 netlify 的自动构建时长。&lt;&#x2F;p&gt;
+&lt;p&gt;进入 setting 的 &lt;code&gt;Access control&lt;&#x2F;code&gt; 找到其中的 &lt;code&gt;OAuth&lt;&#x2F;code&gt;，&lt;code&gt;Install provider&lt;&#x2F;code&gt; 把 Github 装上。其中的 github app 可以查看这个&lt;a href=&quot;https:&#x2F;&#x2F;docs.netlify.com&#x2F;visitor-access&#x2F;oauth-provider-tokens&#x2F;&quot;&gt;文档&lt;&#x2F;a&gt;进行配置。&lt;&#x2F;p&gt;
+&lt;p&gt;最后在 setting 的 &lt;code&gt;Custom domains&lt;&#x2F;code&gt; 里面添加 &lt;code&gt;YOURNAME.github.io&lt;&#x2F;code&gt;，会有警告，但是不用管他，前面有一个 &lt;code&gt;Default subdomain&lt;&#x2F;code&gt;，把他记下来填到 &lt;code&gt;static&#x2F;admin&#x2F;config.yml&lt;&#x2F;code&gt; 里面的 &lt;code&gt;backend.site_domain&lt;&#x2F;code&gt; 里面去。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;about-zhu-ye&quot;&gt;About 主页&lt;&#x2F;h3&gt;
+&lt;p&gt;修改 &lt;code&gt;contents&#x2F;_index.md&lt;&#x2F;code&gt; 来改变主页内容&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;qi-ta-wen-jian&quot;&gt;其他文件&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;certifications.json&quot;&gt;data&#x2F;certifications.json&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;social.json&quot;&gt;data&#x2F;social.json&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;skills.json&quot;&gt;data&#x2F;skills.json&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;experience.json&quot;&gt;data&#x2F;experience.json&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;education.json&quot;&gt;data&#x2F;education.json&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">

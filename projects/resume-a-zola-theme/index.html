@@ -89,92 +89,81 @@
     <h2>Resume: a zola theme</h2>
     
     <div class="content pb-5">
-      <p># Zola Resume</p>
-<p>## 快速开始</p>
-<p>```bash</p>
-<p>git clone git@github.com:alongwy/zola-resume.git</p>
-<p>cd zola-resume</p>
-<p>zola serve</p>
-<p># open http://127.0.0.1:1111/</p>
-<p>```</p>
-<p>**此方法之后更新主题可能比较麻烦**</p>
-<p>## 安装</p>
-<p>### 第一步: 初始化网站</p>
-<p>```bash</p>
-<p>zola init mysite</p>
-<p>```</p>
-<p>### Step 2: 安装 zola-resume</p>
-<p>安装该主题到`themes`目录:</p>
-<p>```bash</p>
-<p>cd mysite/themes</p>
-<p>git clone git@github.com:alongwy/zola-resume.git</p>
-<p>```</p>
+      <h1 id="zola-resume">Zola Resume</h1>
+<h2 id="kuai-su-kai-shi">快速开始</h2>
+<pre data-lang="bash" style="background-color:#fafafa;color:#383a42;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#e45649;">git</span><span> clone git@github.com:alongwy/zola-resume.git
+</span><span style="color:#0184bc;">cd</span><span> zola-resume
+</span><span style="color:#e45649;">zola</span><span> serve
+</span><span style="color:#a0a1a7;"># open http://127.0.0.1:1111/
+</span></code></pre>
+<p><strong>此方法之后更新主题可能比较麻烦</strong></p>
+<h2 id="an-zhuang">安装</h2>
+<h3 id="di-yi-bu-chu-shi-hua-wang-zhan">第一步: 初始化网站</h3>
+<pre data-lang="bash" style="background-color:#fafafa;color:#383a42;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#e45649;">zola</span><span> init mysite
+</span></code></pre>
+<h3 id="step-2-an-zhuang-zola-resume">Step 2: 安装 zola-resume</h3>
+<p>安装该主题到<code>themes</code>目录:</p>
+<pre data-lang="bash" style="background-color:#fafafa;color:#383a42;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#0184bc;">cd</span><span> mysite/themes
+</span><span style="color:#e45649;">git</span><span> clone git@github.com:alongwy/zola-resume.git
+</span></code></pre>
 <p>或者使用 submodule 安装:</p>
-<p><br />
-```bash</p>
-<p>cd mysite</p>
-<p>git init # if your project is a git repository already, ignore this command</p>
-<p>git submodule add git@github.com:alongwy/zola-resume.git themes/zola-resume</p>
-<p>```</p>
-<p>### Step 3: 配置网站</p>
-<p>在配置文件中 `config.toml` 开启本主题:</p>
-<p>```toml</p>
-<p>theme = &quot;zola-resume&quot;</p>
-<p>```</p>
-<p>或者直接复制 `config.toml.example` 到本目录:</p>
-<p>```bash</p>
-<p>cp themes/zola-resume/config.toml.example config.toml</p>
-<p>```</p>
-<p>### Step 4: 添加/修改内容</p>
+<pre data-lang="bash" style="background-color:#fafafa;color:#383a42;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#0184bc;">cd</span><span> mysite
+</span><span style="color:#e45649;">git</span><span> init  </span><span style="color:#a0a1a7;"># if your project is a git repository already, ignore this command
+</span><span style="color:#e45649;">git</span><span> submodule add git@github.com:alongwy/zola-resume.git themes/zola-resume
+</span></code></pre>
+<h3 id="step-3-pei-zhi-wang-zhan">Step 3: 配置网站</h3>
+<p>在配置文件中 <code>config.toml</code> 开启本主题:</p>
+<pre data-lang="toml" style="background-color:#fafafa;color:#383a42;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#e45649;">theme </span><span>= </span><span style="color:#50a14f;">&quot;zola-resume&quot;
+</span></code></pre>
+<p>或者直接复制 <code>config.toml.example</code> 到本目录:</p>
+<pre data-lang="bash" style="background-color:#fafafa;color:#383a42;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#e45649;">cp</span><span> themes/zola-resume/config.toml.example config.toml
+</span></code></pre>
+<h3 id="step-4-tian-jia-xiu-gai-nei-rong">Step 4: 添加/修改内容</h3>
 <p>然后复制:</p>
-<p>```</p>
-<p>cp -r themes/zola-resume/data .</p>
-<p>cp -r themes/zola-resume/content .</p>
-<p>```</p>
-<p>你可以修改或者添加新内容到 `content/blog`, `content/projects` 等目录，注意其中的 `_index.md` 不要删除。</p>
-<p>### Step 5: 运行项目</p>
+<pre style="background-color:#fafafa;color:#383a42;"><code><span>cp -r themes/zola-resume/data .
+</span><span>cp -r themes/zola-resume/content .
+</span></code></pre>
+<p>你可以修改或者添加新内容到 <code>content/blog</code>, <code>content/projects</code> 等目录，注意其中的 <code>_index.md</code> 不要删除。</p>
+<h3 id="step-5-yun-xing-xiang-mu">Step 5: 运行项目</h3>
 <p>使用如下命令查看效果:</p>
-<p>```</p>
-<p>zola serve</p>
-<p>```</p>
+<pre style="background-color:#fafafa;color:#383a42;"><code><span>zola serve
+</span></code></pre>
 <p>打开 http://127.0.0.1:1111 查看效果。</p>
-<p>### Step 6: 自动构建</p>
+<h3 id="step-6-zi-dong-gou-jian">Step 6: 自动构建</h3>
 <p>复制 github actions 配置文件：</p>
-<p>```bash</p>
-<p>mkdir -p .github/workflows</p>
-<p>cp themes/zola-resume/build.yml .github/workflows/build.yml</p>
-<p>```</p>
-<p>## 配置 CMS 系统</p>
-<p></p>
+<pre data-lang="bash" style="background-color:#fafafa;color:#383a42;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#e45649;">mkdir -p</span><span> .github/workflows
+</span><span style="color:#e45649;">cp</span><span> themes/zola-resume/build.yml .github/workflows/build.yml
+</span></code></pre>
+<h2 id="pei-zhi-cms-xi-tong">配置 CMS 系统</h2>
 <h3 id="step-1-xiu-gai-pei-zhi-wen-jian">Step 1: 修改配置文件</h3>
-<p><br />
-复制 cms 配置文件:</p>
-<p>```bash</p>
-<p>cp themes/zola-resume/static/admin/config.yml static/admin/config.yml</p>
-<p>```</p>
+<p>复制 cms 配置文件:</p>
+<pre data-lang="bash" style="background-color:#fafafa;color:#383a42;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#e45649;">cp</span><span> themes/zola-resume/static/admin/config.yml static/admin/config.yml
+</span></code></pre>
 <p>并修改如下部分:</p>
-<p>```yaml</p>
-<p># static/admin/config.yml</p>
-<p>backend:</p>
-<p>name: github</p>
-<p>repo: USERNAME/REPO # &lt;-- 记得修改</p>
-<p>branch: BRANCH # &lt;-- 记得修改</p>
-<p>cms_label_prefix: netlify-cms/</p>
-<p>site_domain: DOMAIN.netlify.com # 记下来这个位置，之后会用到</p>
-<p>```</p>
-<p>## 配置后台认证</p>
-<p>首先到 [Netlify](https://netlify.com) 注册账号并配置仓库，这个时候会自动构建失败，不用管它。</p>
-<p>进入网站 setting 的 `Build &amp; deploy` 选项把 `Build settings` 的 `active` 关掉，这样就不会消耗 netlify 的自动构建时长。</p>
-<p>进入 setting 的 `Access control` 找到其中的 `OAuth`，`Install provider` 把 Github 装上。其中的 github app 可以查看这个[文档](https://docs.netlify.com/visitor-access/oauth-provider-tokens/)进行配置。</p>
-<p>最后在 setting 的 `Custom domains` 里面添加 `YOURNAME.github.io`，会有警告，但是不用管他，前面有一个 `Default subdomain`，把他记下来填到 `static/admin/config.yml` 里面的 `backend.site_domain` 里面去。</p>
-<p>### About 主页</p>
-<p>修改 `contents/_index.md` 来改变主页内容</p>
-<p>### 其他文件</p>
-<p>- [data/certifications.json](https://github.com/AlongWY/zola-resume/blob/main/data/certifications.json)</p>
-<p>- [data/social.json](https://github.com/AlongWY/zola-resume/blob/main/data/social.json)</p>
-<p>- [data/skills.json](https://github.com/AlongWY/zola-resume/blob/main/data/skills.json)</p>
-<p>- [data/experience.json](https://github.com/AlongWY/zola-resume/blob/main/data/experience.json)</p>
-<p>- [data/education.json](https://github.com/AlongWY/zola-resume/blob/main/data/education.json)</p>
+<pre data-lang="yaml" style="background-color:#fafafa;color:#383a42;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#a0a1a7;"># static/admin/config.yml
+</span><span>
+</span><span style="color:#e45649;">backend</span><span>:
+</span><span>  </span><span style="color:#e45649;">name</span><span>: </span><span style="color:#50a14f;">github
+</span><span>  </span><span style="color:#e45649;">repo</span><span>: </span><span style="color:#50a14f;">USERNAME/REPO             </span><span style="color:#a0a1a7;"># &lt;-- 记得修改
+</span><span>  </span><span style="color:#e45649;">branch</span><span>: </span><span style="color:#50a14f;">BRANCH                  </span><span style="color:#a0a1a7;"># &lt;-- 记得修改
+</span><span>  </span><span style="color:#e45649;">cms_label_prefix</span><span>: </span><span style="color:#50a14f;">netlify-cms/
+</span><span>  </span><span style="color:#e45649;">site_domain</span><span>: </span><span style="color:#50a14f;">DOMAIN.netlify.com </span><span style="color:#a0a1a7;"># 记下来这个位置，之后会用到
+</span></code></pre>
+<h2 id="pei-zhi-hou-tai-ren-zheng">配置后台认证</h2>
+<p>首先到 <a href="https://netlify.com">Netlify</a> 注册账号并配置仓库，这个时候会自动构建失败，不用管它。</p>
+<p>进入网站 setting 的 <code>Build &amp; deploy</code> 选项把 <code>Build settings</code> 的 <code>active</code> 关掉，这样就不会消耗 netlify 的自动构建时长。</p>
+<p>进入 setting 的 <code>Access control</code> 找到其中的 <code>OAuth</code>，<code>Install provider</code> 把 Github 装上。其中的 github app 可以查看这个<a href="https://docs.netlify.com/visitor-access/oauth-provider-tokens/">文档</a>进行配置。</p>
+<p>最后在 setting 的 <code>Custom domains</code> 里面添加 <code>YOURNAME.github.io</code>，会有警告，但是不用管他，前面有一个 <code>Default subdomain</code>，把他记下来填到 <code>static/admin/config.yml</code> 里面的 <code>backend.site_domain</code> 里面去。</p>
+<h3 id="about-zhu-ye">About 主页</h3>
+<p>修改 <code>contents/_index.md</code> 来改变主页内容</p>
+<h3 id="qi-ta-wen-jian">其他文件</h3>
+<ul>
+<li><a href="https://github.com/AlongWY/zola-resume/blob/main/data/certifications.json">data/certifications.json</a></li>
+<li><a href="https://github.com/AlongWY/zola-resume/blob/main/data/social.json">data/social.json</a></li>
+<li><a href="https://github.com/AlongWY/zola-resume/blob/main/data/skills.json">data/skills.json</a></li>
+<li><a href="https://github.com/AlongWY/zola-resume/blob/main/data/experience.json">data/experience.json</a></li>
+<li><a href="https://github.com/AlongWY/zola-resume/blob/main/data/education.json">data/education.json</a></li>
+</ul>
 
     </div>
   </div>
