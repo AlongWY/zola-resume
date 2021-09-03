@@ -5,8 +5,102 @@
 	<link href="https://resume.alongwy.top/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://resume.alongwy.top"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-08-28T15:00:30.183+00:00</updated>
+	<updated>2021-09-03T13:30:54.712+00:00</updated>
 	<id>https://resume.alongwy.top/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Resume: a zola theme</title>
+		<published>2021-09-03T13:30:54.712+00:00</published>
+		<updated>2021-09-03T13:30:54.712+00:00</updated>
+		<link href="https://resume.alongwy.top/projects/resume-a-zola-theme/" type="text/html"/>
+		<id>https://resume.alongwy.top/projects/resume-a-zola-theme/</id>
+		<content type="html">&lt;p&gt;# Zola Resume&lt;&#x2F;p&gt;
+&lt;p&gt;## 快速开始&lt;&#x2F;p&gt;
+&lt;p&gt;```bash&lt;&#x2F;p&gt;
+&lt;p&gt;git clone git@github.com:alongwy&#x2F;zola-resume.git&lt;&#x2F;p&gt;
+&lt;p&gt;cd zola-resume&lt;&#x2F;p&gt;
+&lt;p&gt;zola serve&lt;&#x2F;p&gt;
+&lt;p&gt;# open http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;**此方法之后更新主题可能比较麻烦**&lt;&#x2F;p&gt;
+&lt;p&gt;## 安装&lt;&#x2F;p&gt;
+&lt;p&gt;### 第一步: 初始化网站&lt;&#x2F;p&gt;
+&lt;p&gt;```bash&lt;&#x2F;p&gt;
+&lt;p&gt;zola init mysite&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;### Step 2: 安装 zola-resume&lt;&#x2F;p&gt;
+&lt;p&gt;安装该主题到`themes`目录:&lt;&#x2F;p&gt;
+&lt;p&gt;```bash&lt;&#x2F;p&gt;
+&lt;p&gt;cd mysite&#x2F;themes&lt;&#x2F;p&gt;
+&lt;p&gt;git clone git@github.com:alongwy&#x2F;zola-resume.git&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;或者使用 submodule 安装:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;br &#x2F;&gt;
+```bash&lt;&#x2F;p&gt;
+&lt;p&gt;cd mysite&lt;&#x2F;p&gt;
+&lt;p&gt;git init # if your project is a git repository already, ignore this command&lt;&#x2F;p&gt;
+&lt;p&gt;git submodule add git@github.com:alongwy&#x2F;zola-resume.git themes&#x2F;zola-resume&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;### Step 3: 配置网站&lt;&#x2F;p&gt;
+&lt;p&gt;在配置文件中 `config.toml` 开启本主题:&lt;&#x2F;p&gt;
+&lt;p&gt;```toml&lt;&#x2F;p&gt;
+&lt;p&gt;theme = &amp;quot;zola-resume&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;或者直接复制 `config.toml.example` 到本目录:&lt;&#x2F;p&gt;
+&lt;p&gt;```bash&lt;&#x2F;p&gt;
+&lt;p&gt;cp themes&#x2F;zola-resume&#x2F;config.toml.example config.toml&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;### Step 4: 添加&#x2F;修改内容&lt;&#x2F;p&gt;
+&lt;p&gt;然后复制:&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;cp -r themes&#x2F;zola-resume&#x2F;data .&lt;&#x2F;p&gt;
+&lt;p&gt;cp -r themes&#x2F;zola-resume&#x2F;content .&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;你可以修改或者添加新内容到 `content&#x2F;blog`, `content&#x2F;projects` 等目录，注意其中的 `_index.md` 不要删除。&lt;&#x2F;p&gt;
+&lt;p&gt;### Step 5: 运行项目&lt;&#x2F;p&gt;
+&lt;p&gt;使用如下命令查看效果:&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;zola serve&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;打开 http:&#x2F;&#x2F;127.0.0.1:1111 查看效果。&lt;&#x2F;p&gt;
+&lt;p&gt;### Step 6: 自动构建&lt;&#x2F;p&gt;
+&lt;p&gt;复制 github actions 配置文件：&lt;&#x2F;p&gt;
+&lt;p&gt;```bash&lt;&#x2F;p&gt;
+&lt;p&gt;mkdir -p .github&#x2F;workflows&lt;&#x2F;p&gt;
+&lt;p&gt;cp themes&#x2F;zola-resume&#x2F;build.yml .github&#x2F;workflows&#x2F;build.yml&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;## 配置 CMS 系统&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;step-1-xiu-gai-pei-zhi-wen-jian&quot;&gt;Step 1: 修改配置文件&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;br &#x2F;&gt;
+复制 cms 配置文件:&lt;&#x2F;p&gt;
+&lt;p&gt;```bash&lt;&#x2F;p&gt;
+&lt;p&gt;cp themes&#x2F;zola-resume&#x2F;static&#x2F;admin&#x2F;config.yml static&#x2F;admin&#x2F;config.yml&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;并修改如下部分:&lt;&#x2F;p&gt;
+&lt;p&gt;```yaml&lt;&#x2F;p&gt;
+&lt;p&gt;# static&#x2F;admin&#x2F;config.yml&lt;&#x2F;p&gt;
+&lt;p&gt;backend:&lt;&#x2F;p&gt;
+&lt;p&gt;name: github&lt;&#x2F;p&gt;
+&lt;p&gt;repo: USERNAME&#x2F;REPO # &amp;lt;-- 记得修改&lt;&#x2F;p&gt;
+&lt;p&gt;branch: BRANCH # &amp;lt;-- 记得修改&lt;&#x2F;p&gt;
+&lt;p&gt;cms_label_prefix: netlify-cms&#x2F;&lt;&#x2F;p&gt;
+&lt;p&gt;site_domain: DOMAIN.netlify.com # 记下来这个位置，之后会用到&lt;&#x2F;p&gt;
+&lt;p&gt;```&lt;&#x2F;p&gt;
+&lt;p&gt;## 配置后台认证&lt;&#x2F;p&gt;
+&lt;p&gt;首先到 [Netlify](https:&#x2F;&#x2F;netlify.com) 注册账号并配置仓库，这个时候会自动构建失败，不用管它。&lt;&#x2F;p&gt;
+&lt;p&gt;进入网站 setting 的 `Build &amp;amp; deploy` 选项把 `Build settings` 的 `active` 关掉，这样就不会消耗 netlify 的自动构建时长。&lt;&#x2F;p&gt;
+&lt;p&gt;进入 setting 的 `Access control` 找到其中的 `OAuth`，`Install provider` 把 Github 装上。其中的 github app 可以查看这个[文档](https:&#x2F;&#x2F;docs.netlify.com&#x2F;visitor-access&#x2F;oauth-provider-tokens&#x2F;)进行配置。&lt;&#x2F;p&gt;
+&lt;p&gt;最后在 setting 的 `Custom domains` 里面添加 `YOURNAME.github.io`，会有警告，但是不用管他，前面有一个 `Default subdomain`，把他记下来填到 `static&#x2F;admin&#x2F;config.yml` 里面的 `backend.site_domain` 里面去。&lt;&#x2F;p&gt;
+&lt;p&gt;### About 主页&lt;&#x2F;p&gt;
+&lt;p&gt;修改 `contents&#x2F;_index.md` 来改变主页内容&lt;&#x2F;p&gt;
+&lt;p&gt;### 其他文件&lt;&#x2F;p&gt;
+&lt;p&gt;- [data&#x2F;certifications.json](https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;certifications.json)&lt;&#x2F;p&gt;
+&lt;p&gt;- [data&#x2F;social.json](https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;social.json)&lt;&#x2F;p&gt;
+&lt;p&gt;- [data&#x2F;skills.json](https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;skills.json)&lt;&#x2F;p&gt;
+&lt;p&gt;- [data&#x2F;experience.json](https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;experience.json)&lt;&#x2F;p&gt;
+&lt;p&gt;- [data&#x2F;education.json](https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;education.json)&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>gpustat: a rust-version of gpustat.</title>
 		<published>2021-08-28T15:00:30.183+00:00</published>
