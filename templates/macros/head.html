@@ -9,7 +9,6 @@
 {% endmacro %}
 
 {% macro javascript() %}
-<script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/vendors/scrolloverflow.min.js"></script>
 <!-- JS -->
 {% if config.build_search_index %}
 <script src="{{ get_url(path='elasticlunr.min.js') | safe }}" defer></script>
