@@ -115,51 +115,58 @@ collections:
             label: "参数"
             widget: "object"
             fields:
-              - { label: "姓氏", name: "firstName", widget: "string" }
-              - { label: "姓名", name: "lastName", widget: "string" }
-              - { label: "地址", name: address, widget: "string" }
-              - { label: "照片", name: profileImage, widget: "image" }
+              - { label: "姓氏", name: "first_name", widget: "string" }
+              - { label: "姓名", name: "last_name", widget: "string" }
+              - { label: "地址", name: "address", widget: "string" }
+              - { label: "照片", name: "avatar", widget: "image" }
+              - { label: "图标", name: "favicon", widget: "image" }
               - { label: "邮箱", name: "email", widget: "string" }
               - { label: "电话号码", name: "phone", widget: "string" }
               - {
+                  label: "显示关于",
+                  name: "show_about",
+                  widget: "boolean",
+                  required: false,
+                }
+              - {
                   label: "显示技能",
-                  name: "showSkills",
-                  widget: "boolean",
-                  required: false,
-                }
-              - {
-                  label: "显示博客",
-                  name: "showBlog",
-                  widget: "boolean",
-                  required: false,
-                }
-              - {
-                  label: "显示出版物",
-                  name: "showPublications",
+                  name: "show_skills",
                   widget: "boolean",
                   required: false,
                 }
               - {
                   label: "显示开源项目",
-                  name: "showProjects",
+                  name: "show_projects",
                   widget: "boolean",
                   required: false,
                 }
               - {
                   label: "显示开源贡献",
-                  name: "showOpenSource",
+                  name: "show_opensource",
+                  widget: "boolean",
+                  required: false,
+                }
+              - {
+                  label: "显示出版物",
+                  name: "show_publications",
                   widget: "boolean",
                   required: false,
                 }
               - {
                   label: "显示工作经历",
-                  name: "showExperience",
+                  name: "show_experience",
                   widget: "boolean",
                   required: false,
                 }
               - {
                   label: "显示教育经历",
-                  name: "showEducation",
+                  name: "show_education",
+                  widget: "boolean",
+                  required: false,
+                }
+              - {
+                  label: "显示博客",
+                  name: "show_blog",
                   widget: "boolean",
                   required: false,
                 }
