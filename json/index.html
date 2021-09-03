@@ -29,9 +29,9 @@
     
       
       {
-      "title": "gpustat: a rust-version of gpustat.",
-      "url": "https://resume.alongwy.top/projects/gpustat-a-rust-version-of-gpustat/",
-      "body": "gpustat\n\n\nA rust version of gpustat.\nJust less than nvidia-smi?\nUsage\n$ gpustat\nOptions:\n\n--color            : Force colored output (even when stdout is not a tty)\n--no-color         : Suppress colored output\n-u, --show-user  : Display username of the process owner\n-c, --show-cmd   : Display the process name\n-f, --show-full-cmd   : Display full command and cpu stats of running process\n-p, --show-pid   : Display PID of the process\n-F, --show-fan   : Display GPU fan speed\n-e, --show-codec : Display encoder and/or decoder utilization\n-a, --show-all   : Display all gpu properties above\n\nQuick Installation\nInstall from Cargo:\ncargo install gpustat\n\nDefault display\n\n[0] | A100-PCIE-40GB | 65'C | 75 % | 33409 / 40536 MB | along(33407M)\n\n\n[0]: GPUindex (starts from 0) as PCI_BUS_ID\nA100-PCIE-40GB: GPU name\n65'C: Temperature\n75 %: Utilization\n33409 / 40536 MB: GPU Memory Usage\nalong(33407M): Username of the running processes owner on GPU (and their memory usage)\n\nLicense\nGPL v2 License\n"
+      "title": "Language Technology Platform",
+      "url": "https://resume.alongwy.top/projects/language-technology-platform/",
+      "body": "Intro\nAn open-source neural language technology platform supporting six fundamental Chinese NLP tasks:\n\nlexical analysis (Chinese word segmentation, part-of-speech tagging, and named entity recognition)\nsyntactic parsing (dependency parsing)\nsemantic parsing (semantic dependency parsing and semantic role labeling). \n\nQuickstart\nfrom ltp import LTP\n\nltp = LTP()  # 默认加载 Small 模型\nseg, hidden = ltp.seg([&quot;他叫汤姆去拿外衣。&quot;])\npos = ltp.pos(hidden)\nner = ltp.ner(hidden)\nsrl = ltp.srl(hidden)\ndep = ltp.dep(hidden)\nsdp = ltp.sdp(hidden)\n\nPerformance\nModelCWSPOSNERSRLDEPSDPSpeed(Sents/S)\nLTP 4.0 (Base)98.7098.5095.480.6089.5075.2039.12\nLTP 4.0 (Base1)99.2298.7396.3979.2889.5776.57--.--\nLTP 4.0 (Base2)99.1898.6995.9779.4990.1976.62--.--\nLTP 4.0 (Small)98.4098.2094.3078.4088.3074.7043.13\nLTP 4.0 (Tiny)96.8097.1091.6070.9083.8070.1053.22\n\nCite\n@article{che2020n,\n  title={N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models},\n  author={Che, Wanxiang and Feng, Yunlong and Qin, Libo and Liu, Ting},\n  journal={arXiv preprint arXiv:2009.11616},\n  year={2020}\n}\n\n"
       }
     ,
     
@@ -47,9 +47,9 @@
     
       
       {
-      "title": "Language Technology Platform",
-      "url": "https://resume.alongwy.top/projects/language-technology-platform/",
-      "body": "Intro\nAn open-source neural language technology platform supporting six fundamental Chinese NLP tasks:\n\nlexical analysis (Chinese word segmentation, part-of-speech tagging, and named entity recognition)\nsyntactic parsing (dependency parsing)\nsemantic parsing (semantic dependency parsing and semantic role labeling). \n\nQuickstart\nfrom ltp import LTP\n\nltp = LTP()  # 默认加载 Small 模型\nseg, hidden = ltp.seg([&quot;他叫汤姆去拿外衣。&quot;])\npos = ltp.pos(hidden)\nner = ltp.ner(hidden)\nsrl = ltp.srl(hidden)\ndep = ltp.dep(hidden)\nsdp = ltp.sdp(hidden)\n\nPerformance\nModelCWSPOSNERSRLDEPSDPSpeed(Sents/S)\nLTP 4.0 (Base)98.7098.5095.480.6089.5075.2039.12\nLTP 4.0 (Base1)99.2298.7396.3979.2889.5776.57--.--\nLTP 4.0 (Base2)99.1898.6995.9779.4990.1976.62--.--\nLTP 4.0 (Small)98.4098.2094.3078.4088.3074.7043.13\nLTP 4.0 (Tiny)96.8097.1091.6070.9083.8070.1053.22\n\nCite\n@article{che2020n,\n  title={N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models},\n  author={Che, Wanxiang and Feng, Yunlong and Qin, Libo and Liu, Ting},\n  journal={arXiv preprint arXiv:2009.11616},\n  year={2020}\n}\n\n"
+      "title": "gpustat: a rust-version of gpustat.",
+      "url": "https://resume.alongwy.top/projects/gpustat-a-rust-version-of-gpustat/",
+      "body": "gpustat\n\n\nA rust version of gpustat.\nJust less than nvidia-smi?\nUsage\n$ gpustat\nOptions:\n\n--color            : Force colored output (even when stdout is not a tty)\n--no-color         : Suppress colored output\n-u, --show-user  : Display username of the process owner\n-c, --show-cmd   : Display the process name\n-f, --show-full-cmd   : Display full command and cpu stats of running process\n-p, --show-pid   : Display PID of the process\n-F, --show-fan   : Display GPU fan speed\n-e, --show-codec : Display encoder and/or decoder utilization\n-a, --show-all   : Display all gpu properties above\n\nQuick Installation\nInstall from Cargo:\ncargo install gpustat\n\nDefault display\n\n[0] | A100-PCIE-40GB | 65'C | 75 % | 33409 / 40536 MB | along(33407M)\n\n\n[0]: GPUindex (starts from 0) as PCI_BUS_ID\nA100-PCIE-40GB: GPU name\n65'C: Temperature\n75 %: Utilization\n33409 / 40536 MB: GPU Memory Usage\nalong(33407M): Username of the running processes owner on GPU (and their memory usage)\n\nLicense\nGPL v2 License\n"
       }
     
     ,
