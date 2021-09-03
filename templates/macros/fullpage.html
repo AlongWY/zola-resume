@@ -2,28 +2,28 @@
 <ul id="menu" class="menu-list">
     
 {% if config.extra.show_about           %}
-<li data-menuanchor="about"><a href="/#anchor_about">ABOUT</a></li>   
+<li data-menuanchor="about"><a href="{{ get_url(path='/#anchor_about') }}">ABOUT</a></li>   
 {% endif %}
 {% if config.extra.show_skills          %} 
-<li data-menuanchor="skills"><a href="/#anchor_skills">SKILLS</a></li>
+<li data-menuanchor="skills"><a href="{{ get_url(path='/#anchor_skills') }}">SKILLS</a></li>
 {% endif %}
 {% if config.extra.show_projects        %}
-<li data-menuanchor="projects"><a href="/#anchor_projects">PROJECTS</a></li>
+<li data-menuanchor="projects"><a href="{{ get_url(path='/#anchor_projects') }}">PROJECTS</a></li>
 {% endif %}
 {% if config.extra.show_opensource      %} 
-<li data-menuanchor="opensource"><a href="/#anchor_opensource">OPEN SOURCE</a></li>
+<li data-menuanchor="opensource"><a href="{{ get_url(path='/#anchor_opensource') }}">OPEN SOURCE</a></li>
 {% endif %}
 {% if config.extra.show_publications    %}
-<li data-menuanchor="publications"><a href="/#anchor_publications">PUBLICATIONS</a></li>
+<li data-menuanchor="publications"><a href="{{ get_url(path='/#anchor_publications') }}">PUBLICATIONS</a></li>
 {% endif %}
 {% if config.extra.show_experience      %} 
-<li data-menuanchor="experience"><a href="/#anchor_experience">EXPERIENCE</a></li>
+<li data-menuanchor="experience"><a href="{{ get_url(path='/#anchor_experience') }}">EXPERIENCE</a></li>
 {% endif %}
 {% if config.extra.show_education       %} 
-<li data-menuanchor="education"><a href="/#anchor_education">EDUCATION</a></li>
+<li data-menuanchor="education"><a href="{{ get_url(path='/#anchor_education') }}">EDUCATION</a></li>
 {% endif %}
 {% if config.extra.show_blog            %} 
-<li data-menuanchor="blog"><a href="/#anchor_blog">BLOG</a></li>    
+<li data-menuanchor="blog"><a href="{{ get_url(path='/#anchor_blog') }}">BLOG</a></li>    
 {% endif %}
 </ul>
 {% endmacro %}
