@@ -1,5 +1,7 @@
 # Zola Resume
 
+[Chinese Version](README.CN.md)
+
 Redesigned form [hugo resume](https://github.com/eddiewebb/hugo-resume).
 
 ## Features
@@ -12,7 +14,7 @@ Redesigned form [hugo resume](https://github.com/eddiewebb/hugo-resume).
 
 ```bash
 git clone git@github.com:alongwy/zola-resume.git
-cd adidoks
+cd zola-resume
 zola serve
 # open http://127.0.0.1:1111/
 ```
@@ -26,7 +28,7 @@ Just earlier we showed you how to run the theme directly. Now we start to instal
 zola init mysite
 ```
 
-### Step 2: Install AdiDoks
+### Step 2: Install zola-resume
 Download this theme to your themes directory:
 
 ```bash
@@ -78,6 +80,7 @@ backend:
 You can copy the content from the theme directory to your project:
 
 ```
+cp -r themes/zola-resume/data .
 cp -r themes/zola-resume/content .
 ```
 
