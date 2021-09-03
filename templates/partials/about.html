@@ -17,23 +17,25 @@
       {% for item in data %}
       <a href="{{ item.proof }}" data-toggle="tooltip" title="{{ item.name }}" data-offset="0,10" rel="me">
         <figure class="image is-64x64">
+          {% if item.badge is starting_with("http") %}
           <img src="{{ item.badge }}">
+          {% else %}
+          <img src="{{ get_url(path=item.badge) }}">
+          {% endif %}
         </figure>
       </a>
       {% endfor %}
-    
-    
       <h3>Socialization</h3>
       {% set data = load_data(path="data/social.json") %}
       {% for item in data %}
-      <a href="{{ item.link }}" style="font-size: 1.75rem;" data-toggle="tooltip" title="{{ item.name }}"
+      <a href="{% if item.link is starting_with('http') %}{{ item.link }}{% else %}{{ get_url(path=item.link) }}{% endif %}" style="font-size: 1.75rem;" data-toggle="tooltip" title="{{ item.name }}"
         data-offset="0,10" rel="me">
-        <span class="fa-stack">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fab fa-{{ item.name | lower }} fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-      {% endfor %}
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fab fa-{{ item.name | lower }} fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        {% endfor %}
     </div>
   </div>
 </div>

@@ -31,7 +31,7 @@
 {% if config.extra.avatar %}
 <div style="display:block;margin:auto auto 0;padding:.5rem">
     <figure class="image">
-        <img id="avatar" class="is-rounded" src="{{ config.extra.avatar }}">
+        <img id="avatar" class="is-rounded" src="{{ get_url(path=config.extra.avatar ) }}">
     </figure>
 </div>
 {% endif %}
