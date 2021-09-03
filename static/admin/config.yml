@@ -94,6 +94,7 @@ collections:
         widget: "object"
         fields:
           - { label: "精选", name: "featured", widget: "boolean", required: false }
+          - { label: "引用", name: image, widget: "file" }
           - { label: "项目/网址链接", name: "link", widget: "string" }
           - { label: "项目图片", name: image, widget: "image" }
       - { label: "正文", name: "body", widget: "markdown" }
