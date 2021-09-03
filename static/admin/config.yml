@@ -123,6 +123,12 @@ collections:
               - { label: "邮箱", name: "email", widget: "string" }
               - { label: "电话号码", name: "phone", widget: "string" }
               - {
+                  label: "渲染数学公式",
+                  name: "katex",
+                  widget: "boolean",
+                  required: false,
+                }
+              - {
                   label: "显示关于",
                   name: "show_about",
                   widget: "boolean",

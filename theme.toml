@@ -20,6 +20,7 @@ email = "ylfeng@ir.hit.edu.cn"
 favicon = "/favicon.ico"
 avatar = "/img/avatar.png"
 
+katex = false
 show_about = true
 show_skills = true
 show_projects = true
