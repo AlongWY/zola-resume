@@ -1,11 +1,8 @@
 {% import 'partials/about.html' as partial_about -%}
 {% import 'partials/skills.html' as partial_skills -%}
-{% import 'partials/projects.html' as partial_projects -%}
-{% import 'partials/opensource.html' as partial_opensource -%}
-{% import 'partials/publications.html' as partial_publications -%}
 {% import 'partials/experience.html' as partial_experience -%}
 {% import 'partials/education.html' as partial_education -%}
-{% import 'partials/blog.html' as partial_blog -%}
+{% import 'partials/section.html' as partial_section -%}
 
 {% extends "base.html" %}
 
@@ -25,19 +22,19 @@
 
   {% if config.extra.show_projects %}
   <div class="section hero is-fullheight page" id="projects">
-    {{ partial_projects::display() }}
+    {{ partial_section::display(path="projects/_index.md") }}
   </div>
   {% endif %}
 
   {% if config.extra.show_opensource %}
   <div class="section hero is-fullheight page" id="opensource">
-    {{ partial_opensource::display() }}
+    {{ partial_section::display(path="opensource/_index.md") }}
   </div>
   {% endif %}
 
   {% if config.extra.show_publications %}
   <div class="section hero is-fullheight page" id="publications">
-    {{ partial_publications::display() }}
+    {{ partial_section::display(path="publications/_index.md", align="right") }}
   </div>
   {% endif %}
 
@@ -55,7 +52,7 @@
 
   {% if config.extra.show_blog %}
   <div class="section hero is-fullheight page" id="blog">
-    {{ partial_blog::display() }}
+    {{ partial_section::display(path="blog/_index.md") }}
   </div>
   {% endif %}
 

@@ -1,12 +1,12 @@
-{% macro display() %}
-{% set section = get_section(path="blog/_index.md") %}
+{% macro display(path, align="left") %}
+{% set section = get_section(path=path) %}
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
-  <h2><a href="{{ section.permalink }}">blog</a></h2>
+  <h2><a href="{{ section.permalink }}">creations</a></h2>
   <div class="is-hidden-touch">
     {{ section.content | safe }}
   </div>
+  {% set remain = false %}
   <div class="pb-6 pt-2" style="overflow: auto;">
-    {% set remain = false %}
     {% for page in section.pages | reverse %}
     {% if page.extra.featured %}
     <div class="mb-5">
@@ -26,7 +26,7 @@
         {% if page.description %}
         <div class="content" style="width: 100%;">
           {% if page.extra.image %}
-          <figure class="image is-128x128" style="float:left;">
+          <figure class="image is-128x128" style="float:{{ align }};">
             <img src="{{ page.extra.image }}">
           </figure>
           {% endif %}
