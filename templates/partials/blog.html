@@ -2,50 +2,52 @@
 {% set section = get_section(path="blog/_index.md") %}
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
   <h2><a href="{{ section.permalink }}">blog</a></h2>
-  {{ section.content | safe }}
-  {% set remain = false %}
-  {% for page in section.pages | reverse %}
-  {% if page.extra.featured %}
-  <div class="mb-5">
-    <nav class="level mb-0">
-      <div class="level-left">
-        <div class="level-item">
-          <h3 class="post-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
-        </div>
-      </div>
-      <div class="level-right">
-        <div class="level-item">
-          <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-        </div>
-      </div>
-    </nav>
-    <div class="is-flex is-flex-direction-row">
-      {% if page.extra.image %}
-      <div class="mr-5">
-        <figure class="image is-128x128">
-          <img src="{{ page.extra.image }}">
-        </figure>
-      </div>
-      {% endif %}
-      {% if page.description %}
-      <div class="content">
-        {{ page.description | markdown() | safe }}
-        <a href="{{ page.permalink }}">Read More</a>
-      </div>
-      {% endif %}
-    </div>
-    {% if page.taxonomies.tags %}
-    <div class="tags">
-      {% for tag in page.taxonomies.tags %}
-      <span class="tag"><a href="/tags/{{ tag | lower }}">{{ tag }}</a></span>
-      {% endfor %}
-    </div>
-    {% endif %}
+  <div class="is-hidden-touch">
+    {{ section.content | safe }}
   </div>
-  {% else %}
-  {% set_global remain = true %}
-  {% endif %}
-  {% endfor %}
+  <div class="pb-6 pt-2" style="overflow: auto;">
+    {% set remain = false %}
+    {% for page in section.pages | reverse %}
+    {% if page.extra.featured %}
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3 class="post-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+          </div>
+        </div>
+        <div class="level-right is-hidden-touch">
+          <div class="level-item">
+            <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+          </div>
+        </div>
+      </nav>
+      <div class="is-flex is-flex-direction-row">
+        {% if page.description %}
+        <div class="content" style="width: 100%;">
+          {% if page.extra.image %}
+          <figure class="image is-128x128" style="float:left;">
+            <img src="{{ page.extra.image }}">
+          </figure>
+          {% endif %}
+          {{ page.description | markdown() | safe }}
+          <a href="{{ page.permalink }}">Read More</a>
+        </div>
+        {% endif %}
+      </div>
+      {% if page.taxonomies.tags %}
+      <div class="tags">
+        {% for tag in page.taxonomies.tags %}
+        <span class="tag"><a href="/tags/{{ tag | lower }}">{{ tag }}</a></span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% else %}
+    {% set_global remain = true %}
+    {% endif %}
+    {% endfor %}
+  </div>
   {% if remain %}
   <h3><a href="{{ section.permalink }}">Wait! There's more..</a></h3>
   {% endif %}

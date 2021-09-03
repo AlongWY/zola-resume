@@ -12,49 +12,49 @@
 {% block content %}
 <div id="fullpage">
   {% if config.extra.show_about %}
-  <div class="section hero is-fullheight" id="about" style="overflow: scroll;">
+  <div class="section hero is-fullheight page" id="about">
     {{ partial_about::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_skills %}
-  <div class="section hero is-fullheight" id="skills" style="overflow: scroll;">
+  <div class="section hero is-fullheight page" id="skills">
     {{ partial_skills::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_projects %}
-  <div class="section hero is-fullheight" id="projects" style="overflow: scroll;">
+  <div class="section hero is-fullheight page" id="projects">
     {{ partial_projects::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_opensource %}
-  <div class="section hero is-fullheight" id="opensource" style="overflow: scroll;">
+  <div class="section hero is-fullheight page" id="opensource">
     {{ partial_opensource::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_publications %}
-  <div class="section hero is-fullheight" id="publications" style="overflow: scroll;">
+  <div class="section hero is-fullheight page" id="publications">
     {{ partial_publications::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_experience %}
-  <div class="section hero is-fullheight" id="experience" style="overflow: scroll;">
+  <div class="section hero is-fullheight page" id="experience">
     {{ partial_experience::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_education %}
-  <div class="section hero is-fullheight" id="education" style="overflow: scroll;">
+  <div class="section hero is-fullheight page" id="education">
     {{ partial_education::display() }}
   </div>
   {% endif %}
 
   {% if config.extra.show_blog %}
-  <div class="section hero is-fullheight" id="blog" style="overflow: scroll;">
+  <div class="section hero is-fullheight page" id="blog">
     {{ partial_blog::display() }}
   </div>
   {% endif %}

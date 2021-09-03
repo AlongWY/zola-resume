@@ -80,6 +80,11 @@ a:hover, a:focus, a:active {
   height: 100vh;
 }
 
+.page{
+   height: 100vh; 
+   overflow: hidden;
+}
+
 @media (min-width: 992px) {
   #sidebar {
     top: 0;

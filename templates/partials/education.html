@@ -2,30 +2,32 @@
 {% set data = load_data(path="data/education.json") %}
 <div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
   <h2>education</h2>
-  {% for item in data %}
-  <div class="mb-5">
-    <nav class="level mb-0">
-      <div class="level-left">
-        <div class="level-item">
-          <h3>{{ item.school | markdown(inline=true) | safe}}</h3>
+  <div  style="overflow: auto;">
+    {% for item in data %}
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3>{{ item.school | markdown(inline=true) | safe}}</h3>
+          </div>
         </div>
-      </div>
-      <div class="level-right">
-        <div class="level-item">
-          {{ item.range }}
+        <div class="level-right is-hidden-touch">
+          <div class="level-item">
+            {{ item.range }}
+          </div>
         </div>
-      </div>
-    </nav>
-    <div class="is-flex is-flex-direction-column is-align-items-start">
-      <h2 class="subtitle">{{ item.degree | markdown(inline=true) | safe }}</h2>
-      <div>
-        {{ item.major | markdown(inline=true) | safe }}
-      </div>
-      <div>
-        {{ item.notes | markdown(inline=true) | safe }}
+      </nav>
+      <div class="is-flex is-flex-direction-column is-align-items-start">
+        <h2 class="subtitle">{{ item.degree | markdown(inline=true) | safe }}</h2>
+        <div>
+          {{ item.major | markdown(inline=true) | safe }}
+        </div>
+        <div>
+          {{ item.notes | markdown(inline=true) | safe }}
+        </div>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 {% endmacro %}

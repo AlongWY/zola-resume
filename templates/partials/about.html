@@ -1,19 +1,17 @@
 {% macro display() %}
 {% set section = get_section(path="_index.md") %}
 <div class="is-flex is-flex-direction-column" style="height: 100%;">
-  <div style="flex: 1;">
+  <div class="flex: 1;">
     <h1>{{ config.extra.first_name }} <span class="text-primary">{{ config.extra.last_name }}</span></h1>
     <h2 class="subtitle">
       {{ config.extra.address ~ " · " }} <a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a>
     </h2>
   </div>
-  <div class="is-flex is-flex-direction-column is-justify-content-center" style="flex: 1;">
-    <div class="content">
+  <div class="is-flex is-flex-direction-column is-justify-content-center" style="flex: 1; overflow: auto;">
+    <div class="content" style="overflow: auto; padding-top: 1.5rem;">
       {{ section.content | safe }}
     </div>
-  </div>
-  <div class="is-flex is-flex-direction-column is-justify-content-center" style="flex: 1;">
-    <div>
+    <div class="is-hidden-touch">
       <h3>Certifications</h3>
       {% set data = load_data(path="data/certifications.json") %}
       {% for item in data %}
@@ -23,8 +21,8 @@
         </figure>
       </a>
       {% endfor %}
-    </div>
-    <div>
+    
+    
       <h3>Socialization</h3>
       {% set data = load_data(path="data/social.json") %}
       {% for item in data %}
