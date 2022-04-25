@@ -5,7 +5,17 @@
 {% block content %}
 <div class="container is-fluid" style="min-height: 100vh;">
   <div class="is-flex is-flex-direction-column is-justify-content-center" style="min-height: 100vh;">
-    <h2>{{ page.title }}<a href="{{ page.extra.link }}" style="font-style: initial;" ><span class="tag is-warning">Link</span></a></h2>
+    <h2>{{ page.title }}
+      {% if page.extra.link %}
+        <a href="{{ page.extra.link }}" style="font-style: initial;" ><span class="tag is-warning">
+        {% if page.extra.linktext %}
+          {{ page.extra.linktext }}
+        {% else %}
+          Link
+        {% endif %}
+        </span></a>
+      {% endif %}
+    </h2>
     {% if page.extra.lead %}<p class="lead">{{ page.extra.lead }}</p>{% endif %}
     <div class="content pb-5">
       {{ page.content | safe }}
